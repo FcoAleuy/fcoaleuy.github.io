@@ -1,0 +1,42 @@
+---
+title: "Home"
+---
+
+## Hi, I'm Alex.
+
+IT systems professional focused on reliability, clarity, and a human-centered approach.
+
+---
+
+## What I do
+
+- Linux systems administration  
+- Automation (Ansible, Bash scripting)  
+- Monitoring & alerting (Prometheus, Grafana)  
+- Basic networking and security  
+- Tier 2/3 technical support  
+
+---
+
+## Background
+
+I've worked in various environments—from small businesses to large organizations—helping keep infrastructure stable, documented, and efficient. My approach is practical and collaborative, with a strong focus on clarity and maintainability.
+
+---
+
+## What I'm looking for now
+
+A role focused on system reliability in a human-first environment, where collaboration matters more than ego.
+
+---
+
+## Creative side
+
+I enjoy writing, shooting film photography, and experimenting with modular synthesizers.
+
+---
+
+## Contact
+
+📧 [alex@example.ca](mailto:alex@example.ca)  
+🔗 [linkedin.com/in/alex-sysadmin](https://linkedin.com/in/alex-sysadmin)
