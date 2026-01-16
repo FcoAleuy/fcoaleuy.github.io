@@ -4,6 +4,12 @@ export interface Props {
 }
 
 const { children } = Astro.props;
+
+// Configuración para compartir en Redes Sociales (LinkedIn/WhatsApp)
+const socialImage = "https://franciscoaleuy.ca/assets/yo.jpg"; // Tu nueva foto
+const siteTitle = "Francisco Aleuy – Building clarity between systems and people";
+const siteDescription = "Technology and operations professional building clarity, reliability, and human connection in technical environments.";
+const siteUrl = "https://franciscoaleuy.ca/";
 ---
 
 <!DOCTYPE html>
@@ -11,8 +17,22 @@ const { children } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Francisco Aleuy – Building clarity between systems and people</title>
     
+    <title>{siteTitle}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <meta name="description" content={siteDescription} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:title" content={siteTitle} />
+    <meta property="og:description" content={siteDescription} />
+    <meta property="og:image" content={socialImage} />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={siteTitle} />
+    <meta name="twitter:description" content={siteDescription} />
+    <meta name="twitter:image" content={socialImage} />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
@@ -163,7 +183,7 @@ const { children } = Astro.props;
         text-align: center;
       }
 
-      /* === NUEVO: Layout Imagen + Texto (Para The Voice) === */
+      /* === Layout Imagen + Texto (Para The Voice) === */
       .media-text-container {
         display: flex;
         gap: 2rem;
@@ -181,7 +201,7 @@ const { children } = Astro.props;
         flex: 1;
       }
 
-      /* === NUEVO: Contenedor de Video Optimizado === */
+      /* === Contenedor de Video Optimizado === */
       .video-wrapper {
         max-width: 600px;
         margin: 3rem auto;
@@ -191,7 +211,7 @@ const { children } = Astro.props;
         box-shadow: 0 30px 60px -10px rgba(0,0,0,0.6);
       }
 
-      /* === NUEVO: Botones de Contacto === */
+      /* === Botones de Contacto === */
       .contact-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -222,6 +242,16 @@ const { children } = Astro.props;
         box-shadow: 0 10px 20px -5px rgba(56, 189, 248, 0.2);
         color: #fff;
         text-decoration: none;
+      }
+
+      /* ESTILO ESPECIAL PARA EL BOTÓN DE RESUME */
+      .contact-btn.primary {
+        background: rgba(56, 189, 248, 0.15);
+        border-color: rgba(56, 189, 248, 0.4);
+      }
+
+      .contact-btn.primary:hover {
+        background: rgba(56, 189, 248, 0.3);
       }
 
       .btn-icon {
