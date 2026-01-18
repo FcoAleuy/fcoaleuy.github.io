@@ -2,7 +2,7 @@
 title: "Home"
 ---
 
-{/* Header Image: Foto Real con tratamiento B&W estilo "Noir" para elevar el perfil */}
+{/* Header Image: Foto Real con tratamiento B&W estilo "Noir" */}
 <img
   src="/assets/yo.jpg"
   alt="Francisco Aleuy professional profile"
@@ -10,14 +10,12 @@ title: "Home"
     width: '180px',
     height: '180px',
     objectFit: 'cover',
-    // Hacemos zoom para cortar un poco la chamarra y centrarnos en la cara
     objectPosition: 'center 20%', 
     borderRadius: '35%',
     boxShadow: '0 10px 40px -10px rgba(56, 189, 248, 0.4)',
     border: '2px solid rgba(56, 189, 248, 0.3)',
     margin: '0 auto 4rem auto',
     display: 'block',
-    // EL TRUCO: Blanco y negro al 100% + Contraste alto para look premium
     filter: 'grayscale(100%) contrast(1.2) brightness(1.1)'
   }}
 />
@@ -39,11 +37,23 @@ title: "Home"
   fontSize: '1.05rem',
   fontWeight: '400',
   color: '#94a3b8', 
+  marginBottom: '2rem',
+  maxWidth: '90%',
+  lineHeight: '1.6'
+}}>
+  Technology and operations professional with a strong service background. I bridge complex technical requirements with real human needs.
+</p>
+
+{/* PROMESA DE VALOR */}
+<p style={{ 
+  fontSize: '1.1rem',
+  fontWeight: '500',
+  color: '#f8fafc', 
   marginBottom: '3rem',
   maxWidth: '90%',
   lineHeight: '1.6'
 }}>
-  Technology and operations professional with a strong service background. I bridge complex technical requirements with real human needs, helping teams stay organized, calm, and reliable.
+  I help teams turn complexity into calm, usable systems.
 </p>
 
 <p style={{ 
@@ -59,11 +69,11 @@ title: "Home"
 
 ## Core Capabilities
 
-- **Operational Flow & Process Clarity**: Optimizing workflows and documenting processes to reduce friction and errors.
-- **Technical Support & QA**: Diagnosing issues and ensuring system reliability in fast-paced environments.
-- **Service & Human-Centered Experience**: Leveraging empathy and high-pressure performance skills to enhance guest experiences.
+- **Designing Workflows**: Creating processes that teams actually follow, reducing friction and errors.
+- **System Reliability**: Diagnosing issues and keeping operations stable in real-world conditions.
+- **Human Confidence**: Ensuring people feel supported and confident using technology, even under pressure.
 
-{/* SECCIÓN: HOW I WORK (GRID HORIZONTAL OPTIMIZADO) */}
+{/* SECCIÓN: HOW I WORK (GRID HORIZONTAL) */}
 <div style={{ margin: '5rem 0' }}>
   <h2 style={{ fontSize: '1.8rem', marginBottom: '2rem', color: '#f8fafc', textAlign: 'center' }}>How I Work</h2>
   
@@ -119,7 +129,9 @@ title: "Home"
 
 ## Professional Timeline
 
-My career combines high-level corporate strategy in telecommunications with hands-on operational leadership in Canada.
+<p style={{ fontStyle: 'italic', color: '#94a3b8', marginBottom: '2rem' }}>
+  This work wasn’t about technology for its own sake — it was about making large systems easier to operate for people.
+</p>
 
 ### Enterprise Tech & Strategy (Entel Connect)
 *Focus: Implementation, AI Strategy, and Process Optimization.*
@@ -162,13 +174,13 @@ My career combines high-level corporate strategy in telecommunications with hand
 
 ## Performance Under Pressure
 
-Beyond technology, I have tested my ability to perform in high-stakes environments before millions of viewers.
+Beyond technology, I have tested my ability to perform in high-stakes environments.
 
 <div className="media-text-container">
   <div className="media-text-content">
     **The Voice Chile (2023) – Semifinalist**
     
-    Performing live before millions wasn't just about singing — it was a masterclass in discipline, rapid feedback integration, and calm decision-making under extreme pressure.
+    Performing live in front of a national audience wasn't just about singing — it was a masterclass in discipline, rapid feedback integration, and calm decision-making under extreme pressure.
 
     <a href="https://www.youtube.com/watch?v=Lds8A4lGtVQ" target="_blank" style={{
       display: 'inline-block',
@@ -204,7 +216,8 @@ Beyond technology, I have tested my ability to perform in high-stakes environmen
   <p style={{ fontStyle: 'italic', marginBottom: '1.5rem', color: '#cbd5e1' }}>
     A spontaneous moment where I stepped out of my operational role to create a memorable guest experience.
   </p>
-  <a href="/assets/Cumpleanos_Feliz.mp4" target="_blank" className="contact-btn" style={{ display: 'inline-flex', margin: '0 auto' }}>
+  {/* AQUI ESTÁ EL CAMBIO: LINK AL SHORT DE YOUTUBE */}
+  <a href="https://youtube.com/shorts/3x9Awx6zfOE?feature=share" target="_blank" className="contact-btn" style={{ display: 'inline-flex', margin: '0 auto' }}>
     <span className="btn-icon">▶</span>
     <span>See a real guest moment</span>
   </a>
