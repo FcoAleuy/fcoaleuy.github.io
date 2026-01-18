@@ -2,7 +2,7 @@
 title: "Home"
 ---
 
-{/* Header Image: Foto Real con tratamiento B&W estilo "Noir" */}
+{/* Header Image: Con filtro Duotono Azulado "Tech" */}
 <img
   src="/assets/yo.jpg"
   alt="Francisco Aleuy professional profile"
@@ -10,13 +10,14 @@ title: "Home"
     width: '180px',
     height: '180px',
     objectFit: 'cover',
-    objectPosition: 'center 20%', 
     borderRadius: '35%',
-    boxShadow: '0 10px 40px -10px rgba(56, 189, 248, 0.4)',
-    border: '2px solid rgba(56, 189, 248, 0.3)',
+    /* Resplandor azulado */
+    boxShadow: '0 0 50px -10px rgba(56, 189, 248, 0.6)',
+    border: '2px solid rgba(56, 189, 248, 0.5)',
     margin: '0 auto 4rem auto',
     display: 'block',
-    filter: 'grayscale(100%) contrast(1.2) brightness(1.1)'
+    /* Filtro para teñir la foto al azul cian */
+    filter: 'grayscale(100%) brightness(0.95) contrast(1.1) sepia(1) hue-rotate(190deg) saturate(2.5)'
   }}
 />
 
@@ -37,23 +38,11 @@ title: "Home"
   fontSize: '1.05rem',
   fontWeight: '400',
   color: '#94a3b8', 
-  marginBottom: '2rem',
-  maxWidth: '90%',
-  lineHeight: '1.6'
-}}>
-  Technology and operations professional with a strong service background. I bridge complex technical requirements with real human needs.
-</p>
-
-{/* PROMESA DE VALOR */}
-<p style={{ 
-  fontSize: '1.1rem',
-  fontWeight: '500',
-  color: '#f8fafc', 
   marginBottom: '3rem',
   maxWidth: '90%',
   lineHeight: '1.6'
 }}>
-  I help teams turn complexity into calm, usable systems.
+  Technology and operations professional with a strong service background. I bridge complex technical requirements with real human needs, helping teams stay organized, calm, and reliable.
 </p>
 
 <p style={{ 
@@ -69,69 +58,94 @@ title: "Home"
 
 ## Core Capabilities
 
-- **Designing Workflows**: Creating processes that teams actually follow, reducing friction and errors.
-- **System Reliability**: Diagnosing issues and keeping operations stable in real-world conditions.
-- **Human Confidence**: Ensuring people feel supported and confident using technology, even under pressure.
+- **Operational Flow & Process Clarity**: Optimizing workflows and documenting processes to reduce friction and errors.
+- **Technical Support & QA**: Diagnosing issues and ensuring system reliability in fast-paced environments.
+- **Service & Human-Centered Experience**: Leveraging empathy and high-pressure performance skills to enhance guest experiences.
 
-{/* SECCIÓN: HOW I WORK (GRID HORIZONTAL) */}
+{/* SECCIÓN: HOW I WORK (GRID RESPONSIVO) */}
 <div style={{ margin: '5rem 0' }}>
-  <h2 style={{ fontSize: '1.8rem', marginBottom: '2rem', color: '#f8fafc', textAlign: 'center' }}>How I Work</h2>
+  <h2 style={{ fontSize: '1.8rem', marginBottom: '2.5rem', color: '#f8fafc', textAlign: 'center' }}>How I Work</h2>
   
   <div style={{ 
     display: 'grid', 
-    gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', 
-    gap: '1rem',
-    alignItems: 'start',
-    justifyContent: 'center'
+    gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', 
+    gap: '1.5rem' 
   }}>
     
     {/* PASO 1 */}
-    <div style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid rgba(56, 189, 248, 0.1)' }}>
-      <div style={{ color: '#38bdf8', fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>01</div>
-      <h3 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Understand</h3>
-      <p style={{ color: '#94a3b8', margin: 0, fontSize: '0.9rem', lineHeight: '1.5' }}>
-        Short conversation to understand goals and constraints.
+    <div style={{ 
+      border: '1px solid #38bdf8', 
+      borderRadius: '16px', 
+      padding: '1.5rem', 
+      background: 'rgba(56, 189, 248, 0.05)',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'flex-start'
+    }}>
+      <h3 style={{ fontSize: '1.1rem', color: '#38bdf8', marginBottom: '0.8rem' }}>1. Understand</h3>
+      <p style={{ color: '#cbd5e1', margin: 0, fontSize: '0.95rem', lineHeight: '1.5' }}>
+        Short conversation to understand the problem, goals, and constraints. Active listening before solving.
       </p>
     </div>
 
     {/* PASO 2 */}
-    <div style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid rgba(56, 189, 248, 0.1)' }}>
-      <div style={{ color: '#38bdf8', fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>02</div>
-      <h3 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Clarify</h3>
-      <p style={{ color: '#94a3b8', margin: 0, fontSize: '0.9rem', lineHeight: '1.5' }}>
-        I summarize key points to ensure alignment.
+    <div style={{ 
+      border: '1px solid rgba(56, 189, 248, 0.3)', 
+      borderRadius: '16px', 
+      padding: '1.5rem', 
+      background: 'rgba(255, 255, 255, 0.02)',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'flex-start'
+    }}>
+      <h3 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.8rem' }}>2. Clarify & Doc</h3>
+      <p style={{ color: '#94a3b8', margin: 0, fontSize: '0.95rem', lineHeight: '1.5' }}>
+        I summarize key points and share a short, clear note so everyone is aligned before moving forward.
       </p>
     </div>
 
     {/* PASO 3 */}
-    <div style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid rgba(56, 189, 248, 0.1)' }}>
-      <div style={{ color: '#38bdf8', fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>03</div>
-      <h3 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Improve</h3>
-      <p style={{ color: '#94a3b8', margin: 0, fontSize: '0.9rem', lineHeight: '1.5' }}>
-        I deliver a practical output (tool, checklist, doc) ready to use.
+    <div style={{ 
+      border: '1px solid rgba(56, 189, 248, 0.3)', 
+      borderRadius: '16px', 
+      padding: '1.5rem', 
+      background: 'rgba(255, 255, 255, 0.02)',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'flex-start'
+    }}>
+      <h3 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.8rem' }}>3. Concrete Output</h3>
+      <p style={{ color: '#94a3b8', margin: 0, fontSize: '0.95rem', lineHeight: '1.5' }}>
+        I deliver a practical output — a document, flow, checklist, or tool — that teams can use immediately.
       </p>
     </div>
 
     {/* PASO 4 */}
-    <div style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid rgba(56, 189, 248, 0.1)' }}>
-      <div style={{ color: '#38bdf8', fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>04</div>
-      <h3 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Iterate</h3>
-      <p style={{ color: '#94a3b8', margin: 0, fontSize: '0.9rem', lineHeight: '1.5' }}>
-        If it works, we build on it. If not, we adjust quickly.
+    <div style={{ 
+      border: '1px solid #38bdf8', 
+      borderRadius: '16px', 
+      padding: '1.5rem', 
+      background: 'rgba(56, 189, 248, 0.05)',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'flex-start'
+    }}>
+      <h3 style={{ fontSize: '1.1rem', color: '#38bdf8', marginBottom: '0.8rem' }}>4. Iterate</h3>
+      <p style={{ color: '#cbd5e1', margin: 0, fontSize: '0.95rem', lineHeight: '1.5' }}>
+        If it works, we build on it. If not, we adjust quickly based on real feedback.
       </p>
     </div>
 
   </div>
-  <p style={{ marginTop: '2.5rem', fontStyle: 'italic', color: '#38bdf8', opacity: 0.8, textAlign: 'center', fontSize: '0.95rem' }}>
-    "A lightweight approach for teams that want improvements without heavy commitments."
+  
+  <p style={{ marginTop: '2.5rem', fontStyle: 'italic', color: '#38bdf8', opacity: 0.9, textAlign: 'center', fontSize: '0.95rem' }}>
+    "An approach for teams that want improvements without heavy commitments."
   </p>
 </div>
 
 ## Professional Timeline
 
-<p style={{ fontStyle: 'italic', color: '#94a3b8', marginBottom: '2rem' }}>
-  This work wasn’t about technology for its own sake — it was about making large systems easier to operate for people.
-</p>
+My career combines high-level corporate strategy in telecommunications with hands-on operational leadership in Canada.
 
 ### Enterprise Tech & Strategy (Entel Connect)
 *Focus: Implementation, AI Strategy, and Process Optimization.*
@@ -140,11 +154,19 @@ title: "Home"
 * **Global Benchmarking**: Analyzed European solutions (Amelia, SmartContact) to define strategic roadmaps.
 * **Tech Enablement**: Collaborated with IBM/NLP teams to translate emerging tech into business workflows.
 
+<a href="/work/b2b-collections" style={{ display: 'inline-block', marginTop: '1rem', color: '#38bdf8', textDecoration: 'none', borderBottom: '1px solid #38bdf8', fontSize: '0.9rem' }}>
+  → View Case Study: B2B Collections AI
+</a>
+
 ### Operations & Service (Canada)
 *Focus: Adaptability, Reliability, and Guest Experience.*
 
-* **High-Pressure Operations**: Managing peak volume bartending (Watermark/Fifteen) with speed and accuracy.
-* **Community Trust**: Serving as the primary point of contact for long-term guests ("snowbirds"), resolving inquiries and mastering cultural integration.
+* **High-Pressure Operations**: Managing peak volume bartending (Watermark/15 Park Bistro) with speed and accuracy.
+* **Morning Hospitality**: Responsible for morning coffee setup and service (3 days/week), ensuring a consistent and welcoming start for the long-term "snowbird" community.
+
+<a href="/work/shift-planning" style={{ display: 'inline-block', marginTop: '1rem', color: '#38bdf8', textDecoration: 'none', borderBottom: '1px solid #38bdf8', fontSize: '0.9rem' }}>
+  → View Project: Shift Planning Tool
+</a>
 
 ---
 
@@ -174,13 +196,13 @@ title: "Home"
 
 ## Performance Under Pressure
 
-Beyond technology, I have tested my ability to perform in high-stakes environments.
+Beyond technology, I have tested my ability to perform in high-stakes environments before millions of viewers.
 
 <div className="media-text-container">
   <div className="media-text-content">
     **The Voice Chile (2023) – Semifinalist**
     
-    Performing live in front of a national audience wasn't just about singing — it was a masterclass in discipline, rapid feedback integration, and calm decision-making under extreme pressure.
+    Performing live before millions wasn't just about singing — it was a masterclass in discipline, rapid feedback integration, and calm decision-making under extreme pressure.
 
     <a href="https://www.youtube.com/watch?v=Lds8A4lGtVQ" target="_blank" style={{
       display: 'inline-block',
@@ -216,7 +238,6 @@ Beyond technology, I have tested my ability to perform in high-stakes environmen
   <p style={{ fontStyle: 'italic', marginBottom: '1.5rem', color: '#cbd5e1' }}>
     A spontaneous moment where I stepped out of my operational role to create a memorable guest experience.
   </p>
-  {/* AQUI ESTÁ EL CAMBIO: LINK AL SHORT DE YOUTUBE */}
   <a href="https://youtube.com/shorts/3x9Awx6zfOE?feature=share" target="_blank" className="contact-btn" style={{ display: 'inline-flex', margin: '0 auto' }}>
     <span className="btn-icon">▶</span>
     <span>See a real guest moment</span>
