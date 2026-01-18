@@ -2,7 +2,7 @@
 title: "Home"
 ---
 
-{/* Header Image: Apuntando a tu archivo yo.jpg */}
+{/* Header Image: Foto Real con tratamiento B&W estilo "Noir" para elevar el perfil */}
 <img
   src="/assets/yo.jpg"
   alt="Francisco Aleuy professional profile"
@@ -10,67 +10,177 @@ title: "Home"
     width: '180px',
     height: '180px',
     objectFit: 'cover',
+    // Hacemos zoom para cortar un poco la chamarra y centrarnos en la cara
+    objectPosition: 'center 20%', 
     borderRadius: '35%',
-    boxShadow: '0 10px 40px -10px rgba(56, 189, 248, 0.5)',
+    boxShadow: '0 10px 40px -10px rgba(56, 189, 248, 0.4)',
     border: '2px solid rgba(56, 189, 248, 0.3)',
-    margin: '0 auto 3rem auto',
-    display: 'block'
+    margin: '0 auto 4rem auto',
+    display: 'block',
+    // EL TRUCO: Blanco y negro al 100% + Contraste alto para look premium
+    filter: 'grayscale(100%) contrast(1.2) brightness(1.1)'
   }}
 />
 
 # Hi, I’m Francisco.
 
-**I build clarity between systems and people.**
+<p style={{ 
+  fontSize: '1.5rem', 
+  fontWeight: '700', 
+  color: '#f8fafc', 
+  lineHeight: '1.3', 
+  marginBottom: '1.5rem',
+  marginTop: '-1rem' 
+}}>
+  I build clarity between systems and people.
+</p>
 
-Technology and operations professional with a strong service background, helping teams stay organized, calm, and reliable in real-world environments.
+<p style={{ 
+  fontSize: '1.05rem',
+  fontWeight: '400',
+  color: '#94a3b8', 
+  marginBottom: '3rem',
+  maxWidth: '90%',
+  lineHeight: '1.6'
+}}>
+  Technology and operations professional with a strong service background. I bridge complex technical requirements with real human needs, helping teams stay organized, calm, and reliable.
+</p>
 
-## What I do
+<p style={{ 
+  textAlign: 'center', 
+  color: '#38bdf8', 
+  fontSize: '0.9rem', 
+  opacity: 0.8, 
+  letterSpacing: '0.05em',
+  marginBottom: '4rem'
+}}>
+  ↓ How I help teams
+</p>
 
-- **Technical Support & QA**: Ensuring systems run reliably and teams stay productive.
-- **Process Documentation**: Creating clear, practical guides for technical and non-technical teams.
-- **Clear Communication**: Bridging the gap between complex systems and human needs.
-- **Operational Improvement**: Optimizing workflows in high-interaction environments.
-- **Service Excellence**: Leveraging empathy and presence to enhance guest experiences.
+## Core Capabilities
 
-## Background
+- **Operational Flow & Process Clarity**: Optimizing workflows and documenting processes to reduce friction and errors.
+- **Technical Support & QA**: Diagnosing issues and ensuring system reliability in fast-paced environments.
+- **Service & Human-Centered Experience**: Leveraging empathy and high-pressure performance skills to enhance guest experiences.
 
-I’ve worked across diverse environments in Chile and Canada, combining technology, operations, and service roles—from structured corporate teams to fast-paced, people-facing environments.
+{/* SECCIÓN: HOW I WORK (GRID HORIZONTAL OPTIMIZADO) */}
+<div style={{ margin: '5rem 0' }}>
+  <h2 style={{ fontSize: '1.8rem', marginBottom: '2rem', color: '#f8fafc', textAlign: 'center' }}>How I Work</h2>
+  
+  <div style={{ 
+    display: 'grid', 
+    gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', 
+    gap: '1rem',
+    alignItems: 'start',
+    justifyContent: 'center'
+  }}>
+    
+    {/* PASO 1 */}
+    <div style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid rgba(56, 189, 248, 0.1)' }}>
+      <div style={{ color: '#38bdf8', fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>01</div>
+      <h3 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Understand</h3>
+      <p style={{ color: '#94a3b8', margin: 0, fontSize: '0.9rem', lineHeight: '1.5' }}>
+        Short conversation to understand goals and constraints.
+      </p>
+    </div>
 
+    {/* PASO 2 */}
+    <div style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid rgba(56, 189, 248, 0.1)' }}>
+      <div style={{ color: '#38bdf8', fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>02</div>
+      <h3 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Clarify</h3>
+      <p style={{ color: '#94a3b8', margin: 0, fontSize: '0.9rem', lineHeight: '1.5' }}>
+        I summarize key points to ensure alignment.
+      </p>
+    </div>
+
+    {/* PASO 3 */}
+    <div style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid rgba(56, 189, 248, 0.1)' }}>
+      <div style={{ color: '#38bdf8', fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>03</div>
+      <h3 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Improve</h3>
+      <p style={{ color: '#94a3b8', margin: 0, fontSize: '0.9rem', lineHeight: '1.5' }}>
+        I deliver a practical output (tool, checklist, doc) ready to use.
+      </p>
+    </div>
+
+    {/* PASO 4 */}
+    <div style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid rgba(56, 189, 248, 0.1)' }}>
+      <div style={{ color: '#38bdf8', fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>04</div>
+      <h3 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Iterate</h3>
+      <p style={{ color: '#94a3b8', margin: 0, fontSize: '0.9rem', lineHeight: '1.5' }}>
+        If it works, we build on it. If not, we adjust quickly.
+      </p>
+    </div>
+
+  </div>
+  <p style={{ marginTop: '2.5rem', fontStyle: 'italic', color: '#38bdf8', opacity: 0.8, textAlign: 'center', fontSize: '0.95rem' }}>
+    "A lightweight approach for teams that want improvements without heavy commitments."
+  </p>
+</div>
+
+## Professional Timeline
+
+My career combines high-level corporate strategy in telecommunications with hands-on operational leadership in Canada.
+
+### Enterprise Tech & Strategy (Entel Connect)
+*Focus: Implementation, AI Strategy, and Process Optimization.*
+
+* **Cloud & AI Adoption**: Validated AWS and Google Vertex AI for Contact Center modernization.
+* **Global Benchmarking**: Analyzed European solutions (Amelia, SmartContact) to define strategic roadmaps.
+* **Tech Enablement**: Collaborated with IBM/NLP teams to translate emerging tech into business workflows.
+
+### Operations & Service (Canada)
+*Focus: Adaptability, Reliability, and Guest Experience.*
+
+* **High-Pressure Operations**: Managing peak volume bartending (Watermark/Fifteen) with speed and accuracy.
+* **Community Trust**: Serving as the primary point of contact for long-term guests ("snowbirds"), resolving inquiries and mastering cultural integration.
+
+---
+
+{/* Slider visual para respaldo rápido */}
 <div className="slider-container">
   <button className="slider-nav prev" aria-label="Previous slide">‹</button>
   <div className="image-slider">
     <figure>
       <img src="/assets/aws.jpg" alt="Francisco at AWS" loading="lazy" />
-      <figcaption>Collaborating with tech teams at AWS re:Invent.</figcaption>
+      <figcaption>AWS Strategy</figcaption>
     </figure>
-    
     <figure>
-      <img src="/assets/Amelia.jpeg" alt="Francisco with Amelia AI" loading="lazy" />
-      <figcaption>Deploying Conversational AI solutions.</figcaption>
+      <img src="/assets/Amelia.jpeg" alt="Francisco at EXPORC Madrid" loading="lazy" />
+      <figcaption>Global Benchmarking</figcaption>
     </figure>
-
     <figure>
-      <img src="/assets/IBM.jpg" alt="Francisco at IBM Data Day" loading="lazy" />
-      <figcaption>Engaging in data-driven operational strategies at IBM.</figcaption>
+      <img src="/assets/IBM.jpg" alt="Francisco at IBM" loading="lazy" />
+      <figcaption>IBM AI Discovery</figcaption>
     </figure>
-
     <figure>
       <img src="/assets/Google.jpg" alt="Francisco at Google offices" loading="lazy" />
-      <figcaption>Exploring large-scale systems and people at Google.</figcaption>
+      <figcaption>Google Vertex AI</figcaption>
     </figure>
   </div>
   <button className="slider-nav next" aria-label="Next slide">›</button>
 </div>
 
-*Bridging technical disciplines with operational goals across global industry leaders.*
+## Performance Under Pressure
 
-## Human & Service-Oriented Experience
+Beyond technology, I have tested my ability to perform in high-stakes environments before millions of viewers.
 
 <div className="media-text-container">
   <div className="media-text-content">
-    Alongside my technical background, I thrive in high-interaction service environments where communication, empathy, and presence are the most critical tools.
+    **The Voice Chile (2023) – Semifinalist**
+    
+    Performing live before millions wasn't just about singing — it was a masterclass in discipline, rapid feedback integration, and calm decision-making under extreme pressure.
 
-    Music is a core part of my background, including my participation in **The Voice Chile**. Creativity shapes how I think and communicate—skills that translate directly into effective teamwork and reliable service.
+    <a href="https://www.youtube.com/watch?v=Lds8A4lGtVQ" target="_blank" style={{
+      display: 'inline-block',
+      marginTop: '1rem',
+      fontSize: '0.9rem',
+      color: '#38bdf8',
+      textDecoration: 'none',
+      borderBottom: '1px solid rgba(56, 189, 248, 0.3)',
+      transition: 'all 0.2s ease'
+    }}>
+      ▶ Watch full performance (Dream On - Live)
+    </a>
   </div>
   <img
     src="/assets/The Voice.jpeg"
@@ -79,31 +189,38 @@ I’ve worked across diverse environments in Chile and Canada, combining technol
   />
 </div>
 
-## Contribution Beyond My Role
+## Service-Led Impact
 
-*"Sometimes, connecting systems and people goes beyond technology—it’s about creating moments."*
+*"Systems work better when the people using them feel seen."*
 
-<div className="video-wrapper">
-  <video controls width="100%" preload="metadata">
-    <source src="/assets/Cumpleanos_Feliz.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+<div style={{
+  background: 'linear-gradient(145deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.6))',
+  padding: '2rem',
+  borderRadius: '16px',
+  textAlign: 'center',
+  border: '1px solid rgba(56, 189, 248, 0.2)',
+  margin: '2rem 0'
+}}>
+  <p style={{ fontStyle: 'italic', marginBottom: '1.5rem', color: '#cbd5e1' }}>
+    A spontaneous moment where I stepped out of my operational role to create a memorable guest experience.
+  </p>
+  <a href="/assets/Cumpleanos_Feliz.mp4" target="_blank" className="contact-btn" style={{ display: 'inline-flex', margin: '0 auto' }}>
+    <span className="btn-icon">▶</span>
+    <span>See a real guest moment</span>
+  </a>
 </div>
-
-*A spontaneous, unpaid contribution requested by the service team to create a memorable guest experience.*
-
-## What I’m looking for now
-
-I am seeking opportunities where I can contribute through support, reliability, and organization, whether in technical, operational, or community-focused environments. 
-
-**I’m interested in contributing to environments where empathy and structure coexist—where better systems mean better human experiences.**
 
 ## Location & Availability
 
-- 📍 **Based in**: Osoyoos, BC.
-- 📍 **Coverage**: Available across the South Okanagan (Kelowna, Penticton, Oliver, Osoyoos).
+- **Current Base**: Osoyoos, British Columbia.
+- **Coverage Area**: Available for roles in Kelowna, Penticton, Oliver, and Osoyoos.
+- **Remote**: Fully equipped for remote Technical Support & QA roles.
 
 ## Contact
+
+<p style={{ textAlign: 'center', color: '#94a3b8', marginBottom: '2rem', fontSize: '1.05rem', lineHeight: '1.6' }}>
+  If you’re exploring ways to improve internal workflows, service operations, or user experience, I’m happy to start with a conversation.
+</p>
 
 <div className="contact-grid">
   {/* Botón Principal: Descarga del CV */}
