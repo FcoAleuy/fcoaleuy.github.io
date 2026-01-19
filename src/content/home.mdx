@@ -61,12 +61,12 @@ import ContributionSlider from '../components/ContributionSlider.jsx';
 - **Technical Problem Solving**: I bridge the gap between complex tech issues and non-technical users.
 - **Adaptability**: Proven ability to pivot from corporate strategy to service environments without friction.
 
-{/* SECCIÓN: HOW I CONTRIBUTE (Slider Interactivo Optimizado) */}
+{/* SECCIÓN: HOW I CONTRIBUTE (Slider Interactivo 3D) */}
 <div style={{ margin: '5rem 0' }}>
   <h2 style={{ fontSize: '1.8rem', marginBottom: '2.5rem', color: '#f8fafc', textAlign: 'center' }}>How I Contribute</h2>
   
-  {/* USAMOS client:load PARA CARGA INMEDIATA Y EVITAR ERRORES VISUALES */}
-  <ContributionSlider client:load />
+  {/* client:only="react" fuerza que el navegador maneje toda la animación, evitando errores */}
+  <ContributionSlider client:only="react" />
 
 </div>
 
