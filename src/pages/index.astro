@@ -1,10 +1,13 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import HomeContent from '../content/home.mdx';
+
+// ¡Importamos también el componente para pasarlo al MDX como scope!
+import ContributionSlider from '../components/ContributionSlider.jsx';
 ---
 
 <PageLayout>
   <article class="content">
-    <HomeContent />
+    <HomeContent components={{ ContributionSlider }} />
   </article>
 </PageLayout>
