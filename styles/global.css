@@ -167,33 +167,29 @@ footer {
 
 /* ===================================================
    🔥 CRITICAL FIX — SWIPER CARDS 3D EFFECT
-   (This is what was missing)
 =================================================== */
 
-/* Force 3D context */
-.swiper {
+/* Force 3D context on Swiper */
+.swiper-cards {
+  overflow: visible !important;
   transform-style: preserve-3d !important;
   perspective: 1200px !important;
-  overflow: visible !important;
 }
 
-/* Wrapper must preserve 3D transforms */
 .swiper-wrapper {
   transform-style: preserve-3d !important;
 }
 
-/* Slides must allow transforms */
 .swiper-slide {
   transform-style: preserve-3d !important;
 }
 
-/* Shadows between cards */
 .swiper-slide-shadow {
   background: rgba(0, 0, 0, 0.35) !important;
   border-radius: 20px;
 }
 
-/* Pagination dots */
+/* Swiper pagination dots */
 .swiper-pagination-bullet {
   background: #64748b !important;
   opacity: 0.4 !important;
