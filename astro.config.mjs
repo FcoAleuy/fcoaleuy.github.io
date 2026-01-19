@@ -3,11 +3,13 @@ import mdx from '@astrojs/mdx';
 import react from '@astrojs/react';
 
 export default defineConfig({
-  // Tu dominio real (importante para el SEO y sitemap)
   site: 'https://franciscoaleuy.ca',
-  
-  // La base debe ser la raíz, porque ya no usas la URL larga de GitHub
   base: '/', 
   
+  // AGREGA ESTO: Renombramos la carpeta de salida para evitar el bloqueo de GitHub
+  build: {
+    assets: 'assets', 
+  },
+
   integrations: [mdx(), react()],
 });
