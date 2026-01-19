@@ -1,9 +1,7 @@
 ---
 title: "Home"
 ---
-import ContributionSlider from '../components/ContributionSlider.jsx';
 
-{/* Header Image: Duotono Azulado Tech */}
 <img
   src="/assets/yo.jpg"
   alt="Francisco Aleuy professional profile"
@@ -61,13 +59,10 @@ import ContributionSlider from '../components/ContributionSlider.jsx';
 - **Technical Problem Solving**: I bridge the gap between complex tech issues and non-technical users.
 - **Adaptability**: Proven ability to pivot from corporate strategy to service environments without friction.
 
-{/* SECCIÓN: HOW I CONTRIBUTE (Slider Interactivo 3D) */}
-<div style={{ margin: '5rem 0' }}>
-  <h2 style={{ fontSize: '1.8rem', marginBottom: '2.5rem', color: '#f8fafc', textAlign: 'center' }}>How I Contribute</h2>
-  
-  {/* client:only="react" fuerza que el navegador maneje toda la animación, evitando errores */}
-  <ContributionSlider client:only="react" />
+## How I Contribute
 
+<div style={{ margin: '4rem 0' }}>
+  <ContributionSlider />
 </div>
 
 ## Experience Timeline
@@ -106,26 +101,6 @@ My profile is a blend of specialized technical experience and current, on-the-gr
 </a>
 
 ---
-
-{/* Slider visual para respaldo rápido - Mantenido como "Credibilidad" */}
-<div className="slider-container">
-  <button className="slider-nav prev" aria-label="Previous slide">‹</button>
-  <div className="image-slider">
-    <figure>
-      <img src="/assets/aws.jpg" alt="Francisco at AWS" loading="lazy" />
-      <figcaption>AWS Strategy</figcaption>
-    </figure>
-    <figure>
-      <img src="/assets/Amelia.jpeg" alt="Francisco at EXPORC Madrid" loading="lazy" />
-      <figcaption>Global Benchmarking</figcaption>
-    </figure>
-    <figure>
-      <img src="/assets/IBM.jpg" alt="Francisco at IBM" loading="lazy" />
-      <figcaption>IBM AI Discovery</figcaption>
-    </figure>
-  </div>
-  <button className="slider-nav next" aria-label="Next slide">›</button>
-</div>
 
 ## Performance Under Pressure
 
@@ -167,7 +142,6 @@ I have tested my ability to perform in high-stakes environments before millions 
 </p>
 
 <div className="contact-grid">
-  {/* Botón Principal: Descarga del CV */}
   <a href="/assets/CV_Francisco_Aleuy.pdf" download className="contact-btn primary">
     <span className="btn-icon">📥</span>
     <span>Download Resume</span>

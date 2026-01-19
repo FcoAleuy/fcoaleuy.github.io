@@ -22,7 +22,14 @@ export default function ContributionSlider() {
   };
 
   return (
-    <div style={{ maxWidth: '340px', margin: '0 auto', perspective: '1200px' }}>
+    <div
+      style={{
+        maxWidth: '340px',
+        margin: '0 auto',
+        perspective: '1200px',
+        minHeight: '380px' // 🔑 evita colapso visual
+      }}
+    >
       <style>{`
         .swiper {
           width: 100%;
@@ -32,10 +39,9 @@ export default function ContributionSlider() {
         }
         .swiper-slide {
           border-radius: 20px;
-          transition: transform 0.3s ease;
         }
         .swiper-slide-shadow {
-          background: rgba(0, 0, 0, 0.25) !important;
+          background: rgba(0,0,0,0.25) !important;
           border-radius: 20px;
         }
         .swiper-pagination-bullet {
@@ -51,19 +57,19 @@ export default function ContributionSlider() {
 
       <Swiper
         effect="cards"
-        grabCursor={true}
+        grabCursor
         modules={[EffectCards, Pagination]}
         pagination={{ clickable: true }}
         cardsEffect={{
-          perSlideOffset: 16,   // espacio entre tarjetas
-          perSlideRotate: 2,    // rotación suave
-          slideShadows: true    // sombra entre cartas
+          perSlideOffset: 16,
+          perSlideRotate: 2,
+          slideShadows: true
         }}
       >
         <SwiperSlide>
           <div style={{ ...cardStyle, border: '1px solid #38bdf8' }}>
-            <h3 style={{ fontSize: '1.3rem', color: '#38bdf8', marginBottom: '1rem' }}>1. Understand Context</h3>
-            <p style={{ color: '#cbd5e1', fontSize: '1rem', lineHeight: '1.6' }}>
+            <h3 style={{ color: '#38bdf8' }}>1. Understand Context</h3>
+            <p style={{ color: '#cbd5e1' }}>
               I listen first. I ensure I understand the context, team dynamics, and operational standards before acting.
             </p>
           </div>
@@ -71,8 +77,8 @@ export default function ContributionSlider() {
 
         <SwiperSlide>
           <div style={cardStyle}>
-            <h3 style={{ fontSize: '1.3rem', color: '#f8fafc', marginBottom: '1rem' }}>2. Execute Reliably</h3>
-            <p style={{ color: '#94a3b8', fontSize: '1rem', lineHeight: '1.6' }}>
+            <h3 style={{ color: '#f8fafc' }}>2. Execute Reliably</h3>
+            <p style={{ color: '#94a3b8' }}>
               I carry out tasks with precision and consistency, reducing errors and workload for the team.
             </p>
           </div>
@@ -80,15 +86,15 @@ export default function ContributionSlider() {
 
         <SwiperSlide>
           <div style={cardStyle}>
-            <h3 style={{ fontSize: '1.3rem', color: '#f8fafc', marginBottom: '1rem' }}>3. Collaborate</h3>
-            <p style={{ color: '#94a3b8', fontSize: '1rem', lineHeight: '1.6' }}>
+            <h3 style={{ color: '#f8fafc' }}>3. Collaborate</h3>
+            <p style={{ color: '#94a3b8' }}>
               I identify small opportunities to improve stability, always aligned with the team.
             </p>
           </div>
         </SwiperSlide>
       </Swiper>
 
-      <p style={{ textAlign: 'center', fontSize: '0.8rem', color: '#64748b', marginTop: '-10px', opacity: 0.7 }}>
+      <p style={{ textAlign: 'center', fontSize: '0.8rem', color: '#64748b' }}>
         (Swipe cards to navigate)
       </p>
     </div>
