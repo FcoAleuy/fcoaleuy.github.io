@@ -1,16 +1,14 @@
 ---
-layout: ../../layouts/Layout.astro
+layout: ../../layouts/PageLayout.astro
 title: "B2B Collections AI"
 ---
 
 <div style={{ maxWidth: '800px', margin: '0 auto', padding: '4rem 1rem' }}>
 
-  {/* BOTÓN VOLVER */}
   <a href="/" style={{ textDecoration: 'none', color: '#94a3b8', fontSize: '0.9rem', marginBottom: '2rem', display: 'inline-block' }}>
     ← Back to Home
   </a>
 
-  {/* ENCABEZADO DEL PROYECTO */}
   <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#f8fafc', marginBottom: '1rem', lineHeight: '1.2' }}>
     AI-Driven B2B Collections Optimization
   </h1>
@@ -22,7 +20,7 @@ title: "B2B Collections AI"
   <div style={{ marginBottom: '4rem' }}>
     <h2 style={{ fontSize: '1.5rem', color: '#f8fafc', marginBottom: '1rem', borderLeft: '4px solid #38bdf8', paddingLeft: '1rem' }}>Context & Challenge</h2>
     <p style={{ color: '#cbd5e1', lineHeight: '1.8', fontSize: '1.05rem' }}>
-      A major telecom enterprise faced significant inefficiencies in their B2B collections process. High volumes of accounts were managed manually, leading to prioritization issues, lack of visibility on customer promises, and inconsistent follow-ups. The operation relied on scattered data across legacy systems, making it difficult to predict which clients were likely to pay.
+      A major telecom enterprise faced significant inefficiencies in their B2B collections process. High volumes of accounts were managed manually, leading to prioritization issues, lack of visibility on customer promises, and inconsistent follow-ups. The operation relied on scattered data across legacy systems.
     </p>
   </div>
 
@@ -34,48 +32,56 @@ title: "B2B Collections AI"
     </p>
   </div>
 
-  {/* 3. APPROACH (ESTRATEGIA) */}
+  {/* 3. IMAGEN PRINCIPAL: WORKFLOW (SISTEMA) */}
   <div style={{ marginBottom: '4rem' }}>
     <h2 style={{ fontSize: '1.5rem', color: '#f8fafc', marginBottom: '1rem', borderLeft: '4px solid #38bdf8', paddingLeft: '1rem' }}>The Approach</h2>
-    <ul style={{ listStyle: 'none', padding: 0, color: '#cbd5e1', lineHeight: '1.8' }}>
-      <li style={{ marginBottom: '1rem' }}>
-        <strong style={{ color: '#38bdf8' }}>1. Discovery & Diagnosis:</strong> Mapped the manual "as-is" workflow to identify bottlenecks in data loading and payment validation.
-      </li>
-      <li style={{ marginBottom: '1rem' }}>
-        <strong style={{ color: '#38bdf8' }}>2. GenAI Integration:</strong> Implemented a solution to transcribe and analyze 133+ pilot audio interactions, extracting key metadata like "Promise to Pay" dates and "Refusal Reasons".
-      </li>
-      <li style={{ marginBottom: '1rem' }}>
-        <strong style={{ color: '#38bdf8' }}>3. Predictive Scoring:</strong> Collaborated on a model to classify clients into "High Probability to Pay" vs. "Will Maintain Debt", allowing agents to prioritize high-value calls.
-      </li>
-    </ul>
-  </div>
-
-  {/* 4. KEY ARTIFACT (VISUAL) */}
-  <div style={{ marginBottom: '4rem', background: 'rgba(255,255,255,0.03)', padding: '2rem', borderRadius: '16px', border: '1px solid rgba(56, 189, 248, 0.2)' }}>
-    <h3 style={{ color: '#f8fafc', marginBottom: '1rem', textAlign: 'center' }}>Workflow Visualization</h3>
     
-    {/* AQUÍ VA TU IMAGEN DEL DIAGRAMA RPA SANITIZADO */}
-    {/* Por ahora un placeholder visual */}
-    <div style={{ 
-      width: '100%', 
-      height: '300px', 
-      background: 'linear-gradient(45deg, #0f172a 25%, #1e293b 25%, #1e293b 50%, #0f172a 50%, #0f172a 75%, #1e293b 75%, #1e293b 100%)', 
-      backgroundSize: '40px 40px',
-      display: 'flex', 
-      alignItems: 'center', 
-      justifyContent: 'center',
-      borderRadius: '8px',
-      color: '#94a3b8',
-      textAlign: 'center'
-    }}>
-      [Space for Anonymized RPA Diagram]
-    </div>
-    <p style={{ textAlign: 'center', color: '#94a3b8', fontSize: '0.9rem', marginTop: '1rem', fontStyle: 'italic' }}>
-      Simplified visualization of the automated data extraction and prioritization flow.
+    {/* LA FRASE DE POSICIONAMIENTO (NUEVA) */}
+    <p style={{ color: '#f8fafc', marginBottom: '1.5rem', fontSize: '1.1rem', fontStyle: 'italic', borderLeft: '2px solid rgba(56,189,248,0.5)', paddingLeft: '1rem' }}>
+      "This project reflects my core focus: translating operational problems into practical, data-informed decision systems."
+    </p>
+
+    <p style={{ color: '#cbd5e1', marginBottom: '1.5rem', fontSize: '1.05rem' }}>
+      We moved from a manual "reactive" model to a data-driven "proactive" flow. The system ingests call transcripts, scores the interaction, and prioritizes the next action for the agent.
+    </p>
+    
+    <img 
+      src="/assets/b2b-workflow.png" 
+      alt="B2B Collections Intelligent Workflow" 
+      style={{
+        width: '100%',
+        height: 'auto',
+        borderRadius: '8px',
+        border: '1px solid rgba(56, 189, 248, 0.2)',
+        boxShadow: '0 4px 20px -5px rgba(0,0,0,0.5)',
+        marginBottom: '0.5rem'
+      }}
+    />
+    <p style={{ textAlign: 'center', color: '#94a3b8', fontSize: '0.9rem', fontStyle: 'italic' }}>
+      How prioritization decisions were supported during the pilot.
     </p>
   </div>
 
-  {/* 5. IMPACT & OUTCOME */}
+  {/* 4. IMAGEN SECUNDARIA: INSIGHT (OPERACIÓN) */}
+  <div style={{ marginBottom: '4rem', background: 'rgba(255,255,255,0.03)', padding: '2rem', borderRadius: '16px', border: '1px solid rgba(56, 189, 248, 0.1)' }}>
+    <h3 style={{ color: '#f8fafc', marginBottom: '1rem', fontSize: '1.3rem' }}>Operational Insight Example</h3>
+    <p style={{ color: '#cbd5e1', marginBottom: '1.5rem', lineHeight: '1.6' }}>
+      Beyond automation, the data revealed critical operational behaviors. This visualization helped identify services generating disproportionate follow-up effort, allowing leadership to adjust prioritization rules and coaching focus.
+    </p>
+    
+    <img 
+      src="/assets/b2b-insight.png" 
+      alt="Service Insistence Ratio Graph" 
+      style={{
+        width: '100%',
+        height: 'auto',
+        borderRadius: '8px',
+        opacity: 0.9
+      }}
+    />
+  </div>
+
+  {/* 5. IMPACTO */}
   <div style={{ marginBottom: '4rem' }}>
     <h2 style={{ fontSize: '1.5rem', color: '#f8fafc', marginBottom: '1rem', borderLeft: '4px solid #38bdf8', paddingLeft: '1rem' }}>Outcome & Impact</h2>
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem', marginTop: '2rem' }}>
