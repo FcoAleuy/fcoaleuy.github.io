@@ -1,0 +1,175 @@
+<!DOCTYPE html><style>:root{--background: #0f172a;--text-main: #f8fafc;--text-muted: #94a3b8;--accent: #38bdf8}body{background-color:var(--background);color:var(--text-main);font-family:Inter,sans-serif;margin:0}img{max-width:100%;height:auto}.contact-btn{display:flex;align-items:center;gap:.75rem;padding:.8rem 1.5rem;background:#1e293b99;border:1px solid rgba(148,163,184,.2);border-radius:12px;color:#e2e8f0;text-decoration:none;font-weight:500;transition:all .2s ease}.contact-btn:hover{background:#38bdf81a;border-color:#38bdf8;color:#38bdf8;transform:translateY(-2px)}.contact-btn.primary{background:#38bdf81a;border-color:#38bdf866;color:#38bdf8}.contact-btn.primary:hover{background:#38bdf833;box-shadow:0 0 15px #38bdf84d}.contact-grid{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:2rem}html{background-color:#0f172a!important;scroll-behavior:smooth}body{background-color:#0f172a!important;color:#f8fafc!important;margin:0;padding:0;font-family:Inter,sans-serif;line-height:1.6;overflow-x:hidden}h1,h2,h3,h4,h5,h6{color:#f8fafc!important}p,li{color:#cbd5e1}a{color:#38bdf8;text-decoration:none}.nav-link{color:#94a3b8!important;text-decoration:none;font-size:.9rem;font-weight:500;transition:color .2s}.nav-link:hover{color:#f8fafc!important}.nav-link.highlight{color:#38bdf8!important;font-weight:600}
+</style>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoyManada — Francisco Aleuy</title>
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav style="display: flex; justify-content: center; gap: 2rem; padding: 1.5rem; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(56, 189, 248, 0.1);">
+  <a href="/es/#about" class="nav-link">Sobre mí</a>
+  <a href="/es/#experience" class="nav-link">Experiencia</a>
+  <a href="/es/#projects" class="nav-link">Proyectos</a>
+  <a href="/es/#contact" class="nav-link highlight">Contacto</a>
+</nav>
+<div style="display:flex;justify-content:flex-end;align-items:center;gap:0.5rem;padding:0.35rem 1.2rem;font-size:0.75rem;color:#475569;background:rgba(15,23,42,0.95);border-bottom:1px solid rgba(56,189,248,0.07)">Leer en: <a href="/" onclick="localStorage.setItem('fa-lang','en')" style="color:#64748b;text-decoration:none;font-weight:500;transition:color 0.2s" onMouseOver="this.style.color='#94a3b8'" onMouseOut="this.style.color='#64748b'">🇨🇦 EN</a><span style="color:#334155;margin:0 0.1rem">·</span><a href="/fr/" onclick="localStorage.setItem('fa-lang','fr')" style="color:#64748b;text-decoration:none;font-weight:500;transition:color 0.2s" onMouseOver="this.style.color='#94a3b8'" onMouseOut="this.style.color='#64748b'">🇨🇦 FR</a><span style="color:#38bdf8;font-weight:700;margin-left:0.3rem">🇨🇱 ES</span></div>
+
+<main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+<div style="max-width:800px;margin:0 auto;padding:4rem 1rem">
+
+  <a href="/es/#projects" style="display:inline-flex;align-items:center;gap:0.5rem;color:#94a3b8;text-decoration:none;margin-bottom:3rem;font-size:0.9rem;transition:color 0.2s">← Volver a Proyectos</a>
+
+  <header style="margin-bottom:4rem">
+    <h1 style="font-size:2.5rem;line-height:1.2;color:#f8fafc;margin-bottom:1rem">SoyManada — Verified Directory for Hispanic Immigrants</h1>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;font-size:0.95rem;color:#38bdf8;font-family:monospace">
+      <span>soymanada.com</span><span>•</span><span>2025</span><span>•</span><span>Founder &amp; Developer</span>
+    </div>
+  </header>
+
+  <!-- CONTEXT -->
+  <div style="margin-bottom:4rem">
+    <h2 style="color:#f8fafc;font-size:1.5rem;margin-bottom:1.5rem;border-left:4px solid #38bdf8;padding-left:1rem">Contexto y Problema</h2>
+    <p style="font-size:1.1rem;color:#cbd5e1;margin-bottom:1.5rem;line-height:1.7">
+      Canada welcomes over 400,000 new permanent residents per year — a growing share from Latin America. Spanish-speaking immigrants navigating the IRCC process face a critical gap: finding trustworthy, verified service providers in their own language. Directories are fragmented, English-only, and offer no verification layer — leaving newcomers vulnerable to unqualified or fraudulent consultants.
+    </p>
+    <ul style="list-style:none;padding:0;color:#94a3b8">
+      <li style="margin-bottom:0.8rem;display:flex;gap:0.8rem"><span style="color:#ef4444">✕</span> No centralized, language-aware directory for Hispanic migrants.</li>
+      <li style="margin-bottom:0.8rem;display:flex;gap:0.8rem"><span style="color:#ef4444">✕</span> Zero verification standards for listed service providers.</li>
+      <li style="margin-bottom:0.8rem;display:flex;gap:0.8rem"><span style="color:#ef4444">✕</span> Reviews impossible to trust without a minimum volume threshold.</li>
+      <li style="margin-bottom:0.8rem;display:flex;gap:0.8rem"><span style="color:#ef4444">✕</span> No FR-CA coverage — ignoring Canada's bilingual market reality.</li>
+      <li style="margin-bottom:0.8rem;display:flex;gap:0.8rem"><span style="color:#ef4444">✕</span> No PIPEDA-compliant data handling in existing informal directories.</li>
+    </ul>
+  </div>
+
+  <!-- ROLE -->
+  <div style="margin-bottom:4rem;background:rgba(56, 189, 248, 0.05);padding:2rem;border-radius:12px;border:1px solid rgba(56, 189, 248, 0.1)">
+    <h2 style="color:#38bdf8;font-size:1.3rem;margin-bottom:1rem">Mi Rol: Founder &amp; Full-Stack Developer</h2>
+    <p style="color:#cbd5e1;margin:0;line-height:1.7">
+      I designed and built this product from zero — covering the full value chain: business strategy, product definition, UX design, and complete technical implementation. No team, no outsourcing. Every architectural decision, from data model to deployment pipeline, was made and executed by me.
+    </p>
+  </div>
+
+  <!-- SOLUTION -->
+  <div style="margin-bottom:4rem">
+    <h2 style="color:#f8fafc;font-size:1.5rem;margin-bottom:1.5rem;border-left:4px solid #38bdf8;padding-left:1rem">La Solución</h2>
+    <ul style="list-style:none;padding:0;color:#cbd5e1">
+      <li style="margin-bottom:1rem;padding-left:1.5rem;position:relative"><span style="position:absolute;left:0;color:#38bdf8">▹</span><strong>Freemium model with 3 tiers:</strong> Bronze (free) / Silver ($10 USD/mo) / Gold ($20 USD/mo) — designed for progressive monetization without friction for providers starting out.</li>
+      <li style="margin-bottom:1rem;padding-left:1.5rem;position:relative"><span style="position:absolute;left:0;color:#38bdf8">▹</span><strong>Manual verification pipeline:</strong> Every provider is reviewed through a custom AdminPanel before going live. No automated approval — trust is the product.</li>
+      <li style="margin-bottom:1rem;padding-left:1.5rem;position:relative"><span style="position:absolute;left:0;color:#38bdf8">▹</span><strong>Real multilingual routing (ES / EN / FR-CA):</strong> Not just translated text — routes, content, and metadata are fully localized for each market. FR-CA is a strategic differentiator for Canada's bilingual environment.</li>
+      <li style="margin-bottom:1rem;padding-left:1.5rem;position:relative"><span style="position:absolute;left:0;color:#38bdf8">▹</span><strong>Review system with visibility threshold:</strong> A provider's reviews only go public after a minimum of 3 are collected — preventing manipulation and ensuring signal quality.</li>
+      <li style="margin-bottom:1rem;padding-left:1.5rem;position:relative"><span style="position:absolute;left:0;color:#38bdf8">▹</span><strong>Native application form:</strong> Providers apply directly through the platform with a form that pipelines data straight to the database — no manual intake process.</li>
+      <li style="margin-bottom:1rem;padding-left:1.5rem;position:relative"><span style="position:absolute;left:0;color:#38bdf8">▹</span><strong>PIPEDA-aligned data handling:</strong> Minimal personal data collection, explicit consent flows, and user-controlled data — compliant with Canada's federal privacy law from day one.</li>
+    </ul>
+  </div>
+
+  <!-- TECHNICAL -->
+  <div style="margin-bottom:4rem">
+    <h2 style="color:#f8fafc;font-size:1.5rem;margin-bottom:1.5rem;border-left:4px solid #38bdf8;padding-left:1rem">Arquitectura Técnica</h2>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:1.5rem;margin-bottom:2rem">
+      <div style="background:rgba(56, 189, 248, 0.05);padding:1.5rem;border-radius:12px;border:1px solid rgba(56, 189, 248, 0.1)">
+        <div style="font-size:0.8rem;color:#38bdf8;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.5rem">Frontend</div>
+        <div style="color:#f8fafc;font-weight:600">React + Vite</div>
+        <div style="color:#94a3b8;font-size:0.9rem;margin-top:0.25rem">i18next for multilingual routing</div>
+      </div>
+      <div style="background:rgba(56, 189, 248, 0.05);padding:1.5rem;border-radius:12px;border:1px solid rgba(56, 189, 248, 0.1)">
+        <div style="font-size:0.8rem;color:#38bdf8;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.5rem">Backend / DB</div>
+        <div style="color:#f8fafc;font-weight:600">Supabase</div>
+        <div style="color:#94a3b8;font-size:0.9rem;margin-top:0.25rem">PostgreSQL + RLS + Auth</div>
+      </div>
+      <div style="background:rgba(56, 189, 248, 0.05);padding:1.5rem;border-radius:12px;border:1px solid rgba(56, 189, 248, 0.1)">
+        <div style="font-size:0.8rem;color:#38bdf8;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.5rem">CI/CD</div>
+        <div style="color:#f8fafc;font-weight:600">GitHub Actions</div>
+        <div style="color:#94a3b8;font-size:0.9rem;margin-top:0.25rem">Auto-deploy on push to main</div>
+      </div>
+    </div>
+
+    <p style="color:#f8fafc;font-weight:600;margin-bottom:1rem">Key technical decisions:</p>
+    <ul style="list-style:none;padding:0;color:#cbd5e1">
+      <li style="margin-bottom:0.8rem;display:flex;gap:0.8rem"><span style="color:#38bdf8;flex-shrink:0">▸</span><span><strong>RLS policies in Supabase</strong> to cleanly separate public data (visible to all), private data (providers only), and admin data — no middleware needed to enforce access control.</span></li>
+      <li style="margin-bottom:0.8rem;display:flex;gap:0.8rem"><span style="color:#38bdf8;flex-shrink:0">▸</span><span><strong>Dynamic type migration</strong> (UUID → TEXT) in PostgreSQL executed without downtime — maintaining data integrity across a live system.</span></li>
+      <li style="margin-bottom:0.8rem;display:flex;gap:0.8rem"><span style="color:#38bdf8;flex-shrink:0">▸</span><span><strong>Custom AdminPanel</strong> built in-house to manage provider verification, subscription tiers, and review visibility — no third-party admin dependency.</span></li>
+      <li style="margin-bottom:0.8rem;display:flex;gap:0.8rem"><span style="color:#38bdf8;flex-shrink:0">▸</span><span><strong>PIPEDA compliance by design</strong> — data minimization, consent-first flows, and no third-party data sharing without explicit user authorization. Built for the Canadian regulatory standard, not retrofitted to it.</span></li>
+    </ul>
+  </div>
+
+  <!-- IMPACT -->
+  <div style="margin-bottom:4rem">
+    <h2 style="color:#f8fafc;font-size:1.5rem;margin-bottom:1.5rem;border-left:4px solid #38bdf8;padding-left:1rem">Impacto Estratégico</h2>
+    <p style="font-size:1.05rem;color:#cbd5e1;line-height:1.7;margin-bottom:1.5rem">
+      SoyManada directly addresses a real gap in Canada's immigrant services ecosystem. By building with FR-CA support from day one, it operates natively within Canada's bilingual market — a rare differentiator among Spanish-language platforms.
+    </p>
+    <p style="font-size:1.05rem;color:#cbd5e1;line-height:1.7;font-style:italic;border-left:2px solid rgba(56,189,248,0.5);padding-left:1rem">
+      "This project reflects my end-to-end product thinking: I identified the gap, validated the model, and shipped a fully functional SaaS — alone, from scratch, while working full-time."
+    </p>
+  </div>
+
+  <!-- AI WORKFLOW -->
+  <div style="margin-bottom:4rem">
+    <h2 style="color:#f8fafc;font-size:1.5rem;margin-bottom:1.5rem;border-left:4px solid #38bdf8;padding-left:1rem">Metodología de Desarrollo</h2>
+    <p style="font-size:1.05rem;color:#cbd5e1;line-height:1.7;margin-bottom:1.5rem">
+      Shipped as a solo founder using a structured <strong style="color:#f8fafc">multi-LLM development pipeline</strong> — allowing one person to operate at the research depth and iteration speed of a small team.
+    </p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:1rem;margin-bottom:1.5rem">
+      <div style="background:rgba(56, 189, 248, 0.05);padding:1.25rem;border-radius:10px;border:1px solid rgba(56, 189, 248, 0.1)">
+        <div style="font-size:0.75rem;color:#38bdf8;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.4rem">Research</div>
+        <div style="color:#f8fafc;font-weight:600;margin-bottom:0.25rem">Perplexity</div>
+        <div style="color:#94a3b8;font-size:0.85rem">Market validation, competitive landscape, immigration ecosystem analysis</div>
+      </div>
+      <div style="background:rgba(56, 189, 248, 0.05);padding:1.25rem;border-radius:10px;border:1px solid rgba(56, 189, 248, 0.1)">
+        <div style="font-size:0.75rem;color:#38bdf8;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.4rem">Architecture</div>
+        <div style="color:#f8fafc;font-weight:600;margin-bottom:0.25rem">Claude</div>
+        <div style="color:#94a3b8;font-size:0.85rem">System design, data model decisions, RLS strategy, code review</div>
+      </div>
+      <div style="background:rgba(56, 189, 248, 0.05);padding:1.25rem;border-radius:10px;border:1px solid rgba(56, 189, 248, 0.1)">
+        <div style="font-size:0.75rem;color:#38bdf8;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.4rem">Prototyping</div>
+        <div style="color:#f8fafc;font-weight:600;margin-bottom:0.25rem">ChatGPT</div>
+        <div style="color:#94a3b8;font-size:0.85rem">Rapid UI iteration, copy generation, edge case exploration</div>
+      </div>
+      <div style="background:rgba(56, 189, 248, 0.05);padding:1.25rem;border-radius:10px;border:1px solid rgba(56, 189, 248, 0.1)">
+        <div style="font-size:0.75rem;color:#38bdf8;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.4rem">Validation</div>
+        <div style="color:#f8fafc;font-weight:600;margin-bottom:0.25rem">Gemini</div>
+        <div style="color:#94a3b8;font-size:0.85rem">Cross-validation of decisions, alternative approaches, blind spot checks</div>
+      </div>
+    </div>
+    <p style="font-size:0.9rem;color:#64748b;font-style:italic;line-height:1.6">
+      Each model serves a specific role in the pipeline. The decisions, product ownership, and execution remain entirely human — AI is the toolchain, not the author.
+    </p>
+  </div>
+
+  <!-- STATUS -->
+  <div style="margin-top:4rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.1);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem">
+    <span style="color:#94a3b8;font-size:0.9rem">Project Estado:</span>
+    <span style="background:rgba(16, 185, 129, 0.1);color:#34d399;padding:0.5rem 1rem;border-radius:999px;font-size:0.85rem;font-weight:bold;border:1px solid rgba(16, 185, 129, 0.2)">Live — soymanada.com</span>
+  </div>
+
+  <!-- CTA -->
+  <div style="margin-top:4rem;text-align:center;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+    <a href="https://soymanada.com" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:1rem 2rem;background-color:#38bdf8;color:#0f172a;border-radius:100px;font-weight:700;text-decoration:none;font-size:1.1rem">Visitar soymanada.com</a>
+    <a href="mailto:contact@franciscoaleuy.ca" style="display:inline-block;padding:1rem 2rem;border:1px solid rgba(56, 189, 248, 0.4);color:#38bdf8;border-radius:100px;font-weight:600;text-decoration:none;font-size:1rem">Conversar sobre este Proyecto</a>
+  </div>
+
+</div>
+</main>
+
+<footer style="text-align: center; padding: 4rem 1rem; color: #94a3b8; font-size: 0.85rem; border-top: 1px solid rgba(56, 189, 248, 0.1); margin-top: 4rem;">
+  <p style="margin-bottom: 0.5rem;">Construyendo puentes entre sistemas, personas e ideas.</p>
+  <p>&copy; 2026 Francisco Aleuy — Sur de Okanagan, BC</p>
+</footer>
+
+
+<div style="position:fixed;bottom:1.5rem;left:1rem;z-index:9998;display:flex;align-items:center;gap:0.3rem;background:rgba(15,23,42,0.88);backdrop-filter:blur(10px);border:1px solid rgba(56,189,248,0.18);border-radius:100px;padding:0.35rem 0.8rem;font-size:0.8rem;font-family:Inter,sans-serif"><a href="/" onclick="localStorage.setItem('fa-lang','en')" style="color:#64748b;text-decoration:none;font-weight:500;transition:color 0.2s" onMouseOver="this.style.color='#f8fafc'" onMouseOut="this.style.color='#64748b'">🇨🇦 EN</a><span style="color:#334155;margin:0 0.1rem">·</span><a href="/fr/" onclick="localStorage.setItem('fa-lang','fr')" style="color:#64748b;text-decoration:none;font-weight:500;transition:color 0.2s" onMouseOver="this.style.color='#f8fafc'" onMouseOut="this.style.color='#64748b'">🇨🇦 FR</a><span style="color:#334155;margin:0 0.1rem">·</span><span style="color:#38bdf8;font-weight:700">🇨🇱 ES</span></div>
+<!-- Floating Contact -->
+<div style="position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);z-index:9999;display:flex;flex-direction:column;align-items:center;gap:0.6rem">
+  <div id="fc-menu" style="display:none;flex-direction:column;gap:0.5rem;align-items:center">
+    <a href="mailto:contact@franciscoaleuy.ca" style="display:flex;align-items:center;gap:0.6rem;background:#0f172a;border:1px solid rgba(56,189,248,0.4);color:#f8fafc;padding:0.65rem 1.2rem;border-radius:100px;text-decoration:none;font-size:0.88rem;font-weight:500;font-family:Inter,sans-serif;box-shadow:0 4px 24px rgba(0,0,0,0.5);transition:all 0.2s" onMouseOver="this.style.borderColor='#38bdf8';this.style.color='#38bdf8'" onMouseOut="this.style.borderColor='rgba(56,189,248,0.4)';this.style.color='#f8fafc'">📧 Escríbeme</a>
+    <a href="https://linkedin.com/in/faleuy/" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:0.6rem;background:#0f172a;border:1px solid rgba(56,189,248,0.4);color:#f8fafc;padding:0.65rem 1.2rem;border-radius:100px;text-decoration:none;font-size:0.88rem;font-weight:500;font-family:Inter,sans-serif;box-shadow:0 4px 24px rgba(0,0,0,0.5);transition:all 0.2s" onMouseOver="this.style.borderColor='#38bdf8';this.style.color='#38bdf8'" onMouseOut="this.style.borderColor='rgba(56,189,248,0.4)';this.style.color='#f8fafc'">🔗 LinkedIn</a>
+  </div>
+  <button onclick="var m=document.getElementById('fc-menu'),o=m.style.display==='flex';m.style.display=o?'none':'flex';this.style.background=o?'#38bdf8':'#0f172a';this.style.color=o?'#0f172a':'#38bdf8';this.innerHTML=o?'<svg width=20 height=20 viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot;><path d=&quot;M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z&quot;/></svg>':'&#10005;'" style="width:62px;height:62px;border-radius:50%;background:#38bdf8;border:none;color:#0f172a;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(56,189,248,0.35);transition:all 0.2s;font-size:1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></button>
+</div>
+</body>
+</html>
