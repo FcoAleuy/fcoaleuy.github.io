@@ -33,13 +33,14 @@
   <div style="margin-bottom:4rem">
     <h2 style="color:#f8fafc;font-size:1.5rem;margin-bottom:1.5rem;border-left:4px solid #38bdf8;padding-left:1rem">Context &amp; Problem</h2>
     <p style="font-size:1.1rem;color:#cbd5e1;margin-bottom:1.5rem;line-height:1.7">
-      Spanish-speaking immigrants navigating Canada's immigration system face a critical gap: finding trustworthy, verified service providers in their own language. Directories are fragmented, often in English only, and offer no verification layer — leaving newcomers vulnerable to unqualified or fraudulent services.
+      Canada welcomes over 400,000 new permanent residents per year — a growing share from Latin America. Spanish-speaking immigrants navigating the IRCC process face a critical gap: finding trustworthy, verified service providers in their own language. Directories are fragmented, English-only, and offer no verification layer — leaving newcomers vulnerable to unqualified or fraudulent consultants.
     </p>
     <ul style="list-style:none;padding:0;color:#94a3b8">
       <li style="margin-bottom:0.8rem;display:flex;gap:0.8rem"><span style="color:#ef4444">✕</span> No centralized, language-aware directory for Hispanic migrants.</li>
       <li style="margin-bottom:0.8rem;display:flex;gap:0.8rem"><span style="color:#ef4444">✕</span> Zero verification standards for listed service providers.</li>
       <li style="margin-bottom:0.8rem;display:flex;gap:0.8rem"><span style="color:#ef4444">✕</span> Reviews impossible to trust without a minimum volume threshold.</li>
       <li style="margin-bottom:0.8rem;display:flex;gap:0.8rem"><span style="color:#ef4444">✕</span> No FR-CA coverage — ignoring Canada's bilingual market reality.</li>
+      <li style="margin-bottom:0.8rem;display:flex;gap:0.8rem"><span style="color:#ef4444">✕</span> No PIPEDA-compliant data handling in existing informal directories.</li>
     </ul>
   </div>
 
@@ -60,6 +61,7 @@
       <li style="margin-bottom:1rem;padding-left:1.5rem;position:relative"><span style="position:absolute;left:0;color:#38bdf8">▹</span><strong>Real multilingual routing (ES / EN / FR-CA):</strong> Not just translated text — routes, content, and metadata are fully localized for each market. FR-CA is a strategic differentiator for Canada's bilingual environment.</li>
       <li style="margin-bottom:1rem;padding-left:1.5rem;position:relative"><span style="position:absolute;left:0;color:#38bdf8">▹</span><strong>Review system with visibility threshold:</strong> A provider's reviews only go public after a minimum of 3 are collected — preventing manipulation and ensuring signal quality.</li>
       <li style="margin-bottom:1rem;padding-left:1.5rem;position:relative"><span style="position:absolute;left:0;color:#38bdf8">▹</span><strong>Native application form:</strong> Providers apply directly through the platform with a form that pipelines data straight to the database — no manual intake process.</li>
+      <li style="margin-bottom:1rem;padding-left:1.5rem;position:relative"><span style="position:absolute;left:0;color:#38bdf8">▹</span><strong>PIPEDA-aligned data handling:</strong> Minimal personal data collection, explicit consent flows, and user-controlled data — compliant with Canada's federal privacy law from day one.</li>
     </ul>
   </div>
 
@@ -90,6 +92,7 @@
       <li style="margin-bottom:0.8rem;display:flex;gap:0.8rem"><span style="color:#38bdf8;flex-shrink:0">▸</span><span><strong>RLS policies in Supabase</strong> to cleanly separate public data (visible to all), private data (providers only), and admin data — no middleware needed to enforce access control.</span></li>
       <li style="margin-bottom:0.8rem;display:flex;gap:0.8rem"><span style="color:#38bdf8;flex-shrink:0">▸</span><span><strong>Dynamic type migration</strong> (UUID → TEXT) in PostgreSQL executed without downtime — maintaining data integrity across a live system.</span></li>
       <li style="margin-bottom:0.8rem;display:flex;gap:0.8rem"><span style="color:#38bdf8;flex-shrink:0">▸</span><span><strong>Custom AdminPanel</strong> built in-house to manage provider verification, subscription tiers, and review visibility — no third-party admin dependency.</span></li>
+      <li style="margin-bottom:0.8rem;display:flex;gap:0.8rem"><span style="color:#38bdf8;flex-shrink:0">▸</span><span><strong>PIPEDA compliance by design</strong> — data minimization, consent-first flows, and no third-party data sharing without explicit user authorization. Built for the Canadian regulatory standard, not retrofitted to it.</span></li>
     </ul>
   </div>
 
