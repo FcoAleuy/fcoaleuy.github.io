@@ -1,0 +1,129 @@
+/* ─── Tokens ─────────────────────────────────────────────── */
+:root {
+  --bg:       #ffffff;
+  --fg:       #111111;
+  --muted:    #6b7280;
+  --border:   #e5e7eb;
+  --accent:   #1d4ed8;
+  --card-bg:  #f9fafb;
+  --radius:   8px;
+  --max-w:    680px;
+  --font:     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+              Helvetica, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:      #0f1117;
+    --fg:      #f1f5f9;
+    --muted:   #94a3b8;
+    --border:  #1e293b;
+    --accent:  #60a5fa;
+    --card-bg: #161b27;
+  }
+}
+
+/* ─── Reset ──────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ─── Base ───────────────────────────────────────────────── */
+html { font-size: 17px; -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.7;
+  padding: 3rem 1.25rem 5rem;
+}
+
+/* ─── Layout ─────────────────────────────────────────────── */
+main { max-width: var(--max-w); margin: 0 auto; }
+
+.content > * + * { margin-top: 1.5rem; }
+
+/* ─── Typography ─────────────────────────────────────────── */
+h1, h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--fg);
+}
+
+p { color: var(--fg); }
+
+ul {
+  padding-left: 1.25rem;
+  color: var(--fg);
+}
+
+li + li { margin-top: 0.35rem; }
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover { text-decoration: underline; }
+
+/* ─── Project card ───────────────────────────────────────── */
+.projects { display: flex; flex-direction: column; gap: 1rem; }
+
+.project-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  transition: border-color 0.15s;
+}
+
+.project-card:hover { border-color: var(--accent); }
+
+.project-card__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.project-card__name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.project-card__tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+  border-radius: 99px;
+  padding: 0.15rem 0.6rem;
+}
+
+.project-card__desc {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+}
+
+.project-card__link {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
