@@ -90,17 +90,35 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
 
   <p>Protagonicé el rol de <strong style="color:#f8fafc">Jesucristo</strong> en la producción de la <strong style="color:#f8fafc">Agrupación Andrómeda</strong>, una de las compañías de teatro musical con mayor trayectoria en Chile (28 años). La temporada 2026 se presentó en el Gimnasio Municipal de Conchalí con más de 60 artistas en escena, músicos en vivo y equipo técnico de primer nivel — una ópera rock 100% en vivo.</p>
 
-  <!-- Photo grid — placeholders until Andrómeda photos are uploaded -->
-  <div class="photo-grid">
-    <div class="photo-ph" id="andromeda-photo-1" style="aspect-ratio:4/3">
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-      <span>Andrómeda 2026 · foto próximamente</span>
+  <!-- Andrómeda Photo Carousel -->
+  <div style="margin:1.25rem 0">
+    <div style="position:relative;border-radius:10px;overflow:hidden;border:1px solid rgba(167,139,250,.18);background:#0a0f1e">
+      <div id="andro-track" style="display:flex;transition:transform .35s cubic-bezier(.4,0,.2,1)">
+      <img src="/assets/andromeda/arresto.jpg" alt="El Arresto" style="min-width:100%;width:100%;aspect-ratio:16/9;object-fit:cover;display:block">
+      <img src="/assets/andromeda/corona.jpg" alt="La Corona" style="min-width:100%;width:100%;aspect-ratio:16/9;object-fit:cover;display:block">
+      <img src="/assets/andromeda/crucifixion.jpg" alt="La Crucifixión" style="min-width:100%;width:100%;aspect-ratio:16/9;object-fit:cover;display:block">
+      <img src="/assets/andromeda/cuentanos.jpg" alt="Cuéntanos" style="min-width:100%;width:100%;aspect-ratio:16/9;object-fit:cover;display:block">
+      <img src="/assets/andromeda/grupal.jpg" alt="Escena Grupal" style="min-width:100%;width:100%;aspect-ratio:16/9;object-fit:cover;display:block">
+      <img src="/assets/andromeda/leprosos.jpg" alt="Los Leprosos" style="min-width:100%;width:100%;aspect-ratio:16/9;object-fit:cover;display:block">
+      <img src="/assets/andromeda/leprosos-2.jpg" alt="Los Leprosos II" style="min-width:100%;width:100%;aspect-ratio:16/9;object-fit:cover;display:block">
+      <img src="/assets/andromeda/pilatos.jpg" alt="Ante Pilatos" style="min-width:100%;width:100%;aspect-ratio:16/9;object-fit:cover;display:block">
+      <img src="/assets/andromeda/pilatos-2.jpg" alt="Ante Pilatos II" style="min-width:100%;width:100%;aspect-ratio:16/9;object-fit:cover;display:block">
+      <img src="/assets/andromeda/pilatos-3.jpg" alt="Ante Pilatos III" style="min-width:100%;width:100%;aspect-ratio:16/9;object-fit:cover;display:block">
+      <img src="/assets/andromeda/resurreccion.jpg" alt="La Resurrección" style="min-width:100%;width:100%;aspect-ratio:16/9;object-fit:cover;display:block">
+      <img src="/assets/andromeda/todo-estara-en-paz.jpg" alt="Todo Estará en Paz" style="min-width:100%;width:100%;aspect-ratio:16/9;object-fit:cover;display:block">
+      </div>
+      <button onclick="androNav(-1)" style="position:absolute;left:.5rem;top:50%;transform:translateY(-50%);background:rgba(15,23,42,.72);border:1px solid rgba(167,139,250,.3);color:#a78bfa;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:1.2rem;line-height:1;display:flex;align-items:center;justify-content:center;transition:background .2s;backdrop-filter:blur(4px)" onMouseOver="this.style.background='rgba(167,139,250,.22)'" onMouseOut="this.style.background='rgba(15,23,42,.72)'">&#8249;</button>
+      <button onclick="androNav(1)"  style="position:absolute;right:.5rem;top:50%;transform:translateY(-50%);background:rgba(15,23,42,.72);border:1px solid rgba(167,139,250,.3);color:#a78bfa;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:1.2rem;line-height:1;display:flex;align-items:center;justify-content:center;transition:background .2s;backdrop-filter:blur(4px)" onMouseOver="this.style.background='rgba(167,139,250,.22)'" onMouseOut="this.style.background='rgba(15,23,42,.72)'">&#8250;</button>
     </div>
-    <div class="photo-ph" id="andromeda-photo-2" style="aspect-ratio:4/3">
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-      <span>Andrómeda 2026 · foto próximamente</span>
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:.55rem .1rem 0">
+      <span id="andro-caption" style="font-size:.78rem;color:#64748b;font-style:italic">El Arresto</span>
+      <span id="andro-counter" style="font-size:.72rem;color:#475569;font-weight:600;letter-spacing:.06em">1 / 12</span>
     </div>
   </div>
+  <script>(function(){
+    var idx=0,caps=["El Arresto","La Corona","La Crucifixión","Cuéntanos","Escena Grupal","Los Leprosos","Los Leprosos II","Ante Pilatos","Ante Pilatos II","Ante Pilatos III","La Resurrección","Todo Estará en Paz"],total=12;
+    window.androNav=function(d){idx=(idx+d+total)%total;document.getElementById('andro-track').style.transform='translateX(-'+(idx*100)+'%)';document.getElementById('andro-caption').textContent=caps[idx];document.getElementById('andro-counter').textContent=(idx+1)+' / '+total;};
+  })();</script>
 
   <div style="margin-top:1rem">
     <p style="font-size:.78rem;color:#64748b;margin-bottom:.5rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase">Getsemaní — Agrupación Andrómeda 2026</p>
