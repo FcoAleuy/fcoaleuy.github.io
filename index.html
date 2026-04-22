@@ -1,50 +1,244 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Alex – IT Systems</title><link rel="stylesheet" href="/styles/global.css"></head> <body> <main>  <article class="content"> <h2 id="hi-im-alex">Hi, I’m Alex.</h2>
-<p>IT systems professional focused on reliability, clarity, and a human-centered approach.</p>
-<hr/>
-<h2 id="what-i-do">What I do</h2>
-<ul>
-<li>Linux systems administration</li>
-<li>Automation (Ansible, Bash scripting)</li>
-<li>Monitoring &amp; alerting (Prometheus, Grafana)</li>
-<li>Basic networking and security</li>
-<li>Tier 2/3 technical support</li>
-</ul>
-<hr/>
-<h2 id="background">Background</h2>
-<p>I’ve worked in various environments—from small businesses to large organizations—helping keep infrastructure stable, documented, and efficient. My approach is practical and collaborative, with a strong focus on clarity and maintainability.</p>
-<hr/>
-<h2 id="projects">Projects</h2>
-<div class="projects">
-  <div class="project-card">
-    <div class="project-card__header">
-      <span class="project-card__name">SoyManada</span>
-      <span class="project-card__year">2025</span>
-      <div class="project-card__tags">
-        <span class="tag">SaaS</span>
-        <span class="tag">Immigration Tech</span>
-        <span class="tag">ES · EN · FR-CA</span>
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Francisco Aleuy — IT Systems · Musical Theatre</title>
+  <meta name="description" content="Francisco Aleuy — IT Systems professional and Musical Theatre performer based in Vancouver, BC. Builder of SoyManada. Auditioning for Les Misérables Vancouver 2026." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@300..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/global.css" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+
+  <!-- ─── Header ─────────────────────────────────────────────── -->
+  <header class="site-header">
+    <div class="container">
+      <div class="site-header__inner">
+        <span class="site-header__name">Francisco Aleuy</span>
+        <nav class="site-header__nav" aria-label="Main navigation">
+          <a href="#it">IT</a>
+          <a href="#artist">Artist</a>
+          <a href="#contact">Contact</a>
+          <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </nav>
       </div>
     </div>
-    <p class="project-card__role">Founder &amp; Developer</p>
-    <p class="project-card__desc">Verified service directory for Spanish-speaking immigrants — built solo from scratch. Covers the full value chain: business strategy, product, UX design, and technical implementation.</p>
-    <ul class="project-card__highlights">
-      <li>Freemium model with 3 tiers (Bronze free · Silver $10 · Gold $20 USD)</li>
-      <li>Real multilingual routing &amp; content (ES / EN / FR-CA)</li>
-      <li>Manual provider verification pipeline with in-house AdminPanel</li>
-      <li>Review system with visibility threshold (min. 3 reviews to publish)</li>
-      <li>Row-level security via Supabase RLS separating public / private / admin data</li>
-    </ul>
-    <p class="project-card__stack">React · Vite · Supabase (PostgreSQL + RLS + Auth) · i18next · GitHub Actions</p>
-    <a class="project-card__link" href="https://soymanada.com" target="_blank" rel="noopener noreferrer">soymanada.com →</a>
+  </header>
+
+  <main>
+
+    <!-- ─── Hero ───────────────────────────────────────────────── -->
+    <section class="hero">
+      <div class="container">
+        <p class="hero__eyebrow">Southern Okanagan · Vancouver, BC · Canada</p>
+        <h1 class="hero__title">Francisco<br /><em>Aleuy</em></h1>
+        <p class="hero__sub">IT Systems professional and Musical Theatre performer — two disciplines that rarely meet in one person.</p>
+        <div class="hero__tags">
+          <span class="tag">Operations &amp; Technology</span>
+          <span class="tag">Musical Theatre</span>
+          <span class="tag tag--neutral">Vancouver, BC</span>
+          <span class="tag tag--neutral">Open to work</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── IT Section ─────────────────────────────────────────── -->
+    <section class="section" id="it">
+      <div class="container">
+        <p class="section__label">⚙ IT Systems</p>
+        <h2 class="section__title">Operations &amp; <em>Technology</em></h2>
+        <p class="section__lead">I design and build reliable systems — from SaaS infrastructure to process automation — with a focus on clarity, maintainability, and the people who depend on them.</p>
+
+        <!-- Skills -->
+        <div class="skills-grid" style="margin-bottom: var(--sp-10);">
+          <div class="skill-item"><strong>Frontend</strong>React · Vite · i18next</div>
+          <div class="skill-item"><strong>Backend &amp; DB</strong>Supabase · PostgreSQL · RLS</div>
+          <div class="skill-item"><strong>DevOps</strong>GitHub Actions · Bash · Shell</div>
+          <div class="skill-item"><strong>Integration</strong>REST APIs · Node.js · Auth</div>
+          <div class="skill-item"><strong>Process</strong>Product design · UX · Documentation</div>
+          <div class="skill-item"><strong>Support</strong>Tier 2/3 · Nagios · Networking</div>
+        </div>
+
+        <!-- SoyManada project card -->
+        <div class="card">
+          <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:var(--sp-3); margin-bottom:var(--sp-2);">
+            <p class="card__name">SoyManada</p>
+            <div style="display:flex; gap:var(--sp-2); flex-wrap:wrap;">
+              <span class="tag">SaaS</span>
+              <span class="tag">Immigration Tech</span>
+              <span class="tag tag--neutral">2025</span>
+            </div>
+          </div>
+          <p class="card__meta">Founder &amp; Developer</p>
+          <p class="card__body">Verified service directory for Spanish-speaking immigrants in Canada — built solo, end-to-end. Covers the full value chain: strategy, product, UX, and technical implementation.</p>
+          <ul class="card__highlights">
+            <li>Freemium model with 3 tiers (Bronze free · Silver $10 · Gold $20 USD)</li>
+            <li>Real multilingual routing &amp; content (ES / EN / FR-CA)</li>
+            <li>Manual provider verification pipeline with in-house AdminPanel</li>
+            <li>Review system with visibility threshold (min. 3 reviews to publish)</li>
+            <li>Row-level security via Supabase RLS separating public / private / admin data</li>
+          </ul>
+          <p class="card__stack">React · Vite · Supabase (PostgreSQL + RLS + Auth) · i18next · GitHub Actions</p>
+          <a class="card__link" href="https://soymanada.com" target="_blank" rel="noopener noreferrer">soymanada.com →</a>
+        </div>
+
+        <!-- Insight strip for arts-org IT recruiters -->
+        <div class="insight-strip">
+          <span class="insight-strip__icon">🎭</span>
+          <span>Having performed in live theatre productions, I understand the operational demands of arts organizations from the inside — <strong>ticketing infrastructure, production day logistics, multilingual audiences, and the pace of a live season.</strong> That context makes me an unusually effective IT partner for theatres, festivals, and cultural institutions.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Artist Section ─────────────────────────────────────── -->
+    <section class="section" id="artist">
+      <div class="container">
+        <p class="section__label">🎤 Artist</p>
+        <h2 class="section__title">Singer &amp; <em>Performer</em></h2>
+        <p class="section__lead">Musical theatre performer with stage experience across Chile and Canada — currently based in the Vancouver area and actively pursuing professional engagements.</p>
+
+        <!-- Audition highlight -->
+        <div style="margin-bottom: var(--sp-8); padding: var(--sp-4) var(--sp-6); border-left: 2px solid var(--accent); background: var(--accent-hl); border-radius: 0 var(--radius-md) var(--radius-md) 0;">
+          <p style="font-size: var(--text-sm); color: var(--fg-muted);"><strong style="color: var(--fg);">Currently preparing</strong> for the <strong style="color: var(--fg);">Les Misérables Vancouver 2026</strong> auditions — a production I have a deep personal connection to as a performer.</p>
+        </div>
+
+        <!-- Theatre gallery -->
+        <div class="theatre-gallery">
+          <div class="theatre-gallery__item" data-img="assets/img/theatre-lesmis.png" data-caption="Les Misérables" tabindex="0" role="button" aria-label="View Les Misérables photo">
+            <img src="assets/img/theatre-lesmis.png" alt="Francisco Aleuy in Les Misérables" width="300" height="400" loading="lazy" />
+            <div class="theatre-gallery__caption">Les Misérables</div>
+          </div>
+          <div class="theatre-gallery__item" data-img="assets/img/theatre-hair.png" data-caption="Hair" tabindex="0" role="button" aria-label="View Hair photo">
+            <img src="assets/img/theatre-hair.png" alt="Francisco Aleuy in Hair" width="300" height="400" loading="lazy" />
+            <div class="theatre-gallery__caption">Hair</div>
+          </div>
+          <div class="theatre-gallery__item" data-img="assets/img/theatre-wss.png" data-caption="West Side Story" tabindex="0" role="button" aria-label="View West Side Story photo">
+            <img src="assets/img/theatre-wss.png" alt="Francisco Aleuy in West Side Story" width="300" height="400" loading="lazy" />
+            <div class="theatre-gallery__caption">West Side Story</div>
+          </div>
+          <div class="theatre-gallery__item" data-img="assets/img/theatre-habito.png" data-caption="Cambio de Hábito" tabindex="0" role="button" aria-label="View Cambio de Hábito photo">
+            <img src="assets/img/theatre-habito.png" alt="Francisco Aleuy in Cambio de Hábito" width="300" height="400" loading="lazy" />
+            <div class="theatre-gallery__caption">Cambio de Hábito</div>
+          </div>
+        </div>
+
+        <!-- Credits -->
+        <div style="margin-bottom: var(--sp-8);">
+          <div style="display:flex; flex-wrap:wrap; gap:var(--sp-2);">
+            <span class="tag tag--neutral">Musical Theatre</span>
+            <span class="tag tag--neutral">The Voice Chile</span>
+            <span class="tag tag--neutral">Agrupación Andrómeda</span>
+            <span class="tag tag--neutral">Hair</span>
+            <span class="tag tag--neutral">West Side Story</span>
+            <span class="tag tag--neutral">Les Misérables</span>
+            <span class="tag tag--neutral">Cambio de Hábito</span>
+          </div>
+        </div>
+
+        <!-- Insight strip for arts recruiters -->
+        <div class="insight-strip">
+          <span class="insight-strip__icon">💻</span>
+          <span>My background in IT systems is a practical asset on stage and off — <strong>I bring fluency in the digital infrastructure that supports modern productions:</strong> online audition platforms, streaming, production management tools, and the technical coordination that keeps a season running smoothly.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Contact ────────────────────────────────────────────── -->
+    <section class="section" id="contact">
+      <div class="container">
+        <p class="section__label">Contact</p>
+        <h2 class="section__title">Let's <em>connect</em></h2>
+        <p class="section__lead">Whether you're looking for IT expertise, a performer for your next production, or both — I'd love to hear from you.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:var(--sp-4);">
+          <a class="btn btn--primary" href="mailto:contact@franciscoaleuy.ca">contact@franciscoaleuy.ca</a>
+          <a class="btn btn--ghost" href="https://www.linkedin.com/in/faleuy/" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
+          <a class="btn btn--ghost" href="https://github.com/FcoAleuy" target="_blank" rel="noopener noreferrer">GitHub →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── Footer ────────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+        <span class="site-footer__copy">franciscoaleuy.ca · 2026</span>
+        <div class="site-footer__links">
+          <a href="#it">IT</a>
+          <a href="#artist">Artist</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── Lightbox ──────────────────────────────────────────────── -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button class="lightbox__close" id="lightbox-close" aria-label="Close photo">✕</button>
+    <img id="lightbox-img" src="" alt="" />
   </div>
-</div>
-<hr/>
-<h2 id="what-im-looking-for-now">What I’m looking for now</h2>
-<p>A role focused on system reliability in a human-first environment, where collaboration matters more than ego.</p>
-<hr/>
-<h2 id="creative-side">Creative side</h2>
-<p>I enjoy writing, shooting film photography, and experimenting with modular synthesizers.</p>
-<hr/>
-<h2 id="contact">Contact</h2>
-<p>📧 <a href="mailto:alex@example.ca">alex@example.ca</a><br/>
-🔗 <a href="https://linkedin.com/in/alex-sysadmin">linkedin.com/in/alex-sysadmin</a></p> </article>  </main> </body></html>
+
+  <!-- ─── Scripts ───────────────────────────────────────────────── -->
+  <script>
+    // Dark/light mode toggle
+    (function () {
+      const html = document.documentElement;
+      const btn = document.querySelector('[data-theme-toggle]');
+      const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      let theme = systemDark ? 'dark' : 'light';
+      html.setAttribute('data-theme', theme);
+
+      const sunIcon = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
+      const moonIcon = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+
+      function applyTheme(t) {
+        theme = t;
+        html.setAttribute('data-theme', t);
+        if (btn) {
+          btn.innerHTML = t === 'dark' ? sunIcon : moonIcon;
+          btn.setAttribute('aria-label', t === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+        }
+      }
+
+      applyTheme(theme);
+      if (btn) btn.addEventListener('click', () => applyTheme(theme === 'dark' ? 'light' : 'dark'));
+    })();
+
+    // Lightbox
+    (function () {
+      const lightbox = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lightbox-img');
+      const lbClose = document.getElementById('lightbox-close');
+
+      document.querySelectorAll('.theatre-gallery__item').forEach(function (item) {
+        item.addEventListener('click', function () {
+          lbImg.src = item.getAttribute('data-img');
+          lbImg.alt = item.getAttribute('data-caption') || '';
+          lightbox.classList.add('is-open');
+          document.body.style.overflow = 'hidden';
+        });
+        item.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); item.click(); }
+        });
+      });
+
+      function closeLightbox() {
+        lightbox.classList.remove('is-open');
+        document.body.style.overflow = '';
+        lbImg.src = '';
+      }
+
+      lbClose.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', function (e) { if (e.target === lightbox) closeLightbox(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLightbox(); });
+    })();
+  </script>
+
+</body>
+</html>
