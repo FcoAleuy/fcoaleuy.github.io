@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Francisco Aleuy — Performer & Interpreter</title>
+<title>Francisco Aleuy — Performer &amp; Interpreter</title>
 <meta name="description" content="Francisco Aleuy — Performer, Interpreter and Artistic Leader. The Voice Chile semi-finalist, Jesucristo Superstar (Agrupación Andrómeda), musical theatre credits across Santiago.">
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -34,17 +34,12 @@ main{max-width:800px;margin:0 auto;padding:0 1.5rem 5rem}
 .tl-role{font-size:.83rem;color:var(--muted);line-height:1.5}
 .comp-card{background:rgba(30,41,59,.5);border:1px solid rgba(167,139,250,.12);border-radius:12px;padding:1.1rem 1.25rem;margin-bottom:.9rem;display:flex;align-items:flex-start;gap:.9rem}
 .medal{font-size:1.9rem;flex-shrink:0;line-height:1}
-.photo-ph{width:100%;aspect-ratio:4/3;background:rgba(15,25,45,.8);border:2px dashed rgba(167,139,250,.2);border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem;color:#475569;font-size:.8rem}
-.photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1rem 0}
-@media(max-width:500px){.photo-grid{grid-template-columns:1fr}}
 hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
 .btn{display:inline-flex;align-items:center;gap:.6rem;padding:.75rem 1.4rem;border-radius:12px;font-weight:500;font-size:.9rem;text-decoration:none;transition:all .2s ease;border:1px solid rgba(148,163,184,.2);background:rgba(30,41,59,.6);color:#e2e8f0}
 .btn:hover{border-color:var(--accent);background:rgba(167,139,250,.1);color:var(--accent);transform:translateY(-2px)}
 .btn.primary{background:rgba(167,139,250,.1);border-color:rgba(167,139,250,.4);color:var(--accent)}
 .btn.primary:hover{background:rgba(167,139,250,.2);box-shadow:0 0 18px rgba(167,139,250,.25)}
 .btn-row{display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center;margin-top:1.75rem}
-
-/* ── Journey Gallery ── */
 .journey-gallery{position:relative;border-radius:12px;overflow:hidden;border:1px solid rgba(167,139,250,.18);background:#0a0f1e;margin:1.25rem 0}
 .journey-track{display:flex;transition:transform .38s cubic-bezier(.4,0,.2,1)}
 .journey-slide{min-width:100%;width:100%;position:relative}
@@ -62,11 +57,11 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
 .journey-dot.active{background:var(--accent);transform:scale(1.3)}
 </style>
 <script>(function(){
-  var s=localStorage.getItem('fa-lang');
-  var b=(navigator.language||'en').substring(0,2).toLowerCase();
-  var l=s||b;
-  if(l==='es'){localStorage.setItem('fa-lang','es');window.location.replace('/es/music/');}
-  else if(l==='fr'){localStorage.setItem('fa-lang','fr');window.location.replace('/fr/music/');}
+  /* Only redirect if the user EXPLICITLY saved a non-English preference */
+  var saved = localStorage.getItem('fa-lang');
+  if(saved === 'es'){ window.location.replace('/es/music/'); }
+  else if(saved === 'fr'){ window.location.replace('/fr/music/'); }
+  /* No saved preference → stay on EN (default). Never use navigator.language here. */
 })();</script>
 </head><body>
 
@@ -74,16 +69,16 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
 <nav style="display:flex;justify-content:center;align-items:center;gap:1.5rem;padding:1.2rem 1rem;background:rgba(15,23,42,.97);backdrop-filter:blur(10px);position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(167,139,250,.1);flex-wrap:wrap">
   <a href="/" class="nav-link" style="display:flex;align-items:center;gap:.35rem"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>IT Portfolio</a>
   <span style="color:rgba(167,139,250,.25);user-select:none">|</span>
-  <a href="/music/" class="nav-link active">Artista</a>
-  <a href="/music/#credits" class="nav-link">Créditos</a>
-  <a href="/music/#contact" class="nav-link">Contacto</a>
+  <a href="/music/" class="nav-link active">Performer</a>
+  <a href="/music/#credits" class="nav-link">Credits</a>
+  <a href="/music/#contact" class="nav-link">Contact</a>
 </nav>
 
 <!-- LANGUAGE STRIP -->
 <div style="display:flex;justify-content:flex-end;align-items:center;gap:.5rem;padding:.35rem 1.2rem;font-size:.75rem;color:#475569;background:rgba(15,23,42,.97);border-bottom:1px solid rgba(167,139,250,.06)">
   Read in:
-  <a href="/fr/music/" onclick="localStorage.setItem('fa-lang','fr')" style="color:#64748b;text-decoration:none;transition:color .2s" onMouseOver="this.style.color='#94a3b8'" onMouseOut="this.style.color='#64748b'"><span style="display:inline-block;width:18px;height:12px;vertical-align:middle;border-radius:1px;margin-right:3px;background:linear-gradient(to right,#D52B1E 25%,#fff 25%,#fff 75%,#D52B1E 75%)"></span>FR</a> ·
-  <a href="/es/music/" onclick="localStorage.setItem('fa-lang','es')" style="color:#64748b;text-decoration:none;transition:color .2s" onMouseOver="this.style.color='#94a3b8'" onMouseOut="this.style.color='#64748b'"><span style="display:inline-block;width:18px;height:12px;vertical-align:middle;border-radius:1px;margin-right:3px;background:linear-gradient(to right,#0039A6 33%,transparent 33%) 0 0/100% 50% no-repeat,linear-gradient(#fff,#fff) 0 0/100% 50% no-repeat,#D52B1E"></span>ES</a>
+  <a href="/fr/music/" onclick="localStorage.setItem('fa-lang','fr')" style="color:#64748b;text-decoration:none;transition:color .2s" onMouseOver="this.style.color='#94a3b8'" onMouseOut="this.style.color='#64748b'">🇨🇦 FR</a> ·
+  <a href="/es/music/" onclick="localStorage.setItem('fa-lang','es')" style="color:#64748b;text-decoration:none;transition:color .2s" onMouseOver="this.style.color='#94a3b8'" onMouseOut="this.style.color='#64748b'">🇨🇱 ES</a>
 </div>
 
 <main>
@@ -103,10 +98,10 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
   <span class="label">Most recent · 2026</span>
   <h2 style="margin-top:.25rem;font-size:1.65rem">Jesucristo Superstar</h2>
   <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1.1rem">
-    <span class="tag" style="background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.35);color:#f59e0b">Rol: Jesús (protagonista)</span>
-    <span class="tag">Agrupación Andrómeda · 28 años de trayectoria</span>
-    <span class="tag gray">Conchalí, Santiago · 2 abril 2026</span>
-    <span class="tag gray">60+ artistas en escena · 100% en vivo</span>
+    <span class="tag" style="background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.35);color:#f59e0b">Role: Jesús (lead)</span>
+    <span class="tag">Agrupación Andrómeda · 28 years of history</span>
+    <span class="tag gray">Conchalí, Santiago · April 2, 2026</span>
+    <span class="tag gray">60+ artists on stage · 100% live</span>
   </div>
   <p>Starred as <strong style="color:#f8fafc">Jesus Christ</strong> in the production by <strong style="color:#f8fafc">Agrupación Andrómeda</strong>, one of Chile's most established musical theatre companies with 28 years of uninterrupted history. The 2026 season performed at the Gimnasio Municipal de Conchalí with a cast of 60+ artists, live musicians, and a first-class technical team — a full-scale rock opera with zero pre-recorded music.</p>
 
@@ -280,7 +275,7 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
     <div class="tl-item">
       <div class="tl-year">2022</div>
       <div class="tl-title">Alguien Para Amar</div>
-      <div class="tl-role">Creator, Director & Performer · Original project (Broadway & Disney) · Puyuhuapi, Patagonia · Cast of 5</div>
+      <div class="tl-role">Creator, Director &amp; Performer · Original project (Broadway &amp; Disney) · Puyuhuapi, Patagonia · Cast of 5</div>
     </div>
     <div class="tl-item">
       <div class="tl-year">2021</div>
@@ -361,12 +356,10 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
 
 <!-- WHERE ART MEETS CODE -->
 <section id="art-meets-code">
-  <span class="label">Technology & The Arts</span>
+  <span class="label">Technology &amp; The Arts</span>
   <h2 style="margin-top:.25rem;font-size:1.65rem">Where Art Meets Code</h2>
   <p style="color:#94a3b8;font-size:.9rem;margin:.35rem 0 1.1rem;line-height:1.75">Two careers that rarely share the same résumé. Francisco has spent decades interpreting characters on stage — and just as long building software, databases, and digital products. That dual perspective shapes how he thinks about both disciplines.</p>
   <p style="color:#94a3b8;font-size:.9rem;margin:0 0 1.1rem;line-height:1.75">The performing arts world has real, underserved IT needs: audience management, digital production tools, community platforms for independent artists, migration-related cultural projects. Francisco sees those gaps not as obstacles, but as opportunities — and has the technical range to address them.</p>
-
-  <!-- SoyManada highlight -->
   <div style="background:rgba(123,77,200,.07);border:1px solid rgba(123,77,200,.25);border-radius:12px;padding:1.2rem 1.4rem;display:flex;gap:1rem;align-items:flex-start">
     <div style="font-size:1.6rem;flex-shrink:0;line-height:1;margin-top:.1rem">🧭</div>
     <div>
@@ -378,7 +371,6 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
       </a>
     </div>
   </div>
-
   <div style="margin-top:1rem;text-align:center">
     <a href="/" class="btn" style="font-size:.82rem">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
@@ -396,7 +388,7 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
   <div class="tl">
     <div class="tl-item">
       <div class="tl-year">2010 – 2015</div>
-      <div class="tl-title">Truco — Co-founder & Lead Performer</div>
+      <div class="tl-title">Truco — Co-founder &amp; Lead Performer</div>
       <div class="tl-role">Original rock/Latin compositions. Toured Valparaíso, Rancagua, and Santiago</div>
     </div>
     <div class="tl-item">
@@ -448,11 +440,11 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
 
 <!-- BOTTOM LANGUAGE PILL -->
 <div style="position:fixed;bottom:1.5rem;left:1rem;z-index:9998;display:flex;align-items:center;gap:.4rem;background:rgba(15,23,42,.92);border:1px solid rgba(167,139,250,.2);border-radius:20px;padding:.4rem .9rem;font-size:.74rem;backdrop-filter:blur(8px)">
-  <span style="color:var(--accent);font-weight:700"><span style="display:inline-block;width:14px;height:9px;vertical-align:middle;border-radius:1px;margin-right:3px;background:linear-gradient(to right,#D52B1E 25%,#fff 25%,#fff 75%,#D52B1E 75%)"></span>EN</span>
+  <span style="color:var(--accent);font-weight:700">🇨🇦 EN</span>
   <span style="color:#2d3748">·</span>
-  <a href="/fr/music/" onclick="localStorage.setItem('fa-lang','fr')" style="color:#475569;text-decoration:none;font-weight:500;transition:color .2s" onMouseOver="this.style.color='#f8fafc'" onMouseOut="this.style.color='#475569'"><span style="display:inline-block;width:14px;height:9px;vertical-align:middle;border-radius:1px;margin-right:3px;background:linear-gradient(to right,#D52B1E 25%,#fff 25%,#fff 75%,#D52B1E 75%)"></span>FR</a>
+  <a href="/fr/music/" onclick="localStorage.setItem('fa-lang','fr')" style="color:#475569;text-decoration:none;font-weight:500;transition:color .2s" onMouseOver="this.style.color='#f8fafc'" onMouseOut="this.style.color='#475569'">🇨🇦 FR</a>
   <span style="color:#2d3748">·</span>
-  <a href="/es/music/" onclick="localStorage.setItem('fa-lang','es')" style="color:#475569;text-decoration:none;font-weight:500;transition:color .2s" onMouseOver="this.style.color='#f8fafc'" onMouseOut="this.style.color='#475569'"><span style="display:inline-block;width:14px;height:9px;vertical-align:middle;border-radius:1px;margin-right:3px;background:linear-gradient(to right,#0039A6 33%,transparent 33%) 0 0/100% 50% no-repeat,linear-gradient(#fff,#fff) 0 0/100% 50% no-repeat,#D52B1E"></span>ES</a>
+  <a href="/es/music/" onclick="localStorage.setItem('fa-lang','es')" style="color:#475569;text-decoration:none;font-weight:500;transition:color .2s" onMouseOver="this.style.color='#f8fafc'" onMouseOut="this.style.color='#475569'">🇨🇱 ES</a>
 </div>
 
 <footer style="text-align:center;padding:1.5rem;font-size:.78rem;color:#2d3748;border-top:1px solid rgba(167,139,250,.08)">
