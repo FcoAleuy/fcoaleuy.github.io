@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Francisco Aleuy — Singer & Performer</title>
-<meta name="description" content="Francisco Aleuy — Singer, Performer and Artistic Leader. The Voice Chile semi-finalist, Jesucristo Superstar (Agrupación Andrómeda), musical theatre credits across Santiago.">
+<title>Francisco Aleuy — Performer & Interpreter</title>
+<meta name="description" content="Francisco Aleuy — Performer, Interpreter and Artistic Leader. The Voice Chile semi-finalist, Jesucristo Superstar (Agrupación Andrómeda), musical theatre credits across Santiago.">
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
@@ -92,7 +92,7 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
 <div id="about" style="text-align:center;padding:3rem 0 1.75rem">
   <img src="/assets/yo.jpg" alt="Francisco Aleuy" style="width:155px;height:155px;object-fit:cover;border-radius:35%;box-shadow:0 0 60px -10px rgba(167,139,250,.65);border:3px solid rgba(167,139,250,.45);margin:0 auto 1.5rem;display:block;filter:sepia(100%) hue-rotate(240deg) saturate(180%) brightness(.88)">
   <h1 style="margin:.4rem 0 .25rem;font-size:2.1rem;letter-spacing:-.02em">Francisco Aleuy</h1>
-  <p style="font-size:.82rem;font-weight:700;color:var(--accent);letter-spacing:.2em;margin:0 0 1.1rem;text-transform:uppercase">Singer · Performer · Artistic Leader</p>
+  <p style="font-size:.82rem;font-weight:700;color:var(--accent);letter-spacing:.2em;margin:0 0 1.1rem;text-transform:uppercase">Performer · Interpreter · Artistic Leader</p>
   <p style="color:#94a3b8;max-width:520px;margin:0 auto;font-size:.93rem;line-height:1.75">Creating emotional connections through music and performing arts — celebrating cultural and human diversity across Chile and Canada.</p>
 </div>
 
@@ -110,7 +110,6 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
   </div>
   <p>Starred as <strong style="color:#f8fafc">Jesus Christ</strong> in the production by <strong style="color:#f8fafc">Agrupación Andrómeda</strong>, one of Chile's most established musical theatre companies with 28 years of uninterrupted history. The 2026 season performed at the Gimnasio Municipal de Conchalí with a cast of 60+ artists, live musicians, and a first-class technical team — a full-scale rock opera with zero pre-recorded music.</p>
 
-  <!-- Andrómeda Photo Carousel -->
   <div style="margin:1.25rem 0">
     <div style="position:relative;border-radius:10px;overflow:hidden;border:1px solid rgba(167,139,250,.18);background:#0a0f1e">
       <div id="andro-track" style="display:flex;transition:transform .35s cubic-bezier(.4,0,.2,1)">
@@ -163,8 +162,6 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
 
   <div class="journey-gallery">
     <div class="journey-track" id="jt">
-
-      <!-- Slide 1: Les Misérables 2018 -->
       <div class="journey-slide">
         <img src="/assets/theatre-lesmis.png" alt="Les Misérables 2018 — Marius Pontmercy" loading="lazy">
         <div class="journey-caption">
@@ -173,8 +170,6 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
           <div class="jc-role">Marius Pontmercy · Teatro Municipal de Cerro Navia, Santiago</div>
         </div>
       </div>
-
-      <!-- Slide 2: Éxitos de Broadway / Riff -->
       <div class="journey-slide">
         <img src="/assets/theatre-wss.png" alt="Éxitos de Broadway 2019 — Riff" loading="lazy">
         <div class="journey-caption">
@@ -183,8 +178,6 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
           <div class="jc-role">Riff (West Side Story) · Ensemble: Mamma Mia!, Wicked, The Greatest Showman</div>
         </div>
       </div>
-
-      <!-- Slide 3: Cambio de Hábito / Happy Day -->
       <div class="journey-slide">
         <img src="/assets/theatre-habito.png" alt="Cambio de Hábito 2019 — Happy Day" loading="lazy">
         <div class="journey-caption">
@@ -193,8 +186,6 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
           <div class="jc-role">Happy Day · Teatro Municipal de Las Condes, Santiago</div>
         </div>
       </div>
-
-      <!-- Slide 4: Hair 2021 -->
       <div class="journey-slide">
         <img src="/assets/theatre-hair.png" alt="Hair 2021 — Claude" loading="lazy">
         <div class="journey-caption">
@@ -203,21 +194,17 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
           <div class="jc-role">Claude · Teatro Municipal de Las Condes, Santiago</div>
         </div>
       </div>
-
     </div>
-
     <button class="journey-btn prev" onclick="journeyNav(-1)" aria-label="Previous">&lsaquo;</button>
     <button class="journey-btn next" onclick="journeyNav(1)" aria-label="Next">&rsaquo;</button>
   </div>
-
   <div class="journey-dots" id="jdots"></div>
 </section>
 
 <script>(function(){
-  var total=4, idx=0;
+  var total=4,idx=0;
   var track=document.getElementById('jt');
   var dotsEl=document.getElementById('jdots');
-
   for(var i=0;i<total;i++){
     var d=document.createElement('button');
     d.className='journey-dot'+(i===0?' active':'');
@@ -226,16 +213,13 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
     d.addEventListener('click',function(){journeyGoTo(parseInt(this.getAttribute('data-i')));});
     dotsEl.appendChild(d);
   }
-
   function journeyGoTo(n){
     idx=(n+total)%total;
     track.style.transform='translateX(-'+(idx*100)+'%)';
     var dots=dotsEl.querySelectorAll('.journey-dot');
     dots.forEach(function(d,i){d.className='journey-dot'+(i===idx?' active':'');});
   }
-
   window.journeyNav=function(d){journeyGoTo(idx+d);};
-
   var timer=setInterval(function(){journeyGoTo(idx+1);},5000);
   document.getElementById('jt').closest('.journey-gallery').addEventListener('mouseenter',function(){clearInterval(timer);});
   document.getElementById('jt').closest('.journey-gallery').addEventListener('mouseleave',function(){timer=setInterval(function(){journeyGoTo(idx+1);},5000);});
@@ -253,7 +237,6 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
     <span class="tag gray">Top ~10 of ~120 contestants</span>
   </div>
   <p>Reached the semi-finals of <strong style="color:#f8fafc">The Voice Chile</strong>, captivating judges and audiences with a repertoire spanning rock, Latin balladry, and folk — from Aerosmith to Los Jaivas. Coached by singer-songwriter <strong style="color:#f8fafc">Francisca Valenzuela</strong>.</p>
-
   <div class="video-2col">
     <div>
       <p style="font-size:.78rem;color:#64748b;margin:0 0 .5rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase">Blind audition — Getsemaní</p>
@@ -268,7 +251,6 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
       </div>
     </div>
   </div>
-
   <div class="card" style="margin-top:.5rem">
     <p style="font-size:.76rem;font-weight:700;color:#64748b;letter-spacing:.12em;text-transform:uppercase;margin:0 0 .75rem">Repertoire · The Voice Chile 2023</p>
     <div>
@@ -290,65 +272,55 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
   <span class="label">Stage credits</span>
   <h2 style="margin-top:.25rem;font-size:1.65rem">Musical Theatre</h2>
   <div class="tl">
-
     <div class="tl-item gold">
       <div class="tl-year">2026</div>
       <div class="tl-title">Jesucristo Superstar</div>
       <div class="tl-role">Jesus · Agrupación Andrómeda · Gimnasio Municipal de Conchalí, Santiago</div>
     </div>
-
     <div class="tl-item">
       <div class="tl-year">2022</div>
       <div class="tl-title">Alguien Para Amar</div>
       <div class="tl-role">Creator, Director & Performer · Original project (Broadway & Disney) · Puyuhuapi, Patagonia · Cast of 5</div>
     </div>
-
     <div class="tl-item">
       <div class="tl-year">2021</div>
       <div class="tl-title">Hair</div>
       <div class="tl-role">Claude · Teatro Municipal de Las Condes, Santiago</div>
     </div>
-
     <div class="tl-item">
       <div class="tl-year">2020</div>
       <div class="tl-title">Jesucristo Superstar</div>
       <div class="tl-role">Jesus · Teatro Azhar Pro · San Bernardo <em style="color:#475569">— adapted for online format during pandemic</em></div>
     </div>
-
     <div class="tl-item">
       <div class="tl-year">2019</div>
       <div class="tl-title">Éxitos de Broadway</div>
       <div class="tl-role">Riff (West Side Story) · Ensemble (Mamma Mia!, Wicked, The Greatest Showman) · Teatro Municipal de Las Condes, Santiago</div>
     </div>
-
     <div class="tl-item">
       <div class="tl-year">2019</div>
       <div class="tl-title">Cambio de Hábito</div>
       <div class="tl-role">Happy Day · Musical Vecinal de Las Condes · Teatro Municipal de Las Condes, Santiago</div>
     </div>
-
     <div class="tl-item">
       <div class="tl-year">2019</div>
       <div class="tl-title">Jesucristo Superstar</div>
       <div class="tl-role">Simon the Zealot · Teatro Municipal de Macul, Santiago</div>
     </div>
-
     <div class="tl-item gold" style="padding-bottom:0">
       <div class="tl-year">2018</div>
       <div class="tl-title">Les Misérables</div>
       <div class="tl-role">Marius Pontmercy · Teatro Municipal de Cerro Navia, Santiago <em style="color:#475569">— musical theatre debut</em></div>
     </div>
-
   </div>
 </section>
 
 <hr>
 
-<!-- COMPETITIONS 2024 -->
+<!-- COMPETITIONS -->
 <section id="competitions">
   <span class="label">Competitions · 2024</span>
   <h2 style="margin-top:.25rem;font-size:1.65rem">Recognition</h2>
-
   <div class="comp-card">
     <div class="medal">🥈</div>
     <div>
@@ -356,7 +328,6 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
       <div style="font-size:.84rem;color:#94a3b8;line-height:1.6">Runner-up in the Chilean national finals. The winner, Elizabeth Moya, went on to claim the international title in Finland, competing against representatives from 42 countries.</div>
     </div>
   </div>
-
   <div class="comp-card">
     <div class="medal">🥈</div>
     <div>
@@ -378,12 +349,41 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
     <span class="tag gray">Instagram · TikTok</span>
   </div>
   <p>Founded and led <strong style="color:#f8fafc">GatoVox</strong>, an artistic project merging funk rhythms, vintage aesthetics, and feline-inspired themes with generative AI. The process involved street interviews that fed AI song creation — exploring the intersection of human stories and creative technology. Content gained significant traction on social media, bridging Francisco's artistic and tech careers.</p>
-
   <div style="max-width:300px;margin:1.25rem auto">
     <p style="font-size:.78rem;color:#64748b;margin:0 0 .5rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-align:center">GatoVox · AI music short</p>
     <div class="video-wrap" style="padding-bottom:177.78%;border-radius:12px">
       <iframe src="https://www.youtube.com/embed/N74rjKRiprQ" title="GatoVox" allowfullscreen allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture"></iframe>
     </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- WHERE ART MEETS CODE -->
+<section id="art-meets-code">
+  <span class="label">Technology & The Arts</span>
+  <h2 style="margin-top:.25rem;font-size:1.65rem">Where Art Meets Code</h2>
+  <p style="color:#94a3b8;font-size:.9rem;margin:.35rem 0 1.1rem;line-height:1.75">Two careers that rarely share the same résumé. Francisco has spent decades interpreting characters on stage — and just as long building software, databases, and digital products. That dual perspective shapes how he thinks about both disciplines.</p>
+  <p style="color:#94a3b8;font-size:.9rem;margin:0 0 1.1rem;line-height:1.75">The performing arts world has real, underserved IT needs: audience management, digital production tools, community platforms for independent artists, migration-related cultural projects. Francisco sees those gaps not as obstacles, but as opportunities — and has the technical range to address them.</p>
+
+  <!-- SoyManada highlight -->
+  <div style="background:rgba(123,77,200,.07);border:1px solid rgba(123,77,200,.25);border-radius:12px;padding:1.2rem 1.4rem;display:flex;gap:1rem;align-items:flex-start">
+    <div style="font-size:1.6rem;flex-shrink:0;line-height:1;margin-top:.1rem">🧭</div>
+    <div>
+      <div style="font-weight:700;color:#f8fafc;margin-bottom:.3rem;font-size:.97rem">SoyManada — Trusted directory for the migrant community</div>
+      <p style="margin:0 0 .75rem;font-size:.86rem;color:#94a3b8;line-height:1.65">His most personal project: a digital platform that connects migrants with verified service providers — in their language, built with cultural empathy at its core. Technology that understands what it means to start over in a new country.</p>
+      <a href="https://soymanada.com" target="_blank" rel="noopener noreferrer" class="btn primary" style="font-size:.82rem;padding:.5rem 1.1rem">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        soymanada.com
+      </a>
+    </div>
+  </div>
+
+  <div style="margin-top:1rem;text-align:center">
+    <a href="/" class="btn" style="font-size:.82rem">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      View full IT Portfolio
+    </a>
   </div>
 </section>
 
