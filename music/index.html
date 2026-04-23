@@ -180,20 +180,11 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
       </div>
 
       <div class="journey-slide">
-        <img src="/assets/FB_IMG_1544743513056.jpg" alt="Early stage years" loading="lazy">
+        <img src="/assets/theatre-wss.png" alt="Cambio de Hábito 2019 — Happy Day" loading="lazy">
         <div class="journey-caption">
-          <div class="jc-era">2018 · First Jesus</div>
-          <div class="jc-title">Jesucristo Superstar</div>
-          <div class="jc-role">Jesus · Teatro Municipal de Ñuñoa — musical theatre debut in the lead role</div>
-        </div>
-      </div>
-
-      <div class="journey-slide">
-        <img src="/assets/theatre-wss.png" alt="West Side Story — Riff" loading="lazy">
-        <div class="journey-caption">
-          <div class="jc-era">2019 · Teatro Municipal de Las Condes</div>
-          <div class="jc-title">Éxitos de Broadway</div>
-          <div class="jc-role">Riff (West Side Story) · Ensemble: Mamma Mia!, Wicked, The Greatest Showman</div>
+          <div class="jc-era">2019 · Musical Vecinal de Las Condes</div>
+          <div class="jc-title">Cambio de Hábito</div>
+          <div class="jc-role">Happy Day · Teatro Municipal de Las Condes, Santiago</div>
         </div>
       </div>
 
@@ -207,20 +198,11 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
       </div>
 
       <div class="journey-slide">
-        <img src="/assets/theatre-habito.png" alt="Stage performance" loading="lazy">
+        <img src="/assets/theatre-habito.png" alt="Alguien Para Amar — Patagonia 2022" loading="lazy">
         <div class="journey-caption">
           <div class="jc-era">2022 · Original Project · Patagonia</div>
           <div class="jc-title">Alguien Para Amar</div>
           <div class="jc-role">Creator, Director & Performer · Broadway & Disney · Puyuhuapi, Patagonia</div>
-        </div>
-      </div>
-
-      <div class="journey-slide">
-        <img src="/assets/The Voice.jpeg" alt="The Voice Chile 2023" loading="lazy">
-        <div class="journey-caption">
-          <div class="jc-era">2023 · National Television</div>
-          <div class="jc-title">The Voice Chile — Semi-Finalist</div>
-          <div class="jc-role">Team Francisca Valenzuela · Chilevisión prime-time · Top ~10 of ~120 contestants</div>
         </div>
       </div>
 
@@ -234,11 +216,10 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
 </section>
 
 <script>(function(){
-  var total=6, idx=0;
+  var total=4, idx=0;
   var track=document.getElementById('jt');
   var dotsEl=document.getElementById('jdots');
 
-  // build dots
   for(var i=0;i<total;i++){
     var d=document.createElement('button');
     d.className='journey-dot'+(i===0?' active':'');
@@ -257,7 +238,6 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
 
   window.journeyNav=function(d){journeyGoTo(idx+d);};
 
-  // auto-advance every 5s
   var timer=setInterval(function(){journeyGoTo(idx+1);},5000);
   document.getElementById('jt').closest('.journey-gallery').addEventListener('mouseenter',function(){clearInterval(timer);});
   document.getElementById('jt').closest('.journey-gallery').addEventListener('mouseleave',function(){timer=setInterval(function(){journeyGoTo(idx+1);},5000);});
@@ -350,20 +330,20 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
 
     <div class="tl-item">
       <div class="tl-year">2019</div>
+      <div class="tl-title">Cambio de Hábito</div>
+      <div class="tl-role">Happy Day · Musical Vecinal de Las Condes · Teatro Municipal de Las Condes, Santiago</div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-year">2019</div>
       <div class="tl-title">Jesucristo Superstar</div>
       <div class="tl-role">Simon the Zealot · Teatro Municipal de Macul, Santiago</div>
     </div>
 
-    <div class="tl-item">
-      <div class="tl-year">2018</div>
-      <div class="tl-title">Les Misérables</div>
-      <div class="tl-role">Marius Pontmercy · Teatro Municipal de Cerro Navia, Santiago</div>
-    </div>
-
     <div class="tl-item gold" style="padding-bottom:0">
       <div class="tl-year">2018</div>
-      <div class="tl-title">Jesucristo Superstar</div>
-      <div class="tl-role">Jesus · Teatro Municipal de Ñuñoa, Santiago <em style="color:#475569">— musical theatre debut</em></div>
+      <div class="tl-title">Les Misérables</div>
+      <div class="tl-role">Marius Pontmercy · Teatro Municipal de Cerro Navia, Santiago <em style="color:#475569">— musical theatre debut</em></div>
     </div>
 
   </div>
