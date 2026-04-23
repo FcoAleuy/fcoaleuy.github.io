@@ -43,6 +43,23 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
 .btn.primary{background:rgba(167,139,250,.1);border-color:rgba(167,139,250,.4);color:var(--accent)}
 .btn.primary:hover{background:rgba(167,139,250,.2);box-shadow:0 0 18px rgba(167,139,250,.25)}
 .btn-row{display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center;margin-top:1.75rem}
+
+/* ── Journey Gallery ── */
+.journey-gallery{position:relative;border-radius:12px;overflow:hidden;border:1px solid rgba(167,139,250,.18);background:#0a0f1e;margin:1.25rem 0}
+.journey-track{display:flex;transition:transform .38s cubic-bezier(.4,0,.2,1)}
+.journey-slide{min-width:100%;width:100%;position:relative}
+.journey-slide img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center top;display:block}
+.journey-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(10,15,30,.95) 60%,transparent);padding:1.1rem 1rem .75rem;pointer-events:none}
+.journey-caption .jc-era{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:.15rem}
+.journey-caption .jc-title{font-size:.92rem;font-weight:700;color:#f8fafc;margin:0 0 .1rem}
+.journey-caption .jc-role{font-size:.78rem;color:#94a3b8}
+.journey-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(15,23,42,.72);border:1px solid rgba(167,139,250,.3);color:#a78bfa;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:1.2rem;line-height:1;display:flex;align-items:center;justify-content:center;transition:background .2s;backdrop-filter:blur(4px);z-index:2}
+.journey-btn:hover{background:rgba(167,139,250,.22)}
+.journey-btn.prev{left:.5rem}
+.journey-btn.next{right:.5rem}
+.journey-dots{display:flex;justify-content:center;gap:.4rem;padding:.55rem 0 .1rem}
+.journey-dot{width:6px;height:6px;border-radius:50%;background:rgba(167,139,250,.25);cursor:pointer;transition:background .2s,transform .2s;border:none;padding:0}
+.journey-dot.active{background:var(--accent);transform:scale(1.3)}
 </style>
 <script>(function(){
   var s=localStorage.getItem('fa-lang');
@@ -139,6 +156,112 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
     <p style="margin:0;font-size:.88rem;color:#94a3b8;line-height:1.65"><strong style="color:#f59e0b">Full circle:</strong> His blind audition on The Voice Chile (2023) was "Getsemaní" — the song Jesus Christ sings the night before his crucifixion. Three years later, he <em>was</em> Jesus Christ on stage with one of Chile's most storied companies.</p>
   </div>
 </section>
+
+<hr>
+
+<!-- ══════════════════════════════════════════
+     ARTISTIC JOURNEY GALLERY (Capa B)
+════════════════════════════════════════════ -->
+<section id="journey-gallery">
+  <span class="label">The story in images</span>
+  <h2 style="margin-top:.25rem;font-size:1.65rem">A Life on Stage</h2>
+  <p style="color:#94a3b8;font-size:.9rem;margin:.35rem 0 1rem;line-height:1.7">From a first piano lesson in Patagonia to the national stage — a visual journey through more than two decades of music, theatre, and performance.</p>
+
+  <div class="journey-gallery">
+    <div class="journey-track" id="jt">
+
+      <div class="journey-slide">
+        <img src="/assets/theatre-lesmis.png" alt="Les Misérables 2018 — Marius Pontmercy" loading="lazy">
+        <div class="journey-caption">
+          <div class="jc-era">2018 · Musical Theatre Debut</div>
+          <div class="jc-title">Les Misérables</div>
+          <div class="jc-role">Marius Pontmercy · Teatro Municipal de Cerro Navia, Santiago</div>
+        </div>
+      </div>
+
+      <div class="journey-slide">
+        <img src="/assets/FB_IMG_1544743513056.jpg" alt="Early stage years" loading="lazy">
+        <div class="journey-caption">
+          <div class="jc-era">2018 · First Jesus</div>
+          <div class="jc-title">Jesucristo Superstar</div>
+          <div class="jc-role">Jesus · Teatro Municipal de Ñuñoa — musical theatre debut in the lead role</div>
+        </div>
+      </div>
+
+      <div class="journey-slide">
+        <img src="/assets/theatre-wss.png" alt="West Side Story — Riff" loading="lazy">
+        <div class="journey-caption">
+          <div class="jc-era">2019 · Teatro Municipal de Las Condes</div>
+          <div class="jc-title">Éxitos de Broadway</div>
+          <div class="jc-role">Riff (West Side Story) · Ensemble: Mamma Mia!, Wicked, The Greatest Showman</div>
+        </div>
+      </div>
+
+      <div class="journey-slide">
+        <img src="/assets/theatre-hair.png" alt="Hair 2021 — Claude" loading="lazy">
+        <div class="journey-caption">
+          <div class="jc-era">2021 · Las Condes</div>
+          <div class="jc-title">Hair</div>
+          <div class="jc-role">Claude · Teatro Municipal de Las Condes, Santiago</div>
+        </div>
+      </div>
+
+      <div class="journey-slide">
+        <img src="/assets/theatre-habito.png" alt="Stage performance" loading="lazy">
+        <div class="journey-caption">
+          <div class="jc-era">2022 · Original Project · Patagonia</div>
+          <div class="jc-title">Alguien Para Amar</div>
+          <div class="jc-role">Creator, Director & Performer · Broadway & Disney · Puyuhuapi, Patagonia</div>
+        </div>
+      </div>
+
+      <div class="journey-slide">
+        <img src="/assets/The Voice.jpeg" alt="The Voice Chile 2023" loading="lazy">
+        <div class="journey-caption">
+          <div class="jc-era">2023 · National Television</div>
+          <div class="jc-title">The Voice Chile — Semi-Finalist</div>
+          <div class="jc-role">Team Francisca Valenzuela · Chilevisión prime-time · Top ~10 of ~120 contestants</div>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="journey-btn prev" onclick="journeyNav(-1)" aria-label="Previous">&#8249;</button>
+    <button class="journey-btn next" onclick="journeyNav(1)" aria-label="Next">&#8250;</button>
+  </div>
+
+  <div class="journey-dots" id="jdots"></div>
+</section>
+
+<script>(function(){
+  var total=6, idx=0;
+  var track=document.getElementById('jt');
+  var dotsEl=document.getElementById('jdots');
+
+  // build dots
+  for(var i=0;i<total;i++){
+    var d=document.createElement('button');
+    d.className='journey-dot'+(i===0?' active':'');
+    d.setAttribute('aria-label','Slide '+(i+1));
+    d.setAttribute('data-i',i);
+    d.addEventListener('click',function(){journeyGoTo(parseInt(this.getAttribute('data-i')));});
+    dotsEl.appendChild(d);
+  }
+
+  function journeyGoTo(n){
+    idx=(n+total)%total;
+    track.style.transform='translateX(-'+(idx*100)+'%)';
+    var dots=dotsEl.querySelectorAll('.journey-dot');
+    dots.forEach(function(d,i){d.className='journey-dot'+(i===idx?' active':'');});
+  }
+
+  window.journeyNav=function(d){journeyGoTo(idx+d);};
+
+  // auto-advance every 5s
+  var timer=setInterval(function(){journeyGoTo(idx+1);},5000);
+  document.getElementById('jt').closest('.journey-gallery').addEventListener('mouseenter',function(){clearInterval(timer);});
+  document.getElementById('jt').closest('.journey-gallery').addEventListener('mouseleave',function(){timer=setInterval(function(){journeyGoTo(idx+1);},5000);});
+})();</script>
 
 <hr>
 
