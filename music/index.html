@@ -64,15 +64,22 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
 .lang-pill .sep{color:#2d3748;padding:0 .05rem;font-weight:400}
 </style>
 <script>(function(){
-  var saved = localStorage.getItem('fa-lang');
-  if(saved === 'es'){ window.location.replace('/es/music/'); }
-  else if(saved === 'fr'){ window.location.replace('/fr/music/'); }
+  if(!localStorage.getItem('fa-lang-v2')){
+    if(localStorage.getItem('fa-lang')==='fr'){localStorage.removeItem('fa-lang');}
+    localStorage.setItem('fa-lang-v2','1');
+  }
+  var s=localStorage.getItem('fa-lang');
+  var b=(navigator.language||'en').substring(0,2).toLowerCase();
+  if(s==='es'){window.location.replace('/es/music/');}
+  else if(s==='fr'){window.location.replace('/fr/music/');}
+  else if(!s&&b==='es'){localStorage.setItem('fa-lang','es');window.location.replace('/es/music/');}
+
 })();</script>
 </head><body>
 
 <!-- NAV -->
 <nav style="display:flex;justify-content:center;align-items:center;gap:1.5rem;padding:1.2rem 1rem;background:rgba(15,23,42,.97);backdrop-filter:blur(10px);position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(167,139,250,.1);flex-wrap:wrap">
-  <a href="/" class="nav-link" style="display:flex;align-items:center;gap:.35rem"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>IT Portfolio</a>
+  <a href="/" class="nav-link" style="display:flex;align-items:center;gap:.35rem"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>franciscoaleuy.ca</a>
   <span style="color:rgba(167,139,250,.25);user-select:none">|</span>
   <a href="/music/" class="nav-link active">Performer</a>
   <a href="/music/#credits" class="nav-link">Credits</a>
@@ -307,6 +314,8 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
       <div class="tl-title">Jesucristo Superstar</div>
       <div class="tl-role">Simon the Zealot · Teatro Municipal de Macul, Santiago</div>
     </div>
+
+
     <div class="tl-item gold" style="padding-bottom:0">
       <div class="tl-year">2018</div>
       <div class="tl-title">Les Misérables</div>
@@ -411,6 +420,34 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
       <div class="tl-title">Piano — first steps</div>
       <div class="tl-role">Casa de la Cultura · Coyhaique, Chilean Patagonia</div>
     </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- ══════════════════════════════════════════
+     IT + ARTS BRIDGE
+════════════════════════════════════════════ -->
+<section id="bridge">
+  <span class="label">Cross-sector profile</span>
+  <h2 style="margin-top:.25rem;font-size:1.65rem">Where the Stage Meets the System</h2>
+  <p style="color:#94a3b8;font-size:.9rem;margin-bottom:1.25rem;line-height:1.7">Francisco's dual career isn't a coincidence — it's a rare advantage. He brings operational fluency <em>and</em> a performer's understanding of what it takes to put on a show. Arts organizations that need both creative energy and technical rigor will find a unique ally.</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1rem 0">
+    <div class="card" style="border-color:rgba(56,189,248,.2)">
+      <div style="font-size:1.2rem;margin-bottom:.5rem">⚙️</div>
+      <div style="font-weight:700;color:#38bdf8;margin-bottom:.3rem;font-size:.88rem;text-transform:uppercase;letter-spacing:.08em">IT & Operations</div>
+      <p style="font-size:.8rem;color:#94a3b8;margin:0;line-height:1.65">Product Owner · Process Design · Systems Analysis · ERP · AWS — built for scale, applied to complexity.</p>
+    </div>
+    <div class="card">
+      <div style="font-size:1.2rem;margin-bottom:.5rem">🎭</div>
+      <div style="font-weight:700;color:var(--accent);margin-bottom:.3rem;font-size:.88rem;text-transform:uppercase;letter-spacing:.08em">Performer's Lens</div>
+      <p style="font-size:.8rem;color:#94a3b8;margin:0;line-height:1.65">Led casts of 60+. Understands production timelines, artist coordination, and the operational reality of live performance.</p>
+    </div>
+  </div>
+
+  <div style="background:rgba(56,189,248,.05);border:1px solid rgba(56,189,248,.18);border-radius:10px;padding:1rem 1.2rem;margin-top:.75rem">
+    <p style="margin:0;font-size:.86rem;color:#94a3b8;line-height:1.65;text-align:center">Arts organizations, festivals, theatres, and creative companies looking for <strong style="color:#f8fafc">technically fluent operations leadership</strong> — <a href="/it/" style="color:#38bdf8;text-decoration:none;font-weight:600">see the full IT portfolio →</a></p>
   </div>
 </section>
 

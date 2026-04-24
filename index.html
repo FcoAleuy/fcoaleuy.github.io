@@ -30,11 +30,16 @@ h1{color:#f8fafc}a{text-decoration:none}
 .loc{margin-top:2.5rem;font-size:.74rem;color:#334155;text-align:center;letter-spacing:.05em}
 </style>
 <script>(function(){
+  // v2 migration: clear any auto-stored 'fr' (Canadian phones stuck in French)
+  if(!localStorage.getItem('fa-lang-v2')){
+    if(localStorage.getItem('fa-lang')==='fr'){localStorage.removeItem('fa-lang');}
+    localStorage.setItem('fa-lang-v2','1');
+  }
   var s=localStorage.getItem('fa-lang');
   var b=(navigator.language||'en').substring(0,2).toLowerCase();
-  var l=s||b;
-  if(l==='es'){localStorage.setItem('fa-lang','es');window.location.replace('/es/');}
-  else if(l==='fr'){localStorage.setItem('fa-lang','fr');window.location.replace('/fr/');}
+  if(s==='es'){window.location.replace('/es/');}
+  else if(s==='fr'){window.location.replace('/fr/');}
+  else if(!s&&b==='es'){localStorage.setItem('fa-lang','es');window.location.replace('/es/');}
 })();</script>
 </head><body>
 
