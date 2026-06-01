@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="es"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Francisco Aleuy — Singer & Performer</title>
+<title>Francisco Aleuy — Artista &amp; Intérprete</title>
 <meta name="description" content="Francisco Aleuy — Cantante, Artista y Líder Creativo. Semifinalista de The Voice Chile, Jesucristo Superstar (Agrupación Andrómeda), créditos en teatro musical en Santiago.">
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -34,22 +34,40 @@ main{max-width:800px;margin:0 auto;padding:0 1.5rem 5rem}
 .tl-role{font-size:.83rem;color:var(--muted);line-height:1.5}
 .comp-card{background:rgba(30,41,59,.5);border:1px solid rgba(167,139,250,.12);border-radius:12px;padding:1.1rem 1.25rem;margin-bottom:.9rem;display:flex;align-items:flex-start;gap:.9rem}
 .medal{font-size:1.9rem;flex-shrink:0;line-height:1}
-.photo-ph{width:100%;aspect-ratio:4/3;background:rgba(15,25,45,.8);border:2px dashed rgba(167,139,250,.2);border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem;color:#475569;font-size:.8rem}
-.photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1rem 0}
-@media(max-width:500px){.photo-grid{grid-template-columns:1fr}}
 hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
 .btn{display:inline-flex;align-items:center;gap:.6rem;padding:.75rem 1.4rem;border-radius:12px;font-weight:500;font-size:.9rem;text-decoration:none;transition:all .2s ease;border:1px solid rgba(148,163,184,.2);background:rgba(30,41,59,.6);color:#e2e8f0}
 .btn:hover{border-color:var(--accent);background:rgba(167,139,250,.1);color:var(--accent);transform:translateY(-2px)}
 .btn.primary{background:rgba(167,139,250,.1);border-color:rgba(167,139,250,.4);color:var(--accent)}
 .btn.primary:hover{background:rgba(167,139,250,.2);box-shadow:0 0 18px rgba(167,139,250,.25)}
 .btn-row{display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center;margin-top:1.75rem}
+.journey-gallery{position:relative;border-radius:12px;overflow:hidden;border:1px solid rgba(167,139,250,.18);background:#0a0f1e;margin:1.25rem 0}
+.journey-track{display:flex;transition:transform .38s cubic-bezier(.4,0,.2,1)}
+.journey-slide{min-width:100%;width:100%;position:relative}
+.journey-slide img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center top;display:block}
+.journey-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(10,15,30,.95) 60%,transparent);padding:1.1rem 1rem .75rem;pointer-events:none}
+.journey-caption .jc-era{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:.15rem}
+.journey-caption .jc-title{font-size:.92rem;font-weight:700;color:#f8fafc;margin:0 0 .1rem}
+.journey-caption .jc-role{font-size:.78rem;color:#94a3b8}
+.journey-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(15,23,42,.72);border:1px solid rgba(167,139,250,.3);color:#a78bfa;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:1.2rem;line-height:1;display:flex;align-items:center;justify-content:center;transition:background .2s;backdrop-filter:blur(4px);z-index:2}
+.journey-btn:hover{background:rgba(167,139,250,.22)}
+.journey-btn.prev{left:.5rem}
+.journey-btn.next{right:.5rem}
+.journey-dots{display:flex;justify-content:center;gap:.4rem;padding:.55rem 0 .1rem}
+.journey-dot{width:6px;height:6px;border-radius:50%;background:rgba(167,139,250,.25);cursor:pointer;transition:background .2s,transform .2s;border:none;padding:0}
+.journey-dot.active{background:var(--accent);transform:scale(1.3)}
+.lang-pill{position:fixed;bottom:1.5rem;left:1rem;z-index:9998;display:flex;align-items:center;gap:.15rem;background:rgba(15,23,42,.92);border:1px solid rgba(167,139,250,.2);border-radius:20px;padding:.3rem .5rem;font-size:.74rem;backdrop-filter:blur(8px)}
+.lang-pill a,.lang-pill span.current{padding:.2rem .55rem;border-radius:14px;font-weight:600;text-decoration:none;transition:color .2s,background .2s;letter-spacing:.04em}
+.lang-pill span.current{color:var(--accent);background:rgba(167,139,250,.12)}
+.lang-pill a{color:#475569}
+.lang-pill a:hover{color:#f8fafc}
+.lang-pill .sep{color:#2d3748;padding:0 .05rem;font-weight:400}
 </style>
 <script>localStorage.setItem('fa-lang','es');</script>
 </head><body>
 
 <!-- NAV -->
 <nav style="display:flex;justify-content:center;align-items:center;gap:1.5rem;padding:1.2rem 1rem;background:rgba(15,23,42,.97);backdrop-filter:blur(10px);position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(167,139,250,.1);flex-wrap:wrap">
-  <a href="/es/" class="nav-link" style="display:flex;align-items:center;gap:.35rem"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>Portafolio IT</a>
+  <a href="/es/" class="nav-link" style="display:flex;align-items:center;gap:.35rem"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>franciscoaleuy.ca</a>
   <span style="color:rgba(167,139,250,.25);user-select:none">|</span>
   <a href="#" onclick="return false" class="nav-link active">Artista</a>
   <a href="/es/music/#credits" class="nav-link">Créditos</a>
@@ -69,8 +87,8 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
 <div id="about" style="text-align:center;padding:3rem 0 1.75rem">
   <img src="/assets/yo.jpg" alt="Francisco Aleuy" style="width:155px;height:155px;object-fit:cover;border-radius:35%;box-shadow:0 0 60px -10px rgba(167,139,250,.65);border:3px solid rgba(167,139,250,.45);margin:0 auto 1.5rem;display:block;filter:sepia(100%) hue-rotate(240deg) saturate(180%) brightness(.88)">
   <h1 style="margin:.4rem 0 .25rem;font-size:2.1rem;letter-spacing:-.02em">Francisco Aleuy</h1>
-  <p style="font-size:.82rem;font-weight:700;color:var(--accent);letter-spacing:.2em;margin:0 0 1.1rem;text-transform:uppercase">Singer · Performer · Artistic Leader</p>
-  <p style="color:#94a3b8;max-width:520px;margin:0 auto;font-size:.93rem;line-height:1.75">Creating emotional connections through music and performing arts — celebrating cultural and human diversity across Chile and Canada.</p>
+  <p style="font-size:.82rem;font-weight:700;color:var(--accent);letter-spacing:.2em;margin:0 0 1.1rem;text-transform:uppercase">Artista · Intérprete · Líder Artístico</p>
+  <p style="color:#94a3b8;max-width:520px;margin:0 auto;font-size:.93rem;line-height:1.75">Crear conexiones emocionales a través de la música y las artes escénicas — celebrando la diversidad cultural y humana entre Chile y Canadá.</p>
 </div>
 
 <hr>
@@ -142,6 +160,81 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
 <hr>
 
 <!-- ══════════════════════════════════════════
+     GALERÍA DEL RECORRIDO ARTÍSTICO
+════════════════════════════════════════════ -->
+<section id="journey-gallery">
+  <span class="label">La historia en imágenes</span>
+  <h2 style="margin-top:.25rem;font-size:1.65rem">Una Vida en Escena</h2>
+  <p style="color:#94a3b8;font-size:.9rem;margin:.35rem 0 1rem;line-height:1.7">Desde las primeras clases de piano en la Patagonia hasta el escenario nacional — un recorrido visual por más de dos décadas de música, teatro y actuación.</p>
+
+  <div class="journey-gallery">
+    <div class="journey-track" id="jt">
+      <div class="journey-slide">
+        <img src="/assets/theatre-lesmis.png" alt="Les Misérables 2018 — Marius Pontmercy" loading="lazy">
+        <div class="journey-caption">
+          <div class="jc-era">2018 · Debut en teatro musical</div>
+          <div class="jc-title">Les Misérables</div>
+          <div class="jc-role">Marius Pontmercy · Teatro Municipal de Cerro Navia, Santiago</div>
+        </div>
+      </div>
+      <div class="journey-slide">
+        <img src="/assets/theatre-wss.png" alt="Éxitos de Broadway 2019 — Riff" loading="lazy">
+        <div class="journey-caption">
+          <div class="jc-era">2019 · Teatro Municipal de Las Condes</div>
+          <div class="jc-title">Éxitos de Broadway</div>
+          <div class="jc-role">Riff (West Side Story) · Ensemble: Mamma Mia!, Wicked, The Greatest Showman</div>
+        </div>
+      </div>
+      <div class="journey-slide">
+        <img src="/assets/theatre-habito.png" alt="Cambio de Hábito 2019 — Happy Day" loading="lazy">
+        <div class="journey-caption">
+          <div class="jc-era">2019 · Musical Vecinal de Las Condes</div>
+          <div class="jc-title">Cambio de Hábito</div>
+          <div class="jc-role">Happy Day · Teatro Municipal de Las Condes, Santiago</div>
+        </div>
+      </div>
+      <div class="journey-slide">
+        <img src="/assets/theatre-hair.png" alt="Hair 2021 — Claude" loading="lazy">
+        <div class="journey-caption">
+          <div class="jc-era">2021 · Las Condes</div>
+          <div class="jc-title">Hair</div>
+          <div class="jc-role">Claude · Teatro Municipal de Las Condes, Santiago</div>
+        </div>
+      </div>
+    </div>
+    <button class="journey-btn prev" onclick="journeyNav(-1)" aria-label="Anterior">&#8249;</button>
+    <button class="journey-btn next" onclick="journeyNav(1)" aria-label="Siguiente">&#8250;</button>
+  </div>
+  <div class="journey-dots" id="jdots"></div>
+</section>
+
+<script>(function(){
+  var total=4,idx=0;
+  var track=document.getElementById('jt');
+  var dotsEl=document.getElementById('jdots');
+  for(var i=0;i<total;i++){
+    var d=document.createElement('button');
+    d.className='journey-dot'+(i===0?' active':'');
+    d.setAttribute('aria-label','Diapositiva '+(i+1));
+    d.setAttribute('data-i',i);
+    d.addEventListener('click',function(){journeyGoTo(parseInt(this.getAttribute('data-i')));});
+    dotsEl.appendChild(d);
+  }
+  function journeyGoTo(n){
+    idx=(n+total)%total;
+    track.style.transform='translateX(-'+(idx*100)+'%)';
+    var dots=dotsEl.querySelectorAll('.journey-dot');
+    dots.forEach(function(d,i){d.className='journey-dot'+(i===idx?' active':'');});
+  }
+  window.journeyNav=function(d){journeyGoTo(idx+d);};
+  var timer=setInterval(function(){journeyGoTo(idx+1);},5000);
+  document.getElementById('jt').closest('.journey-gallery').addEventListener('mouseenter',function(){clearInterval(timer);});
+  document.getElementById('jt').closest('.journey-gallery').addEventListener('mouseleave',function(){timer=setInterval(function(){journeyGoTo(idx+1);},5000);});
+})();</script>
+
+<hr>
+
+<!-- ══════════════════════════════════════════
      THE VOICE CHILE 2023
 ════════════════════════════════════════════ -->
 <section id="voice">
@@ -203,7 +296,7 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
     <div class="tl-item">
       <div class="tl-year">2022</div>
       <div class="tl-title">Alguien Para Amar</div>
-      <div class="tl-role">Creator, Director & Performer · Original project (Broadway & Disney) · Puyuhuapi, Patagonia · Cast of 5</div>
+      <div class="tl-role">Creador, Director &amp; Intérprete · Proyecto original (Broadway &amp; Disney) · Puyuhuapi, Patagonia · Elenco de 5</div>
     </div>
 
     <div class="tl-item">
@@ -226,6 +319,12 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
 
     <div class="tl-item">
       <div class="tl-year">2019</div>
+      <div class="tl-title">Cambio de Hábito</div>
+      <div class="tl-role">Happy Day · Musical Vecinal de Las Condes · Teatro Municipal de Las Condes, Santiago</div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-year">2019</div>
       <div class="tl-title">Jesucristo Superstar</div>
       <div class="tl-role">Simon the Zealot · Teatro Municipal de Macul, Santiago</div>
     </div>
@@ -244,6 +343,15 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
 
   </div>
 </section>
+
+<!-- Vancouver Callout -->
+<div style="background:rgba(56,189,248,.06);border:1px solid rgba(56,189,248,.18);border-radius:12px;padding:1.2rem 1.4rem;margin:1.5rem 0;display:flex;gap:1rem;align-items:flex-start">
+  <span style="font-size:1.6rem;flex-shrink:0;line-height:1">🍁</span>
+  <div>
+    <div style="font-weight:700;color:#38bdf8;margin-bottom:.3rem">Les Misérables — Vancouver, Columbia Británica</div>
+    <p style="margin:0;font-size:.86rem;color:#94a3b8;line-height:1.65">Desde su llegada a Canadá, Francisco continúa desarrollando su carrera artística dentro de la comunidad de las artes escénicas en la Columbia Británica. Una década después de sus primeros pasos en escena con <em>Les Misérables</em> en Santiago, las grandes historias cruzan fronteras.</p>
+  </div>
+</div>
 
 <hr>
 
@@ -298,6 +406,35 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
 <hr>
 
 <!-- ══════════════════════════════════════════
+     DONDE EL ARTE ENCUENTRA EL CÓDIGO
+════════════════════════════════════════════ -->
+<section id="art-meets-code">
+  <span class="label">Tecnología &amp; Artes</span>
+  <h2 style="margin-top:.25rem;font-size:1.65rem">Donde el Arte encuentra el Código</h2>
+  <p style="color:#94a3b8;font-size:.9rem;margin:.35rem 0 1.1rem;line-height:1.75">Dos carreras que raramente comparten el mismo CV. Francisco ha pasado décadas interpretando personajes en escena — y el mismo tiempo construyendo software, bases de datos y productos digitales. Esa doble perspectiva moldea su manera de abordar ambas disciplinas.</p>
+  <p style="color:#94a3b8;font-size:.9rem;margin:0 0 1.1rem;line-height:1.75">El mundo de las artes escénicas tiene necesidades tecnológicas reales y desatendidas: gestión de audiencias, herramientas de producción digital, plataformas comunitarias para artistas independientes, proyectos culturales ligados a la migración. Francisco ve esas brechas no como obstáculos, sino como oportunidades — y tiene el rango técnico para abordarlas.</p>
+  <div style="background:rgba(123,77,200,.07);border:1px solid rgba(123,77,200,.25);border-radius:12px;padding:1.2rem 1.4rem;display:flex;gap:1rem;align-items:flex-start">
+    <div style="font-size:1.6rem;flex-shrink:0;line-height:1;margin-top:.1rem">🧭</div>
+    <div>
+      <div style="font-weight:700;color:#f8fafc;margin-bottom:.3rem;font-size:.97rem">SoyManada — Directorio de confianza para la comunidad migrante</div>
+      <p style="margin:0 0 .75rem;font-size:.86rem;color:#94a3b8;line-height:1.65">Su proyecto más personal: una plataforma digital que conecta a migrantes con proveedores de servicios verificados — en su idioma, construida con empatía cultural como eje central. Tecnología que entiende lo que significa comenzar de nuevo en un nuevo país.</p>
+      <a href="https://soymanada.com" target="_blank" rel="noopener noreferrer" class="btn primary" style="font-size:.82rem;padding:.5rem 1.1rem">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        soymanada.com
+      </a>
+    </div>
+  </div>
+  <div style="margin-top:1rem;text-align:center">
+    <a href="/es/" class="btn" style="font-size:.82rem">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      Ver el portafolio IT completo
+    </a>
+  </div>
+</section>
+
+<hr>
+
+<!-- ══════════════════════════════════════════
      THE JOURNEY
 ════════════════════════════════════════════ -->
 <section id="journey">
@@ -307,7 +444,7 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
   <div class="tl">
     <div class="tl-item">
       <div class="tl-year">2010 – 2015</div>
-      <div class="tl-title">Truco — Co-founder & Lead Performer</div>
+      <div class="tl-title">Truco — Co-fundador &amp; Intérprete Principal</div>
       <div class="tl-role">Composiciones originales de rock/latin. Gira por Valparaíso, Rancagua y Santiago</div>
     </div>
     <div class="tl-item">
@@ -325,6 +462,34 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
       <div class="tl-title">Piano — primeros pasos</div>
       <div class="tl-role">Casa de la Cultura · Coyhaique, Patagonia chilena</div>
     </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- ══════════════════════════════════════════
+     DONDE EL ESCENARIO ENCUENTRA EL SISTEMA
+════════════════════════════════════════════ -->
+<section id="bridge">
+  <span class="label">Perfil intersectorial</span>
+  <h2 style="margin-top:.25rem;font-size:1.65rem">Donde el Escenario encuentra el Sistema</h2>
+  <p style="color:#94a3b8;font-size:.9rem;margin-bottom:1.25rem;line-height:1.7">La doble carrera de Francisco no es una coincidencia — es una ventaja poco común. Trae fluidez operacional <em>y</em> la comprensión de un intérprete sobre lo que se necesita para montar un espectáculo. Las organizaciones artísticas que necesitan energía creativa y rigor técnico encontrarán en él un aliado único.</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1rem 0">
+    <div class="card" style="border-color:rgba(56,189,248,.2)">
+      <div style="font-size:1.2rem;margin-bottom:.5rem">⚙️</div>
+      <div style="font-weight:700;color:#38bdf8;margin-bottom:.3rem;font-size:.88rem;text-transform:uppercase;letter-spacing:.08em">IT &amp; Operaciones</div>
+      <p style="font-size:.8rem;color:#94a3b8;margin:0;line-height:1.65">Product Owner · Diseño de procesos · Análisis de sistemas · ERP · AWS — construido para la escala, aplicado a la complejidad.</p>
+    </div>
+    <div class="card">
+      <div style="font-size:1.2rem;margin-bottom:.5rem">🎭</div>
+      <div style="font-weight:700;color:var(--accent);margin-bottom:.3rem;font-size:.88rem;text-transform:uppercase;letter-spacing:.08em">Mirada de Intérprete</div>
+      <p style="font-size:.8rem;color:#94a3b8;margin:0;line-height:1.65">Lideró elencos de 60+ artistas. Comprende los plazos de producción, la coordinación artística y la realidad operacional del espectáculo en vivo.</p>
+    </div>
+  </div>
+
+  <div style="background:rgba(56,189,248,.05);border:1px solid rgba(56,189,248,.18);border-radius:10px;padding:1rem 1.2rem;margin-top:.75rem">
+    <p style="margin:0;font-size:.86rem;color:#94a3b8;line-height:1.65;text-align:center">Organizaciones artísticas, festivales, teatros y empresas creativas que buscan un <strong style="color:#f8fafc">liderazgo operacional técnicamente fluido</strong> — <a href="/es/" style="color:#38bdf8;text-decoration:none;font-weight:600">ver el portafolio IT completo →</a></p>
   </div>
 </section>
 
@@ -352,7 +517,7 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
     </a>
     <a href="/es/" class="btn">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-      IT Portfolio
+      Portafolio IT
     </a>
   </div>
 </section>
@@ -360,12 +525,12 @@ hr{border:none;border-top:1px solid rgba(167,139,250,.1);margin:2.5rem 0}
 </main>
 
 <!-- BOTTOM LANGUAGE PILL -->
-<div style="position:fixed;bottom:1.5rem;left:1rem;z-index:9998;display:flex;align-items:center;gap:.4rem;background:rgba(15,23,42,.92);border:1px solid rgba(167,139,250,.2);border-radius:20px;padding:.4rem .9rem;font-size:.74rem;backdrop-filter:blur(8px)">
-  <a href="/music/" onclick="localStorage.setItem('fa-lang','en')" style="color:#475569;text-decoration:none;font-weight:500;transition:color .2s" onMouseOver="this.style.color='#f8fafc'" onMouseOut="this.style.color='#475569'"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" style="display:inline-block;width:14px;height:9px;vertical-align:middle;border-radius:1px;margin-right:3px"><rect width="3" height="2" fill="#fff"/><rect x="1.25" width="0.5" height="2" fill="#CF111A"/><rect y="0.75" width="3" height="0.5" fill="#CF111A"/></svg>EN</a>
-  <span style="color:#2d3748">·</span>
-  <a href="/fr/music/" onclick="localStorage.setItem('fa-lang','fr')" style="color:#475569;text-decoration:none;font-weight:500;transition:color .2s" onMouseOver="this.style.color='#f8fafc'" onMouseOut="this.style.color='#475569'"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" style="display:inline-block;width:14px;height:9px;vertical-align:middle;border-radius:1px;margin-right:3px"><rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ED2939"/></svg>FR</a>
-  <span style="color:#2d3748">·</span>
-  <a href="#" onclick="return false" onclick="localStorage.setItem('fa-lang','es')" style="color:#475569;text-decoration:none;font-weight:500;transition:color .2s" onMouseOver="this.style.color='#f8fafc'" onMouseOut="this.style.color='#475569'"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" style="display:inline-block;width:14px;height:9px;vertical-align:middle;border-radius:1px;margin-right:3px"><rect width="3" height="2" fill="#D52B1E"/><rect width="3" height="1" fill="#fff"/><rect width="1" height="1" fill="#0039A6"/><polygon points="0.5,0.12 0.59,0.37 0.86,0.38 0.65,0.55 0.72,0.81 0.5,0.66 0.28,0.81 0.35,0.55 0.14,0.38 0.41,0.37" fill="#fff"/></svg>ES</a>
+<div class="lang-pill">
+  <a href="/music/" onclick="localStorage.setItem('fa-lang','en')"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" style="display:inline-block;width:14px;height:9px;vertical-align:middle;border-radius:1px;margin-right:3px"><rect width="3" height="2" fill="#fff"/><rect x="1.25" width="0.5" height="2" fill="#CF111A"/><rect y="0.75" width="3" height="0.5" fill="#CF111A"/></svg>EN</a>
+  <span class="sep">·</span>
+  <a href="/fr/music/" onclick="localStorage.setItem('fa-lang','fr')"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" style="display:inline-block;width:14px;height:9px;vertical-align:middle;border-radius:1px;margin-right:3px"><rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ED2939"/></svg>FR</a>
+  <span class="sep">·</span>
+  <span class="current"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" style="display:inline-block;width:14px;height:9px;vertical-align:middle;border-radius:1px;margin-right:3px"><rect width="3" height="2" fill="#D52B1E"/><rect width="3" height="1" fill="#fff"/><rect width="1" height="1" fill="#0039A6"/><polygon points="0.5,0.12 0.59,0.37 0.86,0.38 0.65,0.55 0.72,0.81 0.5,0.66 0.28,0.81 0.35,0.55 0.14,0.38 0.41,0.37" fill="#fff"/></svg>ES</span>
 </div>
 
 <footer style="text-align:center;padding:1.5rem;font-size:.78rem;color:#2d3748;border-top:1px solid rgba(167,139,250,.08)">
