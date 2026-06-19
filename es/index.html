@@ -7,46 +7,92 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%;background:#0f172a;color:#f8fafc;font-family:Inter,sans-serif;overflow-x:hidden}
-body{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem 1.5rem}
+body{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem 1.5rem;position:relative}
+
+/* ─── Ambient background glows ─── */
+.bg-glow{position:fixed;inset:0;z-index:-2;pointer-events:none;overflow:hidden}
+.bg-glow::before,.bg-glow::after{content:'';position:absolute;width:55vw;height:55vw;max-width:680px;max-height:680px;border-radius:50%;filter:blur(90px);opacity:.5}
+.bg-glow::before{top:-12%;left:-10%;background:radial-gradient(circle,rgba(56,189,248,.20),transparent 70%);animation:drift1 22s ease-in-out infinite}
+.bg-glow::after{bottom:-15%;right:-12%;background:radial-gradient(circle,rgba(167,139,250,.18),transparent 70%);animation:drift2 26s ease-in-out infinite}
+/* Grain texture */
+.bg-grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.04;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+@keyframes drift1{0%,100%{transform:translate(0,0)}50%{transform:translate(6%,8%)}}
+@keyframes drift2{0%,100%{transform:translate(0,0)}50%{transform:translate(-7%,-6%)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
 h1{color:#f8fafc}a{text-decoration:none}
-.name{font-size:clamp(1.6rem,5vw,2.4rem);font-weight:700;letter-spacing:-.02em;text-align:center;margin-bottom:.3rem}
-.sub{font-size:.83rem;color:#64748b;text-align:center;letter-spacing:.08em;margin-bottom:3rem}
+.portrait{width:70px;height:70px;object-fit:cover;border-radius:50%;border:2px solid rgba(148,163,184,.18);margin-bottom:1.5rem;filter:grayscale(15%);
+  animation:fadeUp .8s cubic-bezier(.16,1,.3,1) both;animation-delay:.05s}
+.name{font-size:clamp(1.6rem,5vw,2.4rem);font-weight:700;letter-spacing:-.02em;text-align:center;margin-bottom:.3rem;
+  animation:fadeUp .8s cubic-bezier(.16,1,.3,1) both;animation-delay:.18s}
+.sub{font-size:.83rem;color:#64748b;text-align:center;letter-spacing:.08em;margin-bottom:3rem;
+  animation:fadeUp .8s cubic-bezier(.16,1,.3,1) both;animation-delay:.30s}
 .cards{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;width:100%;max-width:640px}
 @media(max-width:500px){.cards{grid-template-columns:1fr;max-width:340px}}
-.card{position:relative;padding:1.8rem 1.5rem 1.5rem;border-radius:16px;transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column;gap:.4rem;overflow:hidden}
-.card:hover{transform:translateY(-4px)}
+.card{position:relative;padding:1.8rem 1.5rem 1.5rem;border-radius:16px;transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s,border-color .3s;display:flex;flex-direction:column;gap:.4rem;overflow:hidden;
+  animation:fadeUp .85s cubic-bezier(.16,1,.3,1) both}
+.card:nth-child(1){animation-delay:.42s}
+.card:nth-child(2){animation-delay:.54s}
+.card:hover{transform:translateY(-6px)}
+/* Top light line that ignites on hover */
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:1.5px;transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.16,1,.3,1)}
+.card:hover::before{transform:scaleX(1)}
+/* Sheen sweep on hover */
+.card::after{content:'';position:absolute;top:0;left:-75%;width:50%;height:100%;transform:skewX(-20deg);pointer-events:none;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.07),transparent)}
+.card:hover::after{animation:sheen .7s ease forwards}
+@keyframes sheen{to{left:140%}}
 .card-it{background:rgba(56,189,248,.06);border:1px solid rgba(56,189,248,.22)}
-.card-it:hover{border-color:rgba(56,189,248,.5);box-shadow:0 8px 40px rgba(56,189,248,.12)}
+.card-it::before{background:linear-gradient(90deg,transparent,#38bdf8,transparent)}
+.card-it:hover{border-color:rgba(56,189,248,.5);box-shadow:0 12px 48px rgba(56,189,248,.16)}
 .card-art{background:rgba(167,139,250,.06);border:1px solid rgba(167,139,250,.22)}
-.card-art:hover{border-color:rgba(167,139,250,.5);box-shadow:0 8px 40px rgba(167,139,250,.12)}
-.card-icon{font-size:1.5rem;margin-bottom:.15rem}
+.card-art::before{background:linear-gradient(90deg,transparent,#a78bfa,transparent)}
+.card-art:hover{border-color:rgba(167,139,250,.5);box-shadow:0 12px 48px rgba(167,139,250,.16)}
+.card-icon{width:26px;height:26px;margin-bottom:.6rem;transition:transform .3s cubic-bezier(.16,1,.3,1)}
+.card-it .card-icon{color:#38bdf8}.card-art .card-icon{color:#a78bfa}
+.card:hover .card-icon{transform:scale(1.12) translateY(-2px)}
 .card-title{font-size:1.05rem;font-weight:700;color:#f8fafc;line-height:1.3}
 .card-tags{font-size:.72rem;color:#64748b;line-height:1.7}
 .card-cta{margin-top:auto;padding-top:1rem;font-size:.78rem;font-weight:600;display:flex;align-items:center;gap:.3rem}
+.card-cta svg{transition:transform .3s cubic-bezier(.16,1,.3,1)}
+.card:hover .card-cta svg{transform:translateX(4px)}
 .card-it .card-cta{color:#38bdf8}.card-art .card-cta{color:#a78bfa}
 .card-badge{position:absolute;top:.7rem;right:.75rem;font-size:.6rem;font-weight:700;letter-spacing:.12em;padding:.15rem .5rem;border-radius:20px;text-transform:uppercase}
 .card-it .card-badge{background:rgba(56,189,248,.1);color:#38bdf8;border:1px solid rgba(56,189,248,.2)}
 .card-art .card-badge{background:rgba(167,139,250,.1);color:#a78bfa;border:1px solid rgba(167,139,250,.2)}
-.loc{margin-top:2.5rem;font-size:.74rem;color:#334155;text-align:center;letter-spacing:.05em}
+.loc{margin-top:2.5rem;font-size:.74rem;color:#334155;text-align:center;letter-spacing:.05em;
+  animation:fadeIn 1s ease both;animation-delay:.7s}
+
+@media(prefers-reduced-motion:reduce){
+  .portrait,.name,.sub,.card,.loc{animation:none!important;opacity:1!important;transform:none!important}
+  .bg-glow::before,.bg-glow::after{animation:none}
+  .card::after{display:none}
+}
 </style>
 <script>localStorage.setItem('fa-lang','es');</script>
 </head><body>
 
-<img src="/assets/yo.jpg" alt="Francisco Aleuy" style="width:70px;height:70px;object-fit:cover;border-radius:50%;border:2px solid rgba(148,163,184,.18);margin-bottom:1.5rem;filter:grayscale(15%)">
+<div class="bg-glow"></div>
+<div class="bg-grain"></div>
+
+<img src="/assets/yo.jpg" alt="Francisco Aleuy" class="portrait">
 <h1 class="name">Francisco Aleuy</h1>
 <p class="sub">Southern Okanagan, BC &nbsp;·&nbsp; Canadá</p>
 
 <div class="cards">
   <a href="/es/it/" class="card card-it">
     <div class="card-badge">IT</div>
-    <div class="card-icon">⚙️</div>
+    <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25zm.75-12h9v9h-9v-9z"/></svg>
     <div class="card-title">Operaciones &amp;<br>Tecnología</div>
     <div class="card-tags">Product Owner · Diseño de Procesos<br>Análisis de Sistemas · BC, Canadá</div>
     <div class="card-cta">Ver portafolio <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></div>
   </a>
   <a href="/es/music/" class="card card-art">
     <div class="card-badge">ARTISTA</div>
-    <div class="card-icon">🎵</div>
+    <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3z"/></svg>
     <div class="card-title">Cantante &amp;<br>Artista</div>
     <div class="card-tags">Teatro Musical · The Voice Chile<br>Agrupación Andrómeda · 2026</div>
     <div class="card-cta">Ver portafolio <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></div>
