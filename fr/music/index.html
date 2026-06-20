@@ -33,7 +33,7 @@ main{max-width:800px;margin:0 auto;padding:0 1.5rem 5rem}
 .tl-title{font-weight:700;color:#f8fafc;margin:.08rem 0 .05rem}
 .tl-role{font-size:.83rem;color:var(--muted);line-height:1.5}
 .comp-card{background:rgba(30,41,59,.5);border:1px solid rgba(167,139,250,.12);border-radius:12px;padding:1.1rem 1.25rem;margin-bottom:.9rem;display:flex;align-items:flex-start;gap:.9rem}
-.medal{font-size:1.9rem;flex-shrink:0;line-height:1}
+.medal{flex-shrink:0;display:flex;align-items:center}
 hr{border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(167,139,250,.28),transparent);margin:2.75rem 0}
 .btn{display:inline-flex;align-items:center;gap:.6rem;padding:.75rem 1.4rem;border-radius:12px;font-weight:500;font-size:.9rem;text-decoration:none;transition:all .2s ease;border:1px solid rgba(148,163,184,.2);background:rgba(30,41,59,.6);color:#e2e8f0}
 .btn:hover{border-color:var(--accent);background:rgba(167,139,250,.1);color:var(--accent);transform:translateY(-2px)}
@@ -73,11 +73,19 @@ hr{border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(167,
 .hero-name{animation:fadeUp .85s cubic-bezier(.16,1,.3,1) both;animation-delay:.18s}
 .hero-role{animation:fadeUp .85s cubic-bezier(.16,1,.3,1) both;animation-delay:.28s}
 .hero-bio{animation:fadeUp .85s cubic-bezier(.16,1,.3,1) both;animation-delay:.4s}
-.card{transition:border-color .25s,box-shadow .25s}
-.card:hover{border-color:rgba(167,139,250,.32);box-shadow:0 8px 32px rgba(167,139,250,.1)}
-.tl-item:hover{background:rgba(167,139,250,.05);border-radius:8px}
-.comp-card{transition:border-color .25s,box-shadow .25s}
-.comp-card:hover{border-color:rgba(167,139,250,.28);box-shadow:0 6px 24px rgba(167,139,250,.09)}
+.card{transform:perspective(900px) rotateX(var(--tiltX,0deg)) rotateY(var(--tiltY,0deg)) scale(var(--s,1));transition:transform .12s ease,border-color .3s,box-shadow .3s;will-change:transform}
+.card:hover{border-color:rgba(167,139,250,.38);box-shadow:0 14px 44px rgba(167,139,250,.16)}
+.tl-item{transition:background .2s}
+.tl-item:hover{background:rgba(167,139,250,.06);border-radius:8px}
+.tl-item::before{transition:box-shadow .25s,transform .22s}
+.tl-item:hover::before{box-shadow:0 0 0 4px rgba(167,139,250,.16),0 0 16px rgba(167,139,250,.55);transform:scale(1.5)}
+.tl-item.gold:hover::before{box-shadow:0 0 0 4px rgba(245,158,11,.18),0 0 16px rgba(245,158,11,.55)}
+.comp-card{position:relative;overflow:hidden;transform:perspective(600px) rotateX(var(--tiltX,0deg)) rotateY(var(--tiltY,0deg)) scale(var(--s,1));transition:transform .12s ease,border-color .25s,box-shadow .25s;will-change:transform}
+.comp-card::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(110deg,transparent 25%,rgba(167,139,250,.09) 50%,transparent 75%);transform:translateX(-130%);transition:transform .7s ease}
+.comp-card:hover::after{transform:translateX(140%)}
+.comp-card:hover{border-color:rgba(167,139,250,.32);box-shadow:0 10px 32px rgba(167,139,250,.15)}
+.journey-slide img{transition:transform .65s cubic-bezier(.4,0,.2,1)}
+.journey-slide:hover img{transform:scale(1.05)}
 @media(prefers-reduced-motion:reduce){.bg-glow::before,.bg-glow::after{animation:none}.hero-img,.hero-name,.hero-role,.hero-bio{animation:none!important;opacity:1!important;transform:none!important}}
 </style>
 <script>localStorage.setItem('fa-lang','fr');localStorage.setItem('fa-lang-v2','1');</script>
@@ -172,7 +180,7 @@ hr{border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(167,
 
   <!-- Full circle note -->
   <div style="background:rgba(245,158,11,.06);border:1px solid rgba(245,158,11,.2);border-radius:10px;padding:1rem 1.2rem;margin-top:1.25rem;display:flex;gap:.75rem;align-items:flex-start">
-    <span style="font-size:1.3rem;flex-shrink:0">✦</span>
+    <span style="flex-shrink:0;display:flex;align-items:center;margin-top:.1rem"><svg width="17" height="17" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2c0 0 1.1 7.4 3 9.5C17.1 13.7 24 12 24 12s-7.1 1-9 3.5C13.1 17.7 12 24 12 24s-1.1-7.4-3-9.5C7.1 12.2 0 12 0 12s7.1-1 9-3.5C10.9 7 12 2 12 2z"/></svg></span>
     <p style="margin:0;font-size:.88rem;color:#94a3b8;line-height:1.65"><strong style="color:#f59e0b">Le cercle complet :</strong> Son audition à l'aveugle lors de The Voice Chile (2023) était « Getsemaní » — la chanson que chante Jésus-Christ la nuit avant sa crucifixion. Trois ans plus tard, il <em>était</em> Jésus-Christ sur scène avec l'une des compagnies les plus emblématiques du Chili.</p>
   </div>
 </section>
@@ -404,7 +412,7 @@ hr{border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(167,
   <h2 style="margin-top:.25rem;font-size:1.65rem">Reconnaissance</h2>
 
   <div class="comp-card">
-    <div class="medal">🥈</div>
+    <div class="medal"><svg width="34" height="40" viewBox="0 0 34 40" fill="none" aria-label="Médaille d'argent"><path d="M9 1 L17 14 L1 14Z" fill="#64748b"/><path d="M25 1 L33 14 L17 14Z" fill="#475569"/><circle cx="17" cy="28" r="11" fill="#1e293b" stroke="#94a3b8" stroke-width="1.5"/><circle cx="17" cy="28" r="8" fill="none" stroke="rgba(148,163,184,.25)" stroke-width="1"/><text x="17" y="32.5" text-anchor="middle" font-size="10" font-weight="700" fill="#cbd5e1" font-family="Inter,sans-serif">2</text></svg></div>
     <div>
       <div style="font-weight:700;color:#f8fafc;margin-bottom:.2rem">Karaoke World Championships — Finale chilienne</div>
       <div style="font-size:.84rem;color:#94a3b8;line-height:1.6">Deuxième place lors de la finale nationale chilienne. La lauréate, Elizabeth Moya, a ensuite remporté le titre international en Finlande face aux représentants de 42 pays.</div>
@@ -412,7 +420,7 @@ hr{border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(167,
   </div>
 
   <div class="comp-card">
-    <div class="medal">🥈</div>
+    <div class="medal"><svg width="34" height="40" viewBox="0 0 34 40" fill="none" aria-label="Médaille d'argent"><path d="M9 1 L17 14 L1 14Z" fill="#64748b"/><path d="M25 1 L33 14 L17 14Z" fill="#475569"/><circle cx="17" cy="28" r="11" fill="#1e293b" stroke="#94a3b8" stroke-width="1.5"/><circle cx="17" cy="28" r="8" fill="none" stroke="rgba(148,163,184,.25)" stroke-width="1"/><text x="17" y="32.5" text-anchor="middle" font-size="10" font-weight="700" fill="#cbd5e1" font-family="Inter,sans-serif">2</text></svg></div>
     <div>
       <div style="font-weight:700;color:#f8fafc;margin-bottom:.2rem">Vocal Fest — Universidad Católica de Chile</div>
       <div style="font-size:.84rem;color:#94a3b8;line-height:1.6">Deuxième place au concours de chant de l'École d'orthophonie de la Pontificia Universidad Católica de Chile — une compétition axée sur la technique vocale et l'expression émotionnelle sur scène.</div>
@@ -455,7 +463,7 @@ hr{border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(167,
   <p style="color:#94a3b8;font-size:.9rem;margin:.35rem 0 1.1rem;line-height:1.75">Deux carrières qui partagent rarement le même CV. Francisco a passé des décennies à interpréter des personnages sur scène — et tout autant à construire des logiciels, des bases de données et des produits numériques. Cette double perspective façonne sa manière d'aborder les deux disciplines.</p>
   <p style="color:#94a3b8;font-size:.9rem;margin:0 0 1.1rem;line-height:1.75">Le monde des arts du spectacle a de véritables besoins en technologies de l'information : gestion du public, outils de production numérique, plateformes communautaires pour les artistes indépendants, projets culturels liés à la migration. Francisco voit ces lacunes non pas comme des obstacles, mais comme des opportunités — et il a l'envergure technique pour y répondre.</p>
   <div style="background:rgba(123,77,200,.07);border:1px solid rgba(123,77,200,.25);border-radius:12px;padding:1.2rem 1.4rem;display:flex;gap:1rem;align-items:flex-start">
-    <div style="font-size:1.6rem;flex-shrink:0;line-height:1;margin-top:.1rem">🧭</div>
+    <div style="flex-shrink:0;margin-top:.1rem;display:flex;align-items:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></div>
     <div>
       <div style="font-weight:700;color:#f8fafc;margin-bottom:.3rem;font-size:.97rem">SoyManada — Répertoire de confiance pour la communauté migrante</div>
       <p style="margin:0 0 .75rem;font-size:.86rem;color:#94a3b8;line-height:1.65">Son projet le plus personnel : une plateforme numérique qui connecte les migrants avec des prestataires de services vérifiés — dans leur langue, construite avec une empathie culturelle au cœur. Une technologie qui comprend ce que signifie recommencer dans un nouveau pays.</p>
@@ -518,12 +526,12 @@ hr{border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(167,
 
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1rem 0">
     <div class="card" style="border-color:rgba(56,189,248,.2)">
-      <div style="font-size:1.2rem;margin-bottom:.5rem">⚙️</div>
+      <div style="margin-bottom:.6rem;display:flex"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
       <div style="font-weight:700;color:#38bdf8;margin-bottom:.3rem;font-size:.88rem;text-transform:uppercase;letter-spacing:.08em">IT &amp; Opérations</div>
       <p style="font-size:.8rem;color:#94a3b8;margin:0;line-height:1.65">Product Owner · Conception de processus · Analyse de systèmes · ERP · AWS — conçu pour la scalabilité, appliqué à la complexité.</p>
     </div>
     <div class="card">
-      <div style="font-size:1.2rem;margin-bottom:.5rem">🎭</div>
+      <div style="margin-bottom:.6rem;display:flex"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
       <div style="font-weight:700;color:var(--accent);margin-bottom:.3rem;font-size:.88rem;text-transform:uppercase;letter-spacing:.08em">Regard d'Interprète</div>
       <p style="font-size:.8rem;color:#94a3b8;margin:0;line-height:1.65">Direction de distributions de 60+ artistes. Compréhension des calendriers de production, de la coordination artistique et de la réalité opérationnelle du spectacle vivant.</p>
     </div>
@@ -577,5 +585,26 @@ hr{border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(167,
 <footer style="text-align:center;padding:1.5rem;font-size:.78rem;color:#2d3748;border-top:1px solid rgba(167,139,250,.08)">
   © 2026 Francisco Aleuy — Southern Okanagan, BC · franciscoaleuy.ca
 </footer>
+<script>
+(function(){
+  if(window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  document.querySelectorAll('.comp-card,.card').forEach(function(el){
+    var maxT=el.classList.contains('comp-card')?9:6;
+    el.addEventListener('mousemove',function(e){
+      var r=el.getBoundingClientRect();
+      var x=(e.clientX-r.left)/r.width-.5;
+      var y=(e.clientY-r.top)/r.height-.5;
+      el.style.setProperty('--tiltY',(x*maxT)+'deg');
+      el.style.setProperty('--tiltX',(y*-maxT)+'deg');
+      el.style.setProperty('--s','1.018');
+    });
+    el.addEventListener('mouseleave',function(){
+      el.style.setProperty('--tiltY','0deg');
+      el.style.setProperty('--tiltX','0deg');
+      el.style.setProperty('--s','1');
+    });
+  });
+})();
+</script>
 
 </body></html>
