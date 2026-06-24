@@ -1,163 +1,526 @@
-<!DOCTYPE html><html lang="fr-CA"> <head><script>(function(){var s=localStorage.getItem('fa-lang');var n=((navigator.languages&&navigator.languages[0])||navigator.language||'en').slice(0,2).toLowerCase();var t=(s==='es'||s==='fr'||s==='en')?s:((n==='es'||n==='fr')?n:'en');var p=location.pathname;var cur='en';if(p==='/es'||p.indexOf('/es/')===0)cur='es';else if(p==='/fr'||p.indexOf('/fr/')===0)cur='fr';if(t===cur)return;var base=p;if(cur!=='en'){base=p.replace(/^\/(es|fr)/,'')||'/';}var dest=(t==='en')?base:('/'+t+base);location.replace(dest);})();</script><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Francisco Aleuy | Operations & Tech</title><link rel="icon" type="image/png" href="/assets/favicon.png"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"><style>:root{--background: #0f172a;--text-main: #f8fafc;--text-muted: #94a3b8;--accent: #38bdf8}body{background-color:var(--background);color:var(--text-main);font-family:Inter,sans-serif;margin:0}img{max-width:100%;height:auto}.contact-btn{display:flex;align-items:center;gap:.75rem;padding:.8rem 1.5rem;background:#1e293b99;border:1px solid rgba(148,163,184,.2);border-radius:12px;color:#e2e8f0;text-decoration:none;font-weight:500;transition:all .2s ease}.contact-btn:hover{background:#38bdf81a;border-color:#38bdf8;color:#38bdf8;transform:translateY(-2px)}.contact-btn.primary{background:#38bdf81a;border-color:#38bdf866;color:#38bdf8}.contact-btn.primary:hover{background:#38bdf833;box-shadow:0 0 15px #38bdf84d}.contact-grid{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:2rem}html{background-color:#0f172a!important;scroll-behavior:smooth}body{background-color:#0f172a!important;color:#f8fafc!important;margin:0;padding:0;font-family:Inter,sans-serif;line-height:1.6;overflow-x:hidden}h1,h2,h3,h4,h5,h6{color:#f8fafc!important}p,li{color:#cbd5e1}a{color:#38bdf8;text-decoration:none}.nav-link{color:#94a3b8!important;text-decoration:none;font-size:.9rem;font-weight:500;transition:color .2s}.nav-link:hover{color:#f8fafc!important}.nav-link.highlight{color:#38bdf8!important;font-weight:600}.enlargeable-image{cursor:zoom-in;transition:transform .2s ease}.enlargeable-image:hover{transform:scale(1.01);box-shadow:0 0 20px #38bdf866}.modal-container{display:none;position:fixed;z-index:10000;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:#0f172af2;backdrop-filter:blur(8px);align-items:center;justify-content:center;flex-direction:column}.modal-content{margin:auto;display:block;width:auto;max-width:95%;max-height:85vh;border-radius:8px;box-shadow:0 0 50px #000c;border:1px solid rgba(56,189,248,.3);animation-name:zoom;animation-duration:.3s}#modal-caption{margin:auto;display:block;width:80%;max-width:700px;text-align:center;color:#f8fafc;padding:15px 0;height:auto;font-size:1.1rem}.close-modal{position:absolute;top:20px;right:35px;color:#f1f1f1;font-size:40px;font-weight:700;transition:.3s;cursor:pointer;z-index:10001}.close-modal:hover,.close-modal:focus{color:#38bdf8;text-decoration:none;cursor:pointer}@keyframes zoom{0%{transform:scale(.9);opacity:0}to{transform:scale(1);opacity:1}}
+<!DOCTYPE html><html lang="fr-CA"><head><script>(function(){var s=localStorage.getItem('fa-lang');var n=((navigator.languages&&navigator.languages[0])||navigator.language||'en').slice(0,2).toLowerCase();var t=(s==='es'||s==='fr'||s==='en')?s:((n==='es'||n==='fr')?n:'en');var p=location.pathname;var cur='en';if(p==='/es'||p.indexOf('/es/')===0)cur='es';else if(p==='/fr'||p.indexOf('/fr/')===0)cur='fr';if(t===cur)return;var base=p;if(cur!=='en'){base=p.replace(/^\/(es|fr)/,'')||'/';}var dest=(t==='en')?base:('/'+t+base);location.replace(dest);})();</script>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Francisco Aleuy | Opérations &amp; Technologie</title>
+<meta name="description" content="Francisco Aleuy — Professionnel en opérations TI et Product Owner en C.-B., Canada. 15+ ans en systèmes, processus et produit.">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0f172a;--text:#f8fafc;--muted:#94a3b8;--dim:#64748b;--accent:#38bdf8;--accent2:#7dd3fc}
+html{background:var(--bg);scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Inter,sans-serif;line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{color:var(--text);letter-spacing:-.02em}
+p,li{color:#cbd5e1}
+a{color:var(--accent);text-decoration:none}
+img{max-width:100%;height:auto}
+main{max-width:820px;margin:0 auto;padding:0 1.5rem 5rem}
+.ic{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.bg-glow{position:fixed;inset:0;z-index:-2;pointer-events:none;overflow:hidden}
+.bg-glow::before,.bg-glow::after{content:'';position:absolute;border-radius:50%;filter:blur(90px)}
+.bg-glow::before{width:60vw;height:60vw;max-width:700px;max-height:700px;top:-16%;right:-12%;background:radial-gradient(circle,rgba(56,189,248,.16),transparent 70%);animation:gd1 24s ease-in-out infinite}
+.bg-glow::after{width:50vw;height:50vw;max-width:560px;max-height:560px;bottom:-12%;left:-10%;background:radial-gradient(circle,rgba(125,211,252,.10),transparent 70%);animation:gd2 30s ease-in-out infinite}
+@keyframes gd1{0%,100%{transform:translate(0,0)}50%{transform:translate(-5%,6%)}}
+@keyframes gd2{0%,100%{transform:translate(0,0)}50%{transform:translate(6%,-5%)}}
+nav{display:flex;justify-content:center;flex-wrap:wrap;gap:1.5rem;padding:1.1rem 1.5rem;background:rgba(15,23,42,.85);backdrop-filter:blur(10px);position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(56,189,248,.1)}
+.nav-link{color:#94a3b8;font-size:.85rem;font-weight:500;transition:color .2s}
+.nav-link:hover{color:#f8fafc}
+.nav-link.home{color:#64748b;font-size:.8rem}
+.nav-link.cta{color:var(--accent);font-weight:600}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+.hero{text-align:center;padding:3.5rem 0 1rem}
+.portrait-frame{position:relative;width:132px;height:132px;margin:0 auto 1.6rem;border-radius:50%}
+.portrait-frame::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,rgba(56,189,248,.18) 0deg,#38bdf8 50deg,#e0f2fe 80deg,#7dd3fc 110deg,rgba(56,189,248,.18) 165deg,rgba(56,189,248,.18) 360deg);animation:spin 4s linear infinite;z-index:0}
+.portrait-frame::after{content:"";position:absolute;inset:0;border-radius:50%;animation:pglow 5s ease-in-out infinite;pointer-events:none}
+.portrait{position:absolute;top:3px;left:3px;width:calc(100% - 6px);height:calc(100% - 6px);object-fit:cover;border-radius:50%;display:block;filter:grayscale(12%)}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pglow{0%,100%{box-shadow:0 0 0 0 rgba(56,189,248,0)}50%{box-shadow:0 0 34px -4px rgba(56,189,248,.42)}}
+.hero h1{font-size:clamp(1.9rem,5vw,2.6rem);font-weight:700;margin-bottom:.5rem}
+.lead{font-size:1.2rem;font-weight:600;color:#e2e8f0;max-width:640px;margin:0 auto 1rem;line-height:1.4}
+.sub{font-size:1rem;color:var(--muted);max-width:600px;margin:0 auto 1.4rem;line-height:1.6}
+.tag{display:inline-block;background:rgba(56,189,248,.1);border:1px solid rgba(56,189,248,.28);color:var(--accent);font-size:.7rem;font-weight:600;padding:.22rem .7rem;border-radius:20px;margin:.15rem .15rem;letter-spacing:.04em}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;max-width:620px;margin:2rem auto 0}
+@media(max-width:560px){.metrics{grid-template-columns:1fr}}
+.metric{background:rgba(56,189,248,.05);border:1px solid rgba(56,189,248,.16);border-radius:14px;padding:1.1rem .9rem;text-align:center;transition:transform .3s cubic-bezier(.16,1,.3,1),border-color .3s,background .3s}
+.metric:hover{transform:translateY(-4px);border-color:rgba(56,189,248,.45);background:rgba(56,189,248,.09);box-shadow:0 0 22px rgba(56,189,248,.15)}
+.metric .num{font-size:1.7rem;font-weight:700;color:var(--accent);line-height:1}
+.metric .lbl{font-size:.78rem;color:var(--muted);margin-top:.4rem;line-height:1.4}
+.eyebrow{font-size:.68rem;letter-spacing:.18em;color:var(--accent);font-weight:700;text-transform:uppercase;display:inline-block;margin-bottom:.6rem;background:rgba(56,189,248,.08);border:1px solid rgba(56,189,248,.2);border-radius:20px;padding:.22rem .75rem}
+section{margin-top:5rem;scroll-margin-top:90px}
+section>h2{font-size:1.7rem;margin-bottom:.6rem}
+.section-intro{font-size:1.02rem;color:var(--muted);max-width:700px;margin-bottom:2rem;line-height:1.7}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+@media(max-width:680px){.grid-3{grid-template-columns:1fr}}
+.vcard{background:rgba(30,41,59,.5);border:1px solid rgba(56,189,248,.14);border-radius:14px;padding:1.4rem 1.3rem;transition:transform .3s cubic-bezier(.16,1,.3,1),border-color .3s,background .3s}
+.vcard:hover{transform:translateY(-5px);border-color:rgba(56,189,248,.4);background:rgba(56,189,248,.05);box-shadow:0 0 28px rgba(56,189,248,.12)}
+.vcard .ic{color:var(--accent);margin-bottom:.7rem}
+.vcard h3{font-size:1.05rem;margin-bottom:.4rem}
+.vcard p{font-size:.92rem;color:var(--muted);line-height:1.6}
+.callout{margin-top:2rem;padding:1.3rem 1.5rem;background:rgba(56,189,248,.04);border:1px solid rgba(56,189,248,.15);border-left:4px solid rgba(56,189,248,.6);border-radius:0 12px 12px 0;display:flex;gap:1rem;align-items:flex-start}
+.callout .ic{color:var(--accent);margin-top:.15rem}
+.callout .et{font-size:.72rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.35rem}
+.callout p{font-size:.92rem;color:#cbd5e1;line-height:1.6}
+.steps{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+@media(max-width:680px){.steps{grid-template-columns:1fr}}
+.step{position:relative;background:rgba(30,41,59,.5);border:1px solid rgba(56,189,248,.14);border-radius:14px;padding:1.3rem;transition:transform .3s cubic-bezier(.16,1,.3,1),border-color .3s}
+.step:hover{transform:translateY(-4px);border-color:rgba(56,189,248,.4);box-shadow:0 0 20px rgba(56,189,248,.1)}
+.step .n{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:rgba(56,189,248,.12);border:1px solid rgba(56,189,248,.35);color:var(--accent);font-weight:700;font-size:.9rem;margin-bottom:.7rem}
+.step h3{font-size:1rem;margin-bottom:.35rem}
+.step p{font-size:.9rem;color:var(--muted);line-height:1.6}
+.work{display:flex;margin-top:1.1rem;padding:1.2rem 1.4rem;background:rgba(255,255,255,.025);border:1px solid rgba(56,189,248,.12);border-left:3px solid rgba(56,189,248,.3);border-radius:0 12px 12px 0;color:#f8fafc;transition:transform .25s cubic-bezier(.16,1,.3,1),border-color .25s,background .25s;align-items:center;justify-content:space-between;gap:1rem}
+.work:hover{transform:translateY(-3px);border-color:#38bdf8;border-left-color:#38bdf8;background:rgba(56,189,248,.06);box-shadow:0 6px 24px rgba(56,189,248,.1)}
+.work.feat{background:rgba(56,189,248,.05);border-color:rgba(56,189,248,.35);border-left-color:#38bdf8}
+.work .wt{display:flex;align-items:center;gap:.55rem;flex-wrap:wrap;margin-bottom:.2rem}
+.work .wt strong{font-size:1.08rem;color:#f8fafc}
+.work .live{font-size:.62rem;font-weight:700;color:#0f172a;background:#38bdf8;padding:.12rem .5rem;border-radius:99px;letter-spacing:.05em;text-transform:uppercase}
+.work .meta{font-size:.8rem;color:var(--dim);font-family:monospace}
+.work .arrow{color:var(--accent);font-size:1.2rem;transition:transform .25s}
+.work:hover .arrow{transform:translateX(4px)}
+.gallery{position:relative;border-radius:14px;overflow:hidden;border:1px solid rgba(56,189,248,.18);background:#0a0f1e;margin-top:1.5rem}
+.g-track{display:flex;transition:transform .4s cubic-bezier(.4,0,.2,1)}
+.g-slide{min-width:100%;width:100%;position:relative}
+.g-slide img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:center;display:block;background:#0a0f1e}
+.g-cap{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(7,16,31,.96) 55%,transparent);padding:1.3rem 1.2rem .9rem}
+.g-cap .ce{font-size:.65rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:.2rem}
+.g-cap .ct{font-size:1rem;font-weight:700;color:#f8fafc}
+.g-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(15,23,42,.72);border:1px solid rgba(56,189,248,.3);color:var(--accent);width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:1.2rem;display:flex;align-items:center;justify-content:center;transition:background .2s;backdrop-filter:blur(4px);z-index:2}
+.g-btn:hover{background:rgba(56,189,248,.22)}
+.g-btn.prev{left:.6rem}.g-btn.next{right:.6rem}
+.g-dots{display:flex;justify-content:center;gap:.4rem;padding:.6rem 0}
+.g-dot{width:7px;height:7px;border-radius:50%;background:rgba(56,189,248,.25);cursor:pointer;transition:background .2s,transform .2s;border:none;padding:0}
+.g-dot.active{background:var(--accent);transform:scale(1.3)}
+.philo{margin-top:2rem;padding:2rem;background:rgba(255,255,255,.02);border:1px solid rgba(56,189,248,.12);border-radius:16px;display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
+.philo img{flex:0 0 260px;max-width:100%;border-radius:12px;border:1px solid rgba(56,189,248,.2);filter:saturate(.9) contrast(.95)}
+.philo .pc{flex:1 1 280px}
+.philo h3{font-size:1.3rem;margin-bottom:.8rem}
+.philo p{font-size:1rem;color:#cbd5e1;line-height:1.7;font-style:italic}
+.tl-wrap{margin-top:1.5rem;background:rgba(7,16,31,.5);border:1px solid rgba(56,189,248,.14);border-radius:18px;padding:2rem 1.6rem}
+.tl-current{background:rgba(56,189,248,.06);border:1px solid rgba(56,189,248,.22);border-radius:14px;padding:1.1rem 1.3rem;margin-bottom:1.6rem}
+.tl-current .ch{display:flex;align-items:center;gap:.7rem}
+.tl-current .ic{color:var(--accent)}
+.tl-current h3{font-size:1.02rem}
+.tl-current .foc{margin:.3rem 0 0 2.1rem;font-size:.82rem;color:var(--accent);font-style:italic}
+.tl{position:relative;padding-left:1.6rem}
+.tl::before{content:'';position:absolute;left:8.4px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,transparent,rgba(56,189,248,.4) 8%,rgba(56,189,248,.4) 92%,transparent)}
+.tl::after{content:'';position:absolute;left:7.4px;top:0;width:4px;height:60px;border-radius:4px;background:linear-gradient(to bottom,transparent,#7dd3fc,transparent);filter:blur(1px);animation:tlflow 4.5s ease-in-out infinite;z-index:0}
+@keyframes tlflow{0%{top:-60px;opacity:0}12%{opacity:1}88%{opacity:1}100%{top:100%;opacity:0}}
+.tl-item{position:relative;z-index:1;padding:0 0 1.2rem .4rem}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{content:'';position:absolute;left:-1.45rem;top:.5rem;width:10px;height:10px;border-radius:50%;background:var(--accent);border:2px solid #0a0f1e}
+.tl-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:.9rem 1.1rem;transition:border-color .25s,background .25s}
+.tl-card:hover{border-color:rgba(56,189,248,.3);background:rgba(56,189,248,.04)}
+.tl-card .th{display:flex;align-items:center;gap:.5rem;margin-bottom:.3rem}
+.tl-card .ic{width:18px;height:18px;color:var(--accent)}
+.tl-card .th span{font-weight:700;color:#f8fafc;font-size:.92rem}
+.tl-card p{margin:0;font-size:.85rem;color:var(--muted);line-height:1.6}
+.tl-highlight{margin-top:1.6rem;background:rgba(56,189,248,.08);border:1px solid rgba(56,189,248,.3);border-radius:12px;padding:1.1rem 1.3rem;display:flex;gap:.9rem;align-items:flex-start}
+.tl-highlight .ic{color:var(--accent);margin-top:.1rem}
+.tl-highlight p{margin:0;font-size:.88rem;color:#94a3b8;line-height:1.7}
+.board{margin-top:2rem;padding:1.4rem 1.5rem;background:rgba(56,189,248,.04);border:1px solid rgba(56,189,248,.18);border-radius:14px;display:flex;gap:1.1rem;align-items:flex-start}
+.board .logo{flex-shrink:0;width:68px;border-radius:10px;background:#fff;padding:6px 8px;display:flex;align-items:center;justify-content:center}
+.board .bt{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-bottom:.2rem}
+.board strong{font-size:1.04rem;color:#f8fafc}
+.board .vol{font-size:.66rem;font-weight:700;color:var(--accent);background:rgba(56,189,248,.12);border:1px solid rgba(56,189,248,.3);padding:.12rem .5rem;border-radius:99px;letter-spacing:.04em;text-transform:uppercase}
+.board .meta{font-size:.8rem;color:var(--dim);font-family:monospace;margin-bottom:.5rem}
+.board p{margin:0;font-size:.9rem;color:#cbd5e1;line-height:1.65}
+.edu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;margin-top:1.5rem}
+@media(max-width:680px){.edu-grid{grid-template-columns:1fr;gap:1.5rem}}
+.edu-grid h3{font-size:.95rem;color:var(--accent);margin-bottom:1rem;text-transform:uppercase;letter-spacing:.05em}
+.edu-grid ul{list-style:none}
+.edu-grid li{margin-bottom:1rem;color:#cbd5e1;font-size:.95rem}
+.edu-grid li span{font-size:.85rem;color:var(--dim)}
+.cred-wes{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin:1.25rem 0 0}
+@media(max-width:560px){.cred-wes{grid-template-columns:1fr}}
+.wes-card{background:rgba(34,197,94,.05);border:1px solid rgba(34,197,94,.22);border-radius:12px;padding:1rem 1.2rem;display:flex;gap:.8rem;align-items:flex-start;transition:border-color .25s}
+.wes-card:hover{border-color:rgba(34,197,94,.42);box-shadow:0 0 20px rgba(34,197,94,.1)}
+.wes-card.pin{background:rgba(34,197,94,.08);border-color:rgba(34,197,94,.32)}
+.wes-mono{flex-shrink:0;width:36px;height:36px;border-radius:8px;background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.28);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.62rem;color:#4ade80;letter-spacing:.03em}
+.wes-body .wb{display:inline-block;font-size:.6rem;font-weight:700;background:rgba(34,197,94,.12);color:#4ade80;border:1px solid rgba(34,197,94,.22);border-radius:20px;padding:.14rem .52rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.3rem}
+.wes-body h4{font-size:.9rem;font-weight:600;color:#f8fafc;line-height:1.3;margin-bottom:.12rem}
+.wes-body .wis{font-size:.74rem;color:#94a3b8;margin-bottom:.2rem}
+.wes-body .wid{font-size:.68rem;color:#475569}
+.cred-filters{display:flex;flex-wrap:wrap;gap:.4rem;margin:.7rem 0 1rem}
+.cf{background:rgba(30,41,59,.5);border:1px solid rgba(56,189,248,.12);border-radius:20px;color:#64748b;font-size:.72rem;padding:.26rem .72rem;cursor:pointer;transition:all .2s;font-family:Inter,sans-serif;white-space:nowrap}
+.cf:hover{border-color:rgba(56,189,248,.32);color:#94a3b8}
+.cf.active{background:rgba(56,189,248,.12);border-color:rgba(56,189,248,.45);color:#38bdf8;font-weight:600}
+.cred-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(226px,1fr));gap:.85rem}
+.cred-card{background:rgba(30,41,59,.45);border:1px solid rgba(56,189,248,.1);border-radius:12px;padding:1rem;display:flex;flex-direction:column;gap:.5rem;transition:transform .25s cubic-bezier(.16,1,.3,1),border-color .25s,background .25s}
+.cred-card:hover{transform:translateY(-3px);border-color:rgba(56,189,248,.3);background:rgba(56,189,248,.04);box-shadow:0 0 16px rgba(56,189,248,.1)}
+.cred-card.hid{display:none}
+.cred-top{display:flex;align-items:flex-start;gap:.62rem}
+.cred-mono{flex-shrink:0;width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.62rem;letter-spacing:.03em;border:1px solid}
+.cred-title{font-size:.87rem;font-weight:600;color:#f8fafc;line-height:1.32;margin-bottom:.1rem}
+.cred-issuer{font-size:.73rem;color:#94a3b8}
+.cred-foot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.3rem}
+.cred-date{font-size:.69rem;color:#475569}
+.badge-new{font-size:.58rem;font-weight:700;padding:.12rem .46rem;border-radius:20px;letter-spacing:.05em;text-transform:uppercase;background:rgba(56,189,248,.12);color:#38bdf8;border:1px solid rgba(56,189,248,.22)}
+.badge-ok{font-size:.58rem;font-weight:700;padding:.12rem .46rem;border-radius:20px;letter-spacing:.05em;text-transform:uppercase;background:rgba(34,197,94,.1);color:#4ade80;border:1px solid rgba(34,197,94,.18)}
+.cred-skills{display:flex;flex-wrap:wrap;gap:.26rem}
+.cred-sk{font-size:.62rem;color:#64748b;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:4px;padding:.12rem .4rem}
+.cred-link{font-size:.71rem;color:#38bdf8;text-decoration:none;display:inline-flex;align-items:center;gap:.2rem;margin-top:.05rem;transition:color .2s}
+.cred-link:hover{color:#7dd3fc}
+.avail{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1.5rem}
+@media(max-width:680px){.avail{grid-template-columns:1fr}}
+.avail-item{background:rgba(30,41,59,.5);border:1px solid rgba(56,189,248,.12);border-radius:12px;padding:1.1rem 1.2rem}
+.avail-item .k{display:flex;align-items:center;gap:.5rem;font-size:.7rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.4rem}
+.avail-item .k .ic{width:16px;height:16px}
+.avail-item p{font-size:.9rem;color:#cbd5e1;line-height:1.55}
+.contact-box{margin-top:2rem;padding:2rem;background:rgba(56,189,248,.03);border-radius:16px;border:1px solid rgba(56,189,248,.12)}
+.contact-box h3{font-size:1.3rem;margin-bottom:.8rem}
+.contact-box p{font-size:1rem;color:#cbd5e1;line-height:1.7;margin-bottom:.8rem}
+.btn-row{display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center;margin-top:2rem}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.8rem 1.5rem;border-radius:12px;font-weight:500;font-size:.9rem;border:1px solid rgba(148,163,184,.2);background:rgba(30,41,59,.6);color:#e2e8f0;transition:all .2s ease}
+.btn .ic{width:18px;height:18px}
+.btn:hover{border-color:var(--accent);background:rgba(56,189,248,.1);color:var(--accent);transform:translateY(-2px)}
+.btn.primary{background:rgba(56,189,248,.1);border-color:rgba(56,189,248,.4);color:var(--accent)}
+.btn.primary:hover{background:rgba(56,189,248,.2);box-shadow:0 0 22px rgba(56,189,248,.28)}
+.btn.li{background:#0a66c2;color:#fff;border:none}
+.btn.li:hover{background:#0a66c2;color:#fff;box-shadow:0 0 18px rgba(10,102,194,.5)}
+hr{border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(56,189,248,.28),transparent);margin:3rem 0}
+footer{text-align:center;padding:4rem 1rem;color:var(--muted);font-size:.85rem;border-top:1px solid rgba(56,189,248,.1);margin-top:4rem}
+.lang-pill{position:fixed;bottom:1.5rem;left:1rem;z-index:9998;display:flex;align-items:center;gap:.15rem;background:rgba(15,23,42,.92);border:1px solid rgba(56,189,248,.2);border-radius:20px;padding:.3rem .5rem;font-size:.74rem;backdrop-filter:blur(8px)}
+.lang-pill a,.lang-pill span.current{padding:.2rem .55rem;border-radius:14px;font-weight:600;transition:color .2s,background .2s;letter-spacing:.04em}
+.lang-pill span.current{color:var(--accent);background:rgba(56,189,248,.12)}
+.lang-pill a{color:#475569}
+.lang-pill a:hover{color:#f8fafc}
+.lang-pill .sep{color:#2d3748;font-weight:400}
+.scroll-bar{position:fixed;top:0;left:0;height:2px;width:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));transform-origin:left;transform:scaleX(0);z-index:200;pointer-events:none;animation:scrollProg linear;animation-timeline:scroll()}
+@keyframes scrollProg{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.reveal{--stagger:0ms}
+.reveal.in{transition-delay:var(--stagger)}
+.h2r{overflow:hidden}
+.h2r span{display:block;transform:translateY(110%);transition:transform .9s cubic-bezier(.16,1,.3,1)}
+.h2r.in span{transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1!important;transform:none!important}
+  .portrait-frame::before,.portrait-frame::after,.tl::after,.bg-glow::before,.bg-glow::after,.scroll-bar{animation:none!important}
+  .portrait-frame::before{background:linear-gradient(135deg,#38bdf8,#7dd3fc)}
+  .h2r span{transform:none!important;transition:none!important}
+}
 </style>
-<link rel="stylesheet" href="/assets/index.BCjjo4XB.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-</head> <body>  <nav style="display: flex; justify-content: center; gap: 1.1rem; padding: 1.2rem 1rem; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(56, 189, 248, 0.1);"> <a href="/" class="nav-link" style="color:#64748b!important;font-size:.8rem">← franciscoaleuy.ca</a> <a href="/fr/it/#about" class="nav-link">À propos</a> <a href="/fr/it/#experience" class="nav-link">Expérience</a> <a href="/fr/it/#projects" class="nav-link">Projets</a> <a href="/fr/it/#contact" class="nav-link highlight">Contact</a> </nav>
-<div style="display:flex;justify-content:flex-end;align-items:center;gap:0.5rem;padding:0.35rem 1.2rem;font-size:0.75rem;color:#475569;background:rgba(15,23,42,0.95);border-bottom:1px solid rgba(56,189,248,0.07)">Lire en&nbsp;: <a href="/it/" onclick="localStorage.setItem('fa-lang','en')" style="color:#64748b;text-decoration:none;transition:color 0.2s" onMouseOver="this.style.color='#94a3b8'" onMouseOut="this.style.color='#64748b'"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" style="display:inline-block;width:18px;height:12px;vertical-align:middle;border-radius:1px;margin-right:3px"><rect width="3" height="2" fill="#fff"/><rect x="1.25" width="0.5" height="2" fill="#CF111A"/><rect y="0.75" width="3" height="0.5" fill="#CF111A"/></svg>EN</a> · <a href="/es/it/" onclick="localStorage.setItem('fa-lang','es')" style="color:#64748b;text-decoration:none;transition:color 0.2s" onMouseOver="this.style.color='#94a3b8'" onMouseOut="this.style.color='#64748b'"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" style="display:inline-block;width:18px;height:12px;vertical-align:middle;border-radius:1px;margin-right:3px"><rect width="3" height="2" fill="#D52B1E"/><rect width="3" height="1" fill="#fff"/><rect width="1" height="1" fill="#0039A6"/><polygon points="0.5,0.12 0.59,0.37 0.86,0.38 0.65,0.55 0.72,0.81 0.5,0.66 0.28,0.81 0.35,0.55 0.14,0.38 0.41,0.37" fill="#fff"/></svg>ES</a></div>  <main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">  <article class="content">  
-<div id="about"></div>
+</head><body>
 
-<img src="/assets/yo.jpg" alt="Francisco Aleuy" style="width:180px;height:180px;object-fit:cover;border-radius:35%;box-shadow:0 0 50px -10px rgba(56, 189, 248, 0.6);border:3px solid rgba(56, 189, 248, 0.5);margin:3rem auto 2rem auto;display:block;filter:sepia(100%) hue-rotate(170deg) saturate(300%) brightness(0.9) contrast(1.1)"/>
-<h1 id="hi-im-francisco">Bonjour, je suis Francisco.</h1>
+<div class="scroll-bar" aria-hidden="true"></div>
+<div class="bg-glow"></div>
 
-<p style="font-size:1.5rem;font-weight:700;color:#f8fafc;line-height:1.3;margin-bottom:0.5rem;margin-top:-1rem"><p>Professionnel en technologie et opérations qui transforme les problèmes opérationnels en produits et systèmes utilisables.</p></p>
-<p style="font-size:1.1rem;font-weight:400;color:#cbd5e1;margin-bottom:1.5rem;margin-top:0;line-height:1.6"><p>Basé dans l'Okanagan, C.-B. — je relie les systèmes techniques à la réalité opérationnelle. De la conception de processus à grande échelle jusqu'au lancement de mon propre produit SaaS, j'exécute sur tout le spectre.</p></p>
-<p style="font-size:1.05rem;font-weight:400;color:#94a3b8;margin-bottom:1rem;max-width:90%;line-height:1.6"><p>Mon parcours couvre les systèmes d'entreprise, le soutien TI, la gestion de produit et les opérations de service — développé dans plusieurs industries et appliqué quotidiennement dans des environnements canadiens.</p></p>
-<p style="font-size:0.95rem;font-weight:400;color:#64748b;margin-bottom:1rem;max-width:90%;line-height:1.6;font-style:italic"><p>Ciblant les rôles de soutien aux opérations, TI et techniques en C.-B. — ouvert aux arrangements à distance et hybrides partout au Canada.</p></p>
+<nav>
+  <a href="/" class="nav-link home">← franciscoaleuy.ca</a>
+  <a href="#about" class="nav-link">À propos</a>
+  <a href="#method" class="nav-link">Méthode</a>
+  <a href="#work" class="nav-link">Travaux</a>
+  <a href="#experience" class="nav-link">Expérience</a>
+  <a href="#contact" class="nav-link cta">Contact</a>
+</nav>
 
-<div style="margin-top:2rem;margin-bottom:3rem;padding-top:1.5rem;border-top:1px solid rgba(56, 189, 248, 0.1)"><p style="color:#38bdf8;font-weight:700;font-size:0.95rem;margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.05em"><p>Disponible pour une contribution immédiate — opérations, soutien TI et rôles en systèmes au Canada</p></p><p style="color:#cbd5e1;font-size:1rem;line-height:1.6;margin:0;max-width:650px"><p>J'apporte une profondeur interfonctionnelle : compréhension des infrastructures, conception de processus et vision produit — et j'exécute sans perdre l'élan.</p></p></div>
+<main>
 
-
-<h2>Comment je crée de la valeur</h2>
-<ul><li><strong>Fiabilité opérationnelle</strong> : Je protège la livraison dans les environnements canadiens où le temps, la conformité (PIPEDA, normes provinciales) et les personnes comptent.</li><li style="margin-top:1rem"><strong>De problème à produit</strong> : J'identifie les causes profondes, définis la solution et la livre — des outils internes à un produit SaaS actif qui génère des revenus.</li><li style="margin-top:1rem"><strong>Exécution sous pression</strong> : À l'aise pour passer entre la réalité du service en première ligne et la conception de systèmes structurés sans perdre l'élan ni la qualité.</li></ul>
-
-
-
-<div style="margin:6rem 0"><h2 style="font-size:1.8rem;margin-bottom:1.5rem;color:#f8fafc;text-align:center">Ma Méthode de Travail</h2><p style="font-size:1.1rem;color:#cbd5e1;max-width:700px;margin:0 auto 3rem auto;line-height:1.7;text-align:center"><p>Je ne me base pas sur des suppositions. J'utilise une structure répétable pour naviguer l'ambiguïté, en veillant à ce que chaque décision soit étayée par des informations et alignée sur les contraintes de l'entreprise.</p></p><astro-island uid="1KdgPT" component-url="/assets/ContributionSlider_FR.js" component-export="default" renderer-url="/assets/client.DCKK-Ipe.js" props="{}" ssr client="only" opts="{&quot;name&quot;:&quot;ContributionSlider&quot;,&quot;value&quot;:&quot;react&quot;}"></astro-island><div style="text-align:center;margin-top:3rem"><a href="/fr/work/method" style="display:inline-block;padding:0.8rem 2rem;border:1px solid rgba(56, 189, 248, 0.3);border-radius:100px;color:#38bdf8;text-decoration:none;font-weight:600;transition:all 0.2s"><p>Voir la décomposition détaillée <span>→</span></p></a></div></div>
-
-
-
-<div id="projects" style="scroll-margin-top:100px"></div>
-<h2 style="font-size:1.8rem;margin-top:6rem;margin-bottom:1rem;color:#f8fafc">Travaux Sélectionnés (De l'Opération au Produit)</h2>
-<p style="font-size:1.05rem;color:#94a3b8;margin-bottom:2rem;max-width:800px"><p>Ces projets montrent comment je passe des problèmes opérationnels à des décisions structurées, une priorisation et une exécution concrète.</p></p>
-
-<a href="/fr/work/soymanada" style="display:flex;align-items:center;justify-content:space-between;margin-top:1.5rem;padding:1.2rem 1.5rem;background:rgba(56, 189, 248, 0.04);border:1px solid rgba(56, 189, 248, 0.35);border-left:4px solid #38bdf8;border-radius:4px 12px 12px 4px;color:#f8fafc;text-decoration:none;transition:all 0.2s ease" onMouseOver="this.style.borderColor='#38bdf8';this.style.background='rgba(56, 189, 248, 0.09)';this.style.transform='translateY(-2px)'" onMouseOut="this.style.borderColor='rgba(56, 189, 248, 0.35)';this.style.background='rgba(56, 189, 248, 0.04)';this.style.transform='translateY(0)'"><div><div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.25rem"><strong style="color:#f8fafc;font-size:1.1rem">SoyManada — Répertoire Vérifié pour Immigrants Hispanophones</strong><span style="font-size:0.7rem;font-weight:700;color:#0f172a;background:#38bdf8;padding:0.15rem 0.5rem;border-radius:99px;letter-spacing:0.05em;text-transform:uppercase">Live</span></div><span style="font-size:0.85rem;color:#64748b;font-family:monospace">SaaS · Répertoire · Tech Immigration</span></div><span style="color:#38bdf8;font-size:1.2rem;font-weight:bold">→</span></a>
-
-<a href="/fr/work/cart-model" style="display:flex;align-items:center;justify-content:space-between;margin-top:1.5rem;padding:1.2rem 1.5rem;background:rgba(255,255,255,0.03);border:1px solid rgba(56, 189, 248, 0.1);border-left:4px solid rgba(56, 189, 248, 0.3);border-radius:4px 12px 12px 4px;color:#f8fafc;text-decoration:none;transition:all 0.2s ease"><div><strong style="display:block;color:#f8fafc;font-size:1.1rem;margin-bottom:0.2rem">Conception de Service et Transformation Opérationnelle</strong><span style="font-size:0.85rem;color:#64748b;font-family:monospace">Conception · Opérations · Processus</span></div><span style="color:#38bdf8;font-size:1.2rem;font-weight:bold">→</span></a>
-
-<a href="/fr/work/shift-planning" style="display:flex;align-items:center;justify-content:space-between;margin-top:1.5rem;padding:1.2rem 1.5rem;background:rgba(255,255,255,0.03);border:1px solid rgba(56, 189, 248, 0.1);border-left:4px solid rgba(56, 189, 248, 0.3);border-radius:4px 12px 12px 4px;color:#f8fafc;text-decoration:none;transition:all 0.2s ease"><div><strong style="display:block;color:#f8fafc;font-size:1.1rem;margin-bottom:0.2rem">Outil de Planification des Quarts</strong><span style="font-size:0.85rem;color:#64748b;font-family:monospace">Outil Interne · Planification · UX</span></div><span style="color:#38bdf8;font-size:1.2rem;font-weight:bold">→</span></a>
-
-<a href="/fr/work/b2b-collections" style="display:flex;align-items:center;justify-content:space-between;margin-top:1.5rem;padding:1.2rem 1.5rem;background:rgba(255,255,255,0.03);border:1px solid rgba(56, 189, 248, 0.1);border-left:4px solid rgba(56, 189, 248, 0.3);border-radius:4px 12px 12px 4px;color:#f8fafc;text-decoration:none;transition:all 0.2s ease"><div><strong style="display:block;color:#f8fafc;font-size:1.1rem;margin-bottom:0.2rem">IA pour Recouvrement B2B</strong><span style="font-size:0.85rem;color:#64748b;font-family:monospace">IA · B2B · Recouvrement · Données</span></div><span style="color:#38bdf8;font-size:1.2rem;font-weight:bold">→</span></a>
-
-<a href="/fr/work/retention-strategy" style="display:flex;align-items:center;justify-content:space-between;margin-top:1.5rem;padding:1.2rem 1.5rem;background:rgba(255,255,255,0.03);border:1px solid rgba(56, 189, 248, 0.1);border-left:4px solid rgba(56, 189, 248, 0.3);border-radius:4px 12px 12px 4px;color:#f8fafc;text-decoration:none;transition:all 0.2s ease"><div><strong style="display:block;color:#f8fafc;font-size:1.1rem;margin-bottom:0.2rem">Stratégie Produit et Systèmes de Décision</strong><span style="font-size:0.85rem;color:#64748b;font-family:monospace">Stratégie · Rétention · Agile</span></div><span style="color:#38bdf8;font-size:1.2rem;font-weight:bold">→</span></a>
-
-
-
-
-
-
-
-<div style="margin:6rem 0;padding:2rem 0;border-top:1px solid rgba(56, 189, 248, 0.1);border-bottom:1px solid rgba(56, 189, 248, 0.1)"><h3 style="font-size:1.6rem;color:#f8fafc;margin-bottom:1.5rem">Expérience Entreprise en Technologie et Produit</h3><p style="font-size:1.05rem;color:#cbd5e1;margin-bottom:2rem;line-height:1.7">Expérience acquise dans de grands environnements avant de s'établir au Canada. Mon parcours en AQ, Product Ownership, analyse de systèmes et optimisation de processus constitue le fondement de ma fiabilité opérationnelle aujourd'hui.</p><astro-island uid="1mtd4s" component-url="/assets/EnterpriseSlider_FR.js" component-export="default" renderer-url="/assets/client.DCKK-Ipe.js" props="{}" ssr client="only" opts="{&quot;name&quot;:&quot;EnterpriseSlider&quot;,&quot;value&quot;:&quot;react&quot;}"></astro-island></div>
-
-
-
-<div id="experience" style="scroll-margin-top:100px"></div>
-<div style="background:#071426;border-radius:20px;padding:2.5rem 2rem;margin:2rem 0;border:1px solid rgba(79,140,255,0.15);box-shadow:0 8px 40px rgba(0,0,0,.35)">
-
-  <!-- Header -->
-  <div style="text-align:center;margin-bottom:2.25rem">
-    <div style="display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.2em;color:#4F8CFF;text-transform:uppercase;margin-bottom:.6rem;border:1px solid rgba(79,140,255,.25);padding:.22rem .75rem;border-radius:20px;background:rgba(79,140,255,.07)">Parcours</div>
-    <h2 id="experience-timeline" style="font-size:1.7rem;color:#f8fafc;margin:.4rem 0 .6rem;font-weight:700;letter-spacing:-.02em">Parcours professionnel</h2>
-    <p style="color:#94a3b8;max-width:560px;margin:0 auto;font-size:.93rem;line-height:1.75">Mon profil combine expérience technique, coordination opérationnelle et adaptabilité pratique acquise en vivant et en travaillant au Canada.</p>
-  </div>
-
-  <!-- Main card title -->
-  <div style="background:rgba(79,140,255,.07);border:1px solid rgba(79,140,255,.22);border-radius:14px;padding:1.25rem 1.5rem;margin-bottom:1.75rem;backdrop-filter:blur(8px)">
-    <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:.3rem">
-      <span style="font-size:1.3rem">🏗️</span>
-      <h3 style="margin:0;font-size:1.05rem;font-weight:700;color:#f8fafc">Actuel : Opérations et soutien aux installations (Canada)</h3>
+  <header class="hero" id="about">
+    <div class="portrait-frame"><img src="/assets/yo.jpg" alt="Francisco Aleuy" class="portrait"></div>
+    <h1>Bonjour, je suis Francisco.</h1>
+    <p class="lead">Professionnel en opérations TI et Product Owner avec 15+ ans de conception de systèmes, d'amélioration de processus et de livraison de produits en environnements d'entreprise.</p>
+    <p class="sub">Basé dans l'Okanagan, C.-B. — j'apporte profondeur technique, rigueur opérationnelle et expérience en gestion de produit à des rôles TI et opérations en C.-B. Parcours couvrant AQ, analyse de systèmes, plateformes cloud et développement d'un SaaS de zéro.</p>
+    <div>
+      <span class="tag">Product Ownership</span>
+      <span class="tag">Soutien TI</span>
+      <span class="tag">Conception de processus</span>
+      <span class="tag">Analyse de systèmes</span>
     </div>
-    <p style="margin:.2rem 0 0 2.1rem;font-size:.84rem;color:#4F8CFF;font-style:italic;font-weight:500">Focus : Préparation du site, opération des installations, sécurité et excellence du service.</p>
-  </div>
+    <div class="metrics">
+      <div class="metric reveal"><div class="num">15+</div><div class="lbl">ans en TI, ops et produit (depuis 2009)</div></div>
+      <div class="metric reveal"><div class="num">12</div><div class="lbl">certifications actives — IA, Agile, Données, Sécurité</div></div>
+      <div class="metric reveal"><div class="num">PO</div><div class="lbl">Scrum · AWS · Jira certifié</div></div>
+    </div>
+  </header>
 
-  <!-- Timeline -->
-  <div style="position:relative;padding-left:1.5rem;border-left:2px solid rgba(79,140,255,.2);margin-left:.75rem">
+  <section class="reveal">
+    <h2>Comment je crée de la valeur</h2>
+    <p class="section-intro">15 ans en TI d'entreprise, conception de processus et produit — je réduis l'ambiguïté, aligne les équipes et livre des systèmes qui tiennent dans des conditions opérationnelles réelles.</p>
+    <div class="grid-3">
+      <div class="vcard">
+        <svg class="ic" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <h3>Opérations TI et conformité</h3>
+        <p>Analyse de systèmes, soutien TI et conception de processus avec attention explicite à la LPRPDE et aux normes provinciales canadiennes — pas supposées, appliquées.</p>
+      </div>
+      <div class="vcard">
+        <svg class="ic" viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><rect x="8" y="8" width="8" height="8" rx="2"/></svg>
+        <h3>Product Ownership et livraison</h3>
+        <p>Gestion de backlog, alignement des parties prenantes et exécution de sprints — incluant la construction et le lancement d'un SaaS de zéro en capacité PO + dev.</p>
+      </div>
+      <div class="vcard">
+        <svg class="ic" viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+        <h3>Amélioration des processus</h3>
+        <p>Identification des causes profondes dans les flux opérationnels et conception de correctifs structurés — dans les centres de contact, la logistique, la planification et les plateformes d'entreprise.</p>
+      </div>
+    </div>
+    <div class="callout">
+      <svg class="ic" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+      <div>
+        <div class="et">Aussi à l'aise dans les milieux artistiques</div>
+        <p>Je comprends le fonctionnement des théâtres, festivals et compagnies de production — de la scène au bureau administratif. Les rôles TI dans les organisations artistiques bénéficient de quelqu'un qui parle les deux langages.</p>
+      </div>
+    </div>
+  </section>
 
-    <div style="position:relative;padding:0 0 1.25rem 1.25rem">
-      <div style="position:absolute;left:-1.57rem;top:.45rem;width:12px;height:12px;border-radius:50%;background:#4F8CFF;border:3px solid #071426;box-shadow:0 0 0 3px rgba(79,140,255,.2)"></div>
-      <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:1rem 1.2rem" onMouseOver="this.style.borderColor='rgba(79,140,255,.3)';this.style.background='rgba(79,140,255,.04)'" onMouseOut="this.style.borderColor='rgba(255,255,255,.07)';this.style.background='rgba(255,255,255,.03)'">
-        <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.35rem"><span style="font-size:1.05rem">🏊</span><span style="font-weight:700;color:#f8fafc;font-size:.93rem">Opération des installations</span></div>
-        <p style="margin:0;font-size:.86rem;color:#94a3b8;line-height:1.65">Responsable de la préparation quotidienne de la zone piscine, des inspections, des normes de propreté et de la mise en place opérationnelle afin d'assurer un environnement sûr et accueillant.</p>
+  <section class="reveal" id="method">
+    <span class="eyebrow">Méthode de travail</span>
+    <h2>Comment je travaille</h2>
+    <p class="section-intro">Une structure répétable pour naviguer l'ambiguïté — chaque décision fondée sur des données opérationnelles, dimensionnée par rapport à de vraies contraintes et validée avant de passer à l'échelle.</p>
+    <div class="steps">
+      <div class="step"><span class="n">1</span><h3>Comprendre le contexte</h3><p>Je commence par identifier les vrais points de douleur des utilisateurs, recueillir des données opérationnelles et comprendre la réalité terrain avant de proposer toute solution.</p></div>
+      <div class="step"><span class="n">2</span><h3>Définir les contraintes</h3><p>Je définis les limites tôt — risques de conformité, limitations techniques, budget et effort — pour garantir que les solutions soient faisables et réalistes.</p></div>
+      <div class="step"><span class="n">3</span><h3>Prioriser et décider</h3><p>En utilisant des cadres comme MoSCoW, je force les conversations sur les compromis pour concentrer les ressources sur ce qui génère de la valeur immédiate et de la continuité opérationnelle.</p></div>
+      <div class="step"><span class="n">4</span><h3>Exécuter et valider</h3><p>Je passe à la livraison avec des MVP et des pilotes, en itérant selon les retours réels pour affiner le système et s'assurer qu'il résout le problème central.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:2rem"><a href="/fr/work/method" class="btn">Voir le détail complet <span aria-hidden="true">→</span></a></div>
+  </section>
+
+  <section class="reveal" id="work">
+    <h2>Travaux sélectionnés</h2>
+    <p class="section-intro">Études de cas couvrant la reconception de processus, les outils internes, l'intégration IA et la stratégie produit — chacune montrant le chemin de décision du problème au résultat livré.</p>
+
+    <a href="/fr/work/soymanada" class="work feat">
+      <div>
+        <div class="wt"><strong>SoyManada — Répertoire vérifié pour immigrants hispanophones</strong><span class="live">Live</span></div>
+        <span class="meta">SaaS · Répertoire · Tech Immigration</span>
+      </div>
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+    <a href="/fr/work/cart-model" class="work">
+      <div>
+        <div class="wt"><strong>Conception de service et transformation opérationnelle</strong></div>
+        <span class="meta">Conception de service · Opérations · Processus</span>
+      </div>
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+    <a href="/fr/work/shift-planning" class="work">
+      <div>
+        <div class="wt"><strong>Outil de planification des quarts</strong></div>
+        <span class="meta">Outil interne · Planification · UX</span>
+      </div>
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+    <a href="/fr/work/b2b-collections" class="work">
+      <div>
+        <div class="wt"><strong>IA pour recouvrement B2B</strong></div>
+        <span class="meta">IA · B2B · Recouvrement · Données</span>
+      </div>
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+    <a href="/fr/work/retention-strategy" class="work">
+      <div>
+        <div class="wt"><strong>Stratégie produit et systèmes de décision</strong></div>
+        <span class="meta">Stratégie produit · Rétention · Agile</span>
+      </div>
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+  </section>
+
+  <section class="reveal">
+    <span class="eyebrow">Parcours</span>
+    <h2>Produit et technologie en entreprise</h2>
+    <p class="section-intro">Expérience TI et produit à grande échelle d'entreprise — plateformes de centre de contact, infrastructure cloud, intégration IA et livraison agile — construite avant et continuée depuis la relocalisation au Canada.</p>
+    <div class="gallery" id="ent-gallery">
+      <div class="g-track" id="ent-track">
+        <div class="g-slide"><img src="/assets/aws.jpg" alt="Stratégie AWS" loading="lazy"><div class="g-cap"><div class="ce">Stratégie AWS</div><div class="ct">Évaluation d'infrastructure et alignement stratégique cloud.</div></div></div>
+        <div class="g-slide"><img src="/assets/IBM.jpg" alt="Découverte IA IBM" loading="lazy"><div class="g-cap"><div class="ce">Découverte IA IBM</div><div class="ct">Exploration des capacités Watson pour l'automatisation d'entreprise.</div></div></div>
+        <div class="g-slide"><img src="/assets/Amelia.jpeg" alt="Analyse comparative mondiale" loading="lazy"><div class="g-cap"><div class="ce">Analyse comparative mondiale</div><div class="ct">Évaluation de solutions IA conversationnelles à l'EXPORC Madrid.</div></div></div>
+        <div class="g-slide"><img src="/assets/gocontact.png" alt="Évaluation CCaaS" loading="lazy"><div class="g-cap"><div class="ce">Évaluation CCaaS</div><div class="ct">Analyse des plateformes de centre de contact cloud pour moderniser les opérations.</div></div></div>
+        <div class="g-slide"><img src="/assets/smartcontact.png" alt="Automatisation des processus" loading="lazy"><div class="g-cap"><div class="ce">Automatisation des processus</div><div class="ct">Déploiement de bots NLU multicanaux pour réduire les frictions opérationnelles.</div></div></div>
+        <div class="g-slide"><img src="/assets/kanban.png" alt="Découverte produit" loading="lazy"><div class="g-cap"><div class="ce">Découverte produit</div><div class="ct">Direction de la découverte, cartographie des processus et priorisation des fonctionnalités.</div></div></div>
+        <div class="g-slide"><img src="/assets/Credenciales.png" alt="Normes d'entreprise" loading="lazy"><div class="g-cap"><div class="ce">Normes d'entreprise</div><div class="ct">Opération dans des cadres stricts de conformité et de sécurité.</div></div></div>
+      </div>
+      <button class="g-btn prev" id="ent-prev" aria-label="Précédent">‹</button>
+      <button class="g-btn next" id="ent-next" aria-label="Suivant">›</button>
+    </div>
+    <div class="g-dots" id="ent-dots"></div>
+  </section>
+
+  <section class="reveal">
+    <div style="text-align:center;margin-bottom:1rem"><span class="eyebrow">Philosophie actuelle</span></div>
+    <div class="philo">
+      <img src="/assets/autodidacta.jpg" alt="Francisco prototypant des idées">
+      <div class="pc">
+        <h3>La discipline de construire</h3>
+        <p>« L'acuité technique exige une curiosité continue. J'utilise le temps libre pour explorer et prototyper des idées — pour que mes compétences soient prêtes quand le prochain défi arrive. »</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="reveal" id="experience">
+    <div class="tl-wrap">
+      <div style="text-align:center;margin-bottom:1.6rem">
+        <span class="eyebrow">Parcours professionnel</span>
+        <p class="section-intro" style="margin:.8rem auto 0;text-align:center">Mon profil combine expérience technique, coordination opérationnelle et adaptabilité pratique acquise en vivant et en travaillant au Canada.</p>
+      </div>
+
+      <div class="tl-current">
+        <div class="ch">
+          <svg class="ic" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg>
+          <h3>Actuel : Opérations et soutien aux installations (Canada)</h3>
+        </div>
+        <p class="foc">Focus : Préparation du site, opération des installations, sécurité et excellence du service.</p>
+      </div>
+
+      <div class="tl">
+        <div class="tl-item"><div class="tl-card"><div class="th"><svg class="ic" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>Opération des installations</span></div><p>Responsable de la préparation quotidienne de la zone piscine, des inspections, des normes de propreté et de la mise en place opérationnelle pour assurer un environnement sûr et accueillant.</p></div></div>
+        <div class="tl-item"><div class="tl-card"><div class="th"><svg class="ic" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>Préparation et mise en service du site</span></div><p>Procédures d'ouverture, préparation des équipements, inspections des installations et vérifications opérationnelles pour assurer la pleine disponibilité du site.</p></div></div>
+        <div class="tl-item"><div class="tl-card"><div class="th"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-2.82 1.17V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 7.5 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15H4.5a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 6 9.4l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 11 4.6V4.5a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 2.82 1.17l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9z"/></svg><span>Soutien opérationnel</span></div><p>Collaboration inter-départementale pour maintenir les standards opérationnels, répondre aux priorités changeantes et assurer le bon déroulement des opérations quotidiennes.</p></div></div>
+        <div class="tl-item"><div class="tl-card"><div class="th"><svg class="ic" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7v6h-6"/></svg><span>Amélioration des processus</span></div><p>Identification des inefficacités de planification et de communication, et proposition de solutions pratiques pour améliorer la coordination et la visibilité entre les équipes.</p></div></div>
+        <div class="tl-item"><div class="tl-card"><div class="th"><svg class="ic" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Service à la clientèle et communication</span></div><p>Soutien professionnel aux clients dans un environnement anglophone, tout en maintenant la sécurité, la qualité et l'excellence opérationnelle.</p></div></div>
+      </div>
+
+      <div class="tl-highlight">
+        <svg class="ic" viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1h6c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2z"/></svg>
+        <p><strong style="color:#f8fafc">Connectant 15 ans d'expérience en TI et produit avec le marché canadien.</strong> La pensée systémique, la rigueur des processus et l'exécution interfonctionnelle sont transférables — et s'appliquent activement dans des rôles opérationnels en C.-B. en ciblant le prochain poste TI ou PO.</p>
       </div>
     </div>
 
-    <div style="position:relative;padding:0 0 1.25rem 1.25rem">
-      <div style="position:absolute;left:-1.57rem;top:.45rem;width:12px;height:12px;border-radius:50%;background:#4F8CFF;border:3px solid #071426;box-shadow:0 0 0 3px rgba(79,140,255,.2)"></div>
-      <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:1rem 1.2rem" onMouseOver="this.style.borderColor='rgba(79,140,255,.3)';this.style.background='rgba(79,140,255,.04)'" onMouseOut="this.style.borderColor='rgba(255,255,255,.07)';this.style.background='rgba(255,255,255,.03)'">
-        <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.35rem"><span style="font-size:1.05rem">✅</span><span style="font-weight:700;color:#f8fafc;font-size:.93rem">Préparation du site</span></div>
-        <p style="margin:0;font-size:.86rem;color:#94a3b8;line-height:1.65">Exécution des procédures d'ouverture, préparation des équipements, inspections et vérifications opérationnelles pour garantir que le site soit entièrement prêt pour les opérations quotidiennes.</p>
+    <div class="board">
+      <div class="logo"><img src="/assets/odac-logo.png" alt="Osoyoos &amp; District Arts Council"></div>
+      <div>
+        <div class="bt"><strong>Directeur du conseil – Technologie et systèmes</strong><span class="vol">Bénévole</span></div>
+        <div class="meta">Osoyoos &amp; District Arts Council · Osoyoos, C.-B. · Juin 2026 – Présent</div>
+        <p>Application de mon expérience en TI et opérations pour optimiser les systèmes numériques, automatiser les processus administratifs et renforcer l'infrastructure technologique de l'organisation en tant que membre bénévole du conseil.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <h2>Formation et fondements techniques</h2>
+    <p class="section-intro">Formation en ingénierie formelle combinée à 12 certifications vérifiées en IA, produit, données et opérations — actives et à jour.</p>
+    <div class="edu-grid" style="grid-template-columns:1fr">
+      <div>
+        <h3>Formation formelle</h3>
+        <ul>
+          <li><strong>Génie industriel (spécialisation gestion de projets TI)</strong><br><span>Universidad Andrés Bello (en cours)</span></li>
+          <li><strong>Diplôme en technologie des réseaux et connectivité</strong><br><span>UCINF</span></li>
+        </ul>
       </div>
     </div>
 
-    <div style="position:relative;padding:0 0 1.25rem 1.25rem">
-      <div style="position:absolute;left:-1.57rem;top:.45rem;width:12px;height:12px;border-radius:50%;background:#4F8CFF;border:3px solid #071426;box-shadow:0 0 0 3px rgba(79,140,255,.2)"></div>
-      <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:1rem 1.2rem" onMouseOver="this.style.borderColor='rgba(79,140,255,.3)';this.style.background='rgba(79,140,255,.04)'" onMouseOut="this.style.borderColor='rgba(255,255,255,.07)';this.style.background='rgba(255,255,255,.03)'">
-        <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.35rem"><span style="font-size:1.05rem">⚙️</span><span style="font-weight:700;color:#f8fafc;font-size:.93rem">Soutien opérationnel</span></div>
-        <p style="margin:0;font-size:.86rem;color:#94a3b8;line-height:1.65">Collaboration entre les départements pour maintenir les normes opérationnelles, répondre aux priorités changeantes et soutenir le bon déroulement des opérations quotidiennes.</p>
+    <div style="margin-top:2rem"><span class="eyebrow">Qualifications académiques vérifiées</span>
+    <div class="cred-wes">
+      <div class="wes-card pin">
+        <div class="wes-mono">WES</div>
+        <div class="wes-body">
+          <span class="wb">Diplôme 3 ans · Vérifié</span>
+          <h4>Industrial Control — Título de Técnico Superior</h4>
+          <div class="wis">Institut professionnel IACC · WES ECA Déc 2025</div>
+          <div class="wid">Réf# 7182404IMM</div>
+          <a href="https://applications.wes.org/e4f8026a-34df-44d1-94d2-35b9d25bc009" target="_blank" rel="noopener" class="cred-link" style="margin-top:.5rem">Vérifier ↗</a>
+        </div>
+      </div>
+      <div class="wes-card">
+        <div class="wes-mono">WES</div>
+        <div class="wes-body">
+          <span class="wb">Diplôme 2 ans · Vérifié</span>
+          <h4>Connectivity and Networks Technology — Título de Técnico Superior</h4>
+          <div class="wis">Ministerio de Educación Chile · WES ECA Oct 2025</div>
+          <div class="wid">ECA# 7118870IMM</div>
+          <a href="https://applications.wes.org/b630ddac-c7f9-4fad-9a0b-2086422855e5" target="_blank" rel="noopener" class="cred-link" style="margin-top:.5rem">Vérifier ↗</a>
+        </div>
+      </div>
+    </div></div>
+
+    <div style="margin-top:2.5rem"><span class="eyebrow">Certifications</span>
+      <div class="cred-filters">
+        <button class="cf active" data-f="all">Toutes · 12</button>
+        <button class="cf" data-f="ai">IA et Prompt · 4</button>
+        <button class="cf" data-f="agile">Produit et Agile · 4</button>
+        <button class="cf" data-f="data">Données · 3</button>
+        <button class="cf" data-f="security">Sécurité · 1</button>
+      </div>
+      <div class="cred-grid" id="cred-grid">
+        <div class="cred-card" data-cat="ai"><div class="cred-top"><div class="cred-mono" style="background:rgba(56,189,248,.14);color:#38bdf8;border-color:rgba(56,189,248,.3)">AN</div><div><div class="cred-title">Claude Code in Action</div><div class="cred-issuer">Anthropic</div></div></div><div class="cred-skills"><span class="cred-sk">API Development</span><span class="cred-sk">Prompt Engineering</span></div><div class="cred-foot"><span class="cred-date">Juin 2026</span><span class="badge-new">2026</span></div><a href="https://verify.skilljar.com/c/4f4zhonggvta" target="_blank" rel="noopener" class="cred-link">Vérifier ↗</a></div>
+        <div class="cred-card" data-cat="ai"><div class="cred-top"><div class="cred-mono" style="background:rgba(56,189,248,.14);color:#38bdf8;border-color:rgba(56,189,248,.3)">AN</div><div><div class="cred-title">AI Fluency: Framework &amp; Foundations</div><div class="cred-issuer">Anthropic</div></div></div><div class="cred-skills"><span class="cred-sk">AI Fluency</span><span class="cred-sk">Intelligence artificielle</span></div><div class="cred-foot"><span class="cred-date">Juin 2026</span><span class="badge-new">2026</span></div><a href="https://verify.skilljar.com/c/67jsxhggn4bq" target="_blank" rel="noopener" class="cred-link">Vérifier ↗</a></div>
+        <div class="cred-card" data-cat="ai"><div class="cred-top"><div class="cred-mono" style="background:rgba(56,189,248,.14);color:#38bdf8;border-color:rgba(56,189,248,.3)">AN</div><div><div class="cred-title">Claude 101</div><div class="cred-issuer">Anthropic</div></div></div><div class="cred-skills"><span class="cred-sk">Claude</span><span class="cred-sk">Prompt Engineering</span></div><div class="cred-foot"><span class="cred-date">Juin 2026</span><span class="badge-new">2026</span></div><a href="https://verify.skilljar.com/c/pdgi2cxuyu3y" target="_blank" rel="noopener" class="cred-link">Vérifier ↗</a></div>
+        <div class="cred-card" data-cat="ai"><div class="cred-top"><div class="cred-mono" style="background:rgba(56,189,248,.12);color:#7dd3fc;border-color:rgba(56,189,248,.22)">CO</div><div><div class="cred-title">Prompt Engineering</div><div class="cred-issuer">Coursera</div></div></div><div class="cred-skills"><span class="cred-sk">Prompt Engineering</span><span class="cred-sk">ChatGPT</span></div><div class="cred-foot"><span class="cred-date">Nov 2024</span></div><a href="https://www.coursera.org/account/accomplishments/verify/K7TCCM73QOR9" target="_blank" rel="noopener" class="cred-link">Vérifier ↗</a></div>
+        <div class="cred-card" data-cat="agile"><div class="cred-top"><div class="cred-mono" style="background:rgba(167,139,250,.14);color:#a78bfa;border-color:rgba(167,139,250,.3)">CP</div><div><div class="cred-title">Scrum Product Owner Professional SPOPC®</div><div class="cred-issuer">Certiprof</div></div></div><div class="cred-skills"><span class="cred-sk">Agile</span><span class="cred-sk">Scrum</span></div><div class="cred-foot"><span class="cred-date">Janv 2025 · exp. Janv 2028</span><span class="badge-ok">Actif</span></div><a href="https://www.credly.com/badges/22323e1b-41b6-4900-987c-fa407539ac1c/" target="_blank" rel="noopener" class="cred-link">Vérifier ↗</a></div>
+        <div class="cred-card" data-cat="agile"><div class="cred-top"><div class="cred-mono" style="background:rgba(251,191,36,.12);color:#fbbf24;border-color:rgba(251,191,36,.25)">PL</div><div><div class="cred-title">Product Owner Specialist</div><div class="cred-issuer">Pablolledo.com</div></div></div><div class="cred-skills"><span class="cred-sk">Agile</span><span class="cred-sk">Scrum</span><span class="cred-sk">Produit</span></div><div class="cred-foot"><span class="cred-date">Nov 2024</span></div></div>
+        <div class="cred-card" data-cat="agile"><div class="cred-top"><div class="cred-mono" style="background:rgba(167,139,250,.12);color:#c4b5fd;border-color:rgba(167,139,250,.22)">UD</div><div><div class="cred-title">Agile PM with Jira (SCRUM-focused)</div><div class="cred-issuer">Udemy</div></div></div><div class="cred-skills"><span class="cred-sk">Agile</span><span class="cred-sk">Jira</span><span class="cred-sk">Scrum</span></div><div class="cred-foot"><span class="cred-date">Fév 2024</span></div><a href="https://www.udemy.com/certificate/UC-9424e8e4-7b32-4b81-b16a-d897cfd448ac/" target="_blank" rel="noopener" class="cred-link">Vérifier ↗</a></div>
+        <div class="cred-card" data-cat="agile"><div class="cred-top"><div class="cred-mono" style="background:rgba(34,197,94,.12);color:#6ee7b7;border-color:rgba(34,197,94,.22)">SC</div><div><div class="cred-title">Effective Team Communication &amp; Management</div><div class="cred-issuer">Sence Chile</div></div></div><div class="cred-skills"><span class="cred-sk">Leadership</span><span class="cred-sk">Gestion d'équipe</span></div><div class="cred-foot"><span class="cred-date">Nov 2024</span></div><a href="https://comunidadingenieria.cl/Dfo_20250_25/FRANCISCO_JOSE_IGNACIO_ALEUY_YOUNG.pdf" target="_blank" rel="noopener" class="cred-link">Voir ↗</a></div>
+        <div class="cred-card" data-cat="data"><div class="cred-top"><div class="cred-mono" style="background:rgba(66,133,244,.14);color:#93c5fd;border-color:rgba(66,133,244,.28)">GG</div><div><div class="cred-title">Google Data Analytics</div><div class="cred-issuer">Google</div></div></div><div class="cred-skills"><span class="cred-sk">Data Analytics</span></div><div class="cred-foot"><span class="cred-date">Mai 2026</span><span class="badge-new">2026</span></div><a href="https://coursera.org/share/3fd685529d55dfa6b8d5c448572059d1" target="_blank" rel="noopener" class="cred-link">Vérifier ↗</a></div>
+        <div class="cred-card" data-cat="data"><div class="cred-top"><div class="cred-mono" style="background:rgba(239,68,68,.12);color:#fca5a5;border-color:rgba(239,68,68,.25)">OR</div><div><div class="cred-title">Oracle DB Foundations Junior Associate</div><div class="cred-issuer">Oracle</div></div></div><div class="cred-skills"><span class="cred-sk">Oracle Database</span><span class="cred-sk">SQL</span></div><div class="cred-foot"><span class="cred-date">Déc 2025</span></div></div>
+        <div class="cred-card" data-cat="data"><div class="cred-top"><div class="cred-mono" style="background:rgba(251,191,36,.12);color:#fcd34d;border-color:rgba(251,191,36,.22)">DL</div><div><div class="cred-title">Data Science Analyst with Python</div><div class="cred-issuer">Desafío Latam</div></div></div><div class="cred-skills"><span class="cred-sk">Data Science</span><span class="cred-sk">Python</span></div><div class="cred-foot"><span class="cred-date">Déc 2021</span></div><a href="https://desafiosdev.s3.amazonaws.com/uploads/certification/image/14751/aprobacion-final-proyecto-data-science-g27-6428.png" target="_blank" rel="noopener" class="cred-link">Voir ↗</a></div>
+        <div class="cred-card" data-cat="security"><div class="cred-top"><div class="cred-mono" style="background:rgba(239,68,68,.1);color:#fca5a5;border-color:rgba(239,68,68,.2)">KB</div><div><div class="cred-title">Security Awareness Training</div><div class="cred-issuer">KnowBe4</div></div></div><div class="cred-skills"><span class="cred-sk">Security Awareness</span></div><div class="cred-foot"><span class="cred-date">Mars 2023</span></div></div>
       </div>
     </div>
+  </section>
 
-    <div style="position:relative;padding:0 0 1.25rem 1.25rem">
-      <div style="position:absolute;left:-1.57rem;top:.45rem;width:12px;height:12px;border-radius:50%;background:#4F8CFF;border:3px solid #071426;box-shadow:0 0 0 3px rgba(79,140,255,.2)"></div>
-      <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:1rem 1.2rem" onMouseOver="this.style.borderColor='rgba(79,140,255,.3)';this.style.background='rgba(79,140,255,.04)'" onMouseOut="this.style.borderColor='rgba(255,255,255,.07)';this.style.background='rgba(255,255,255,.03)'">
-        <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.35rem"><span style="font-size:1.05rem">📈</span><span style="font-weight:700;color:#f8fafc;font-size:.93rem">Amélioration des processus</span></div>
-        <p style="margin:0;font-size:.86rem;color:#94a3b8;line-height:1.65">Identification des inefficacités de planification et de communication, avec proposition de solutions pratiques pour améliorer la coordination et la visibilité entre les équipes.</p>
-      </div>
+  <section class="reveal">
+    <h2>Localisation et disponibilité</h2>
+    <div class="avail">
+      <div class="avail-item"><div class="k"><svg class="ic" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Base actuelle</div><p>Osoyoos, Colombie-Britannique.</p></div>
+      <div class="avail-item"><div class="k"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg>Zone de couverture</div><p>Sud de l'Okanagan — Osoyoos, Oliver, Penticton, Kelowna. Ouvert aux rôles à distance et hybrides partout au Canada.</p></div>
+      <div class="avail-item"><div class="k"><svg class="ic" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>Rôles ciblés</div><p>Soutien aux opérations, Soutien TI (niv. 2/3), Analyste de systèmes, Opérations techniques, AQ · Organisations artistiques et culturelles (TI).</p></div>
+      <div class="avail-item" style="border-color:rgba(245,158,11,.22)"><div class="k" style="color:#f59e0b"><svg class="ic" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 5-3.5 7.5-8.5 9.5C7.5 19.5 3 17 3 12V5l9-3 9 3z"/></svg>Statut de travail</div><p><strong style="color:#f8fafc">Permis de travail fermé</strong> — spécifique à l'employeur. Admissible à un changement de permis parrainé par l'employeur.</p></div>
+      <div class="avail-item" style="border-color:rgba(56,189,248,.25)"><div class="k"><svg class="ic" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>PTPGP — Disponible maintenant</div><p>En tant que ressortissant chilien, admissible à un permis de travail exempté d'EIMT en vertu du Partenariat transpacifique global et progressiste. <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/special-instructions/business-people.html" target="_blank" rel="noopener" style="color:#38bdf8;text-decoration:none;font-weight:600">Comment postuler ↗</a></p></div>
+      <div class="avail-item" style="border-color:rgba(74,222,128,.22)"><div class="k" style="color:#4ade80"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg>ALECC — 2027</div><p>À l'obtention du diplôme d'ingénierie industrielle, admissible à un permis de travail ouvert en vertu de l'Accord de libre-échange Canada-Chili. <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/permit/business-people.html" target="_blank" rel="noopener" style="color:#4ade80;text-decoration:none;font-weight:600">Comment postuler ↗</a></p></div>
     </div>
+  </section>
 
-    <div style="position:relative;padding:0 0 0 1.25rem">
-      <div style="position:absolute;left:-1.57rem;top:.45rem;width:12px;height:12px;border-radius:50%;background:#4F8CFF;border:3px solid #071426;box-shadow:0 0 0 3px rgba(79,140,255,.2)"></div>
-      <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:1rem 1.2rem" onMouseOver="this.style.borderColor='rgba(79,140,255,.3)';this.style.background='rgba(79,140,255,.04)'" onMouseOut="this.style.borderColor='rgba(255,255,255,.07)';this.style.background='rgba(255,255,255,.03)'">
-        <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.35rem"><span style="font-size:1.05rem">🤝</span><span style="font-weight:700;color:#f8fafc;font-size:.93rem">Service client et communication</span></div>
-        <p style="margin:0;font-size:.86rem;color:#94a3b8;line-height:1.65">Soutien professionnel aux visiteurs dans un environnement anglophone, tout en maintenant la sécurité, la qualité et l'excellence opérationnelle.</p>
-      </div>
+  <section class="reveal" id="contact">
+    <div class="contact-box">
+      <h3>Prêt à contribuer — maintenant</h3>
+      <p>Je cherche activement des environnements où je peux appliquer directement mon parcours technique et opérationnel. Aucune longue intégration nécessaire — j'évalue les systèmes rapidement, identifie les goulots d'étranglement et commence à contribuer dès le premier jour.</p>
+      <p style="color:#94a3b8;margin:0">Particulièrement intéressé par les rôles d'opérations, de soutien TI, d'amélioration de systèmes et d'optimisation de processus — où les normes canadiennes, la conformité à la LPRPDE et l'exécution fiable définissent le standard.</p>
     </div>
+    <div class="btn-row">
+      <a href="/assets/CV_Francisco_Aleuy.pdf" download class="btn primary"><svg class="ic" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Télécharger le CV</a>
+      <a href="https://www.linkedin.com/in/faleuy/" target="_blank" rel="noopener" class="btn li"><svg class="ic" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-6a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+      <a href="mailto:contact@franciscoaleuy.ca" class="btn"><svg class="ic" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>M'envoyer un courriel</a>
+    </div>
+  </section>
 
-  </div>
+</main>
 
-  <!-- Bottom highlight box -->
-  <div style="margin-top:1.75rem;background:rgba(79,140,255,.08);border:1px solid rgba(79,140,255,.3);border-radius:12px;padding:1.2rem 1.4rem;display:flex;gap:.9rem;align-items:flex-start">
-    <span style="font-size:1.35rem;flex-shrink:0;margin-top:.05rem">💡</span>
-    <p style="margin:0;font-size:.88rem;color:#94a3b8;line-height:1.7"><strong style="color:#f8fafc">Bâtir une base solide dans les opérations canadiennes</strong> tout en mettant à profit plus de 10 ans d'expérience en amélioration des processus, coordination, gestion des parties prenantes et environnements axés sur la technologie.</p>
-  </div>
+<footer>
+  <p style="margin-bottom:.5rem">Construire des ponts entre systèmes, personnes et idées.</p>
+  <p>&copy; 2026 Francisco Aleuy — Sud de l'Okanagan, C.-B.</p>
+</footer>
 
+<div class="lang-pill">
+  <a href="/it/" onclick="localStorage.setItem('fa-lang','en')">EN</a>
+  <span class="sep">·</span>
+  <span class="current">FR</span>
+  <span class="sep">·</span>
+  <a href="/es/it/" onclick="localStorage.setItem('fa-lang','es')">ES</a>
 </div>
 
-<!-- ODAC Board Director — Technologie et Systèmes -->
-<div style="margin:2.5rem 0;padding:1.5rem 1.6rem;background:rgba(56,189,248,0.04);border:1px solid rgba(56,189,248,0.18);border-radius:14px;display:flex;gap:1.1rem;align-items:flex-start">
-  <div style="flex-shrink:0;width:72px;border-radius:10px;background:#fff;padding:6px 8px;display:flex;align-items:center;justify-content:center"><img src="/assets/odac-logo.png" alt="Osoyoos &amp; District Arts Council" style="width:100%;height:auto;display:block"></div>
-  <div>
-    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:0.5rem;margin-bottom:0.2rem">
-      <strong style="color:#f8fafc;font-size:1.05rem">Administrateur – Technologie et Systèmes</strong>
-      <span style="font-size:0.68rem;font-weight:700;color:#38bdf8;background:rgba(56,189,248,0.12);border:1px solid rgba(56,189,248,0.3);padding:0.12rem 0.5rem;border-radius:99px;letter-spacing:0.04em;text-transform:uppercase">Bénévole</span>
-    </div>
-    <div style="font-size:0.82rem;color:#64748b;font-family:monospace;margin-bottom:0.5rem">Osoyoos &amp; District Arts Council · Osoyoos, BC · Juin 2026 – Présent</div>
-    <p style="margin:0;font-size:0.9rem;color:#cbd5e1;line-height:1.65">Je mets à profit mon expérience en TI et en opérations pour optimiser les systèmes numériques, automatiser les processus administratifs et renforcer l'infrastructure technologique de l'organisation en tant que membre bénévole du conseil d'administration.</p>
-  </div>
-</div>
+<script>
+(function(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 
-<div style="margin-top:5rem;padding:2rem 0;border-top:1px solid rgba(56, 189, 248, 0.1)"><h2 style="font-size:1.5rem;color:#f8fafc;margin-bottom:1.5rem">Éducation et fondation technique</h2><p style="font-size:1rem;color:#94a3b8;margin-bottom:2rem;line-height:1.6;max-width:90%"><p>Je combine une formation en ingénierie formelle avec des certifications spécialisées en systèmes et gestion de produit. Cette base est axée sur la résolution pratique de problèmes et la prise de décision technique plutôt que sur des concepts théoriques.</p></p><div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:3rem"><div><h3 style="font-size:1.1rem;color:#38bdf8;margin-bottom:1rem;text-transform:uppercase;letter-spacing:0.05em">Formation formelle</h3><ul style="list-style:none;padding:0;margin:0"><li style="margin-bottom:1rem;color:#cbd5e1"><strong>Génie industriel (axé sur la gestion de projets TI)</strong><br/><span style="font-size:0.9rem;color:#64748b">Universidad Andrés Bello (in progress)</span></li><li style="color:#cbd5e1"><strong>Diplôme en technologie des réseaux et connectivité</strong><br/><span style="font-size:0.9rem;color:#64748b">UCINF</span></li></ul></div><div><h3 style="font-size:1.1rem;color:#38bdf8;margin-bottom:1rem;text-transform:uppercase;letter-spacing:0.05em">Certifications et fondation technique</h3><ul style="list-style:none;padding:0;margin:0"><li style="margin-bottom:0.8rem;color:#cbd5e1"><p>Scrum Product Owner Professional <span style="color:#64748b">(CertiProf)</span></p></li><li style="margin-bottom:0.8rem;color:#cbd5e1"><strong>AWS Cloud Practitioner</strong><span style="color:#64748b">— foundational cloud concepts applied to system evaluation and product decision-making</span></li><li style="margin-bottom:0.8rem;color:#cbd5e1"><p>Oracle Database Foundations <span style="color:#64748b">(Oracle)</span></p></li><li style="margin-bottom:0.8rem;color:#cbd5e1"><p>Agile Project Management with Jira <span style="color:#64748b">(Atlassian)</span></p></li></ul><p style="margin-top:1.5rem;font-size:0.85rem;color:#475569;font-style:italic"><ul>
-<li>Références détaillées disponibles sur demande.</li>
-</ul></p></div></div></div>
-<h2 id="location--availability">Lieu et disponibilité</h2>
-<ul>
-<li><strong>Base actuelle</strong> : Osoyoos, British Columbia.</li>
-<li><strong>Zone de couverture</strong> : Sud de l'Okanagan — Osoyoos, Oliver, Penticton, Kelowna. Ouvert aux rôles à distance et hybrides partout au Canada.</li>
-<li><strong>Rôles ciblés</strong> : Soutien aux opérations, soutien TI (niveau 2/3), analyste de systèmes, opérations techniques, AQ — environnements où la fiabilité et la résolution structurée de problèmes comptent.</li>
-<li><strong>Autorisation de travail</strong> : Autorisé à travailler au Canada.</li>
-</ul>
+  document.querySelectorAll('section,.metrics').forEach(function(sec){
+    sec.querySelectorAll('.reveal').forEach(function(el,i){el.style.setProperty('--stagger',(i*80)+'ms');});
+  });
 
-<div style="margin:4rem 0;padding:2rem;background:rgba(56, 189, 248, 0.03);border-radius:12px;border:1px solid rgba(56, 189, 248, 0.1)"><h3 style="font-size:1.4rem;color:#f8fafc;margin-bottom:1rem">Prêt à contribuer — Maintenant</h3><p style="font-size:1.05rem;color:#cbd5e1;line-height:1.7;margin-bottom:1rem"><p>Je cherche activement des environnements où je peux appliquer directement mon expérience technique et opérationnelle. Sans longue période d'intégration — j'évalue les systèmes rapidement, j'identifie les goulots d'étranglement et je commence à contribuer dès le premier jour.</p></p><p style="font-size:1.05rem;color:#94a3b8;line-height:1.7;margin:0"><p>Particulièrement intéressé par les rôles d'opérations, de soutien TI, d'amélioration des systèmes et d'optimisation des processus — où les normes canadiennes, la conformité PIPEDA et l'exécution fiable définissent la barre.</p></p></div>
+  document.querySelectorAll('main h2').forEach(function(el){
+    el.classList.add('h2r');el.innerHTML='<span>'+el.innerHTML+'</span>';io.observe(el);
+  });
 
-<div id="contact" style="scroll-margin-top:100px"></div>
-<h2 id="contact">Contact</h2>
-<p style="text-align:center;color:#94a3b8;margin-bottom:2rem;font-size:1.05rem;line-height:1.6"><p>Si vous avez besoin de quelqu'un qui allie compréhension technique et fiabilité opérationnelle, parlons-en.</p></p>
-<div class="contact-grid"><a href="/assets/CV_Francisco_Aleuy.pdf" download class="contact-btn"><span class="btn-icon">📥</span><span>Télécharger le CV</span></a><a href="https://www.linkedin.com/in/faleuy/" target="_blank" class="contact-btn primary" style="background-color:#0a66c2;color:#ffffff;font-weight:700;border:none"><span class="btn-icon">💬</span><span>Discuter sur LinkedIn</span></a><a href="mailto:contact@franciscoaleuy.ca" class="contact-btn"><span class="btn-icon">📧</span><span>M'écrire</span></a></div>
-  <div style="position: fixed; bottom: 0; left: 0; opacity: 0; pointer-events: none; z-index: -9999; width: 1px; height: 1px;"> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();</script><script>(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o in i?A(i,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[o]=a;var d=(i,o,a)=>g(i,typeof o!="symbol"?o+"":o,a);{let i={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t),11:t=>1/0*t},o=t=>{let[l,e]=t;return l in i?i[l](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([l,e])=>[l,o(e)]));class y extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let c=this.querySelectorAll("astro-slot"),n={},h=this.querySelectorAll("template[data-astro-template]");for(let r of h){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(s+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}let u;await this.hydrator(this)(this.Component,p,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))});}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),c.disconnect(),this.childrenConnectedCallback()},c=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});c.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),c=this.getAttribute("client");if(Astro[c]===void 0){window.addEventListener(`astro:${c}`,()=>this.start(),{once:!0});return}try{await Astro[c](async()=>{let n=this.getAttribute("renderer-url"),[h,{default:p}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u];else{this.Component=h;for(let f of u.split("."))this.Component=this.Component[f]}return this.hydrator=p,this.hydrate},e,this)}catch(n){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,n)}}attributeChangedCallback(){this.hydrate()}}d(y,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</script><div style="position:relative"><div style="display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:1rem;padding:0.5rem 1rem 1.2rem;scrollbar-width:none;-webkit-overflow-scrolling:touch"><div style="min-width:calc(100% - 1.5rem);scroll-snap-align:center;flex-shrink:0;box-sizing:border-box;background:rgba(15,23,42,0.6);border:1px solid rgba(56,189,248,0.18);border-radius:20px;padding:2rem 1.8rem;display:flex;flex-direction:column;gap:0.6rem"><h3 style="font-size:1rem;font-weight:800;letter-spacing:0.1em;color:#38bdf8;margin:0">VISION</h3><div style="font-size:1rem;font-weight:700;color:#f8fafc">Comprendre le contexte</div><p style="font-size:0.92rem;color:#94a3b8;line-height:1.65;margin:0">Je commence par identifier les vrais points de douleur des utilisateurs, en recueillant des données opérationnelles et en comprenant la réalité terrain avant de proposer toute solution.</p></div><div style="min-width:calc(100% - 1.5rem);scroll-snap-align:center;flex-shrink:0;box-sizing:border-box;background:rgba(15,23,42,0.6);border:1px solid rgba(56,189,248,0.18);border-radius:20px;padding:2rem 1.8rem;display:flex;flex-direction:column;gap:0.6rem"><h3 style="font-size:1rem;font-weight:800;letter-spacing:0.1em;color:#38bdf8;margin:0">CONTRAINTES</h3><div style="font-size:1rem;font-weight:700;color:#f8fafc">Cadrer les contraintes</div><p style="font-size:0.92rem;color:#94a3b8;line-height:1.65;margin:0">Je définis les limites dès le départ — risques de conformité, limitations techniques, budget et effort — pour m'assurer que les solutions sont faisables et réalistes.</p></div><div style="min-width:calc(100% - 1.5rem);scroll-snap-align:center;flex-shrink:0;box-sizing:border-box;background:rgba(15,23,42,0.6);border:1px solid rgba(56,189,248,0.18);border-radius:20px;padding:2rem 1.8rem;display:flex;flex-direction:column;gap:0.6rem"><h3 style="font-size:1rem;font-weight:800;letter-spacing:0.1em;color:#38bdf8;margin:0">DÉCISION</h3><div style="font-size:1rem;font-weight:700;color:#f8fafc">Prioriser et décider</div><p style="font-size:0.92rem;color:#94a3b8;line-height:1.65;margin:0">En utilisant des frameworks comme MoSCoW, je force les conversations sur les compromis pour concentrer les ressources sur ce qui génère de la valeur immédiate et assure la continuité opérationnelle.</p></div><div style="min-width:calc(100% - 1.5rem);scroll-snap-align:center;flex-shrink:0;box-sizing:border-box;background:rgba(15,23,42,0.6);border:1px solid rgba(56,189,248,0.18);border-radius:20px;padding:2rem 1.8rem;display:flex;flex-direction:column;gap:0.6rem"><h3 style="font-size:1rem;font-weight:800;letter-spacing:0.1em;color:#38bdf8;margin:0">ACTION</h3><div style="font-size:1rem;font-weight:700;color:#f8fafc">Exécuter et valider</div><p style="font-size:0.92rem;color:#94a3b8;line-height:1.65;margin:0">Je passe à la livraison avec des MVPs et des pilotes, en itérant sur les retours réels pour affiner le système et m'assurer qu'il résout le problème central.</p></div></div><p style="text-align:center;font-size:0.78rem;color:#64748b;margin-top:0.2rem">(Faites glisser pour naviguer)</p></div> <div style="margin:0 -1.5rem"><div style="display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:1rem;padding:1rem 1.5rem 1.5rem;scrollbar-width:none;-webkit-overflow-scrolling:touch"><div style="min-width:260px;max-width:300px;scroll-snap-align:center;flex-shrink:0;background:#0f172a;border:1px solid rgba(56,189,248,0.2);border-radius:16px;overflow:hidden"><img src="/assets/aws.jpg" alt="Stratégie AWS" style="width:100%;height:160px;object-fit:cover;display:block;filter:saturate(0.7) contrast(1.05)"/><div style="padding:1rem"><div style="font-size:0.9rem;font-weight:700;color:#f8fafc;margin-bottom:0.4rem">Stratégie AWS</div><p style="font-size:0.8rem;color:#94a3b8;line-height:1.5;margin:0">Évaluation des infrastructures et alignement stratégique sur le cloud.</p></div></div><div style="min-width:260px;max-width:300px;scroll-snap-align:center;flex-shrink:0;background:#0f172a;border:1px solid rgba(56,189,248,0.2);border-radius:16px;overflow:hidden"><img src="/assets/IBM.jpg" alt="Découverte IBM AI" style="width:100%;height:160px;object-fit:cover;display:block;filter:saturate(0.7) contrast(1.05)"/><div style="padding:1rem"><div style="font-size:0.9rem;font-weight:700;color:#f8fafc;margin-bottom:0.4rem">Découverte IBM AI</div><p style="font-size:0.8rem;color:#94a3b8;line-height:1.5;margin:0">Exploration des capacités Watson pour l'automatisation d'entreprise.</p></div></div><div style="min-width:260px;max-width:300px;scroll-snap-align:center;flex-shrink:0;background:#0f172a;border:1px solid rgba(56,189,248,0.2);border-radius:16px;overflow:hidden"><img src="/assets/Google.JPEG" alt="Culture d'innovation" style="width:100%;height:160px;object-fit:cover;display:block;filter:saturate(0.7) contrast(1.05)"/><div style="padding:1rem"><div style="font-size:0.9rem;font-weight:700;color:#f8fafc;margin-bottom:0.4rem">Culture d'innovation</div><p style="font-size:0.8rem;color:#94a3b8;line-height:1.5;margin:0">Compréhension de l'échelle opérationnelle et de la culture des leaders technologiques mondiaux.</p></div></div><div style="min-width:260px;max-width:300px;scroll-snap-align:center;flex-shrink:0;background:#0f172a;border:1px solid rgba(56,189,248,0.2);border-radius:16px;overflow:hidden"><img src="/assets/Amelia.jpeg" alt="Benchmarking mondial" style="width:100%;height:160px;object-fit:cover;display:block;filter:saturate(0.7) contrast(1.05)"/><div style="padding:1rem"><div style="font-size:0.9rem;font-weight:700;color:#f8fafc;margin-bottom:0.4rem">Benchmarking mondial</div><p style="font-size:0.8rem;color:#94a3b8;line-height:1.5;margin:0">Évaluation des solutions d'IA conversationnelle à EXPORC Madrid.</p></div></div><div style="min-width:260px;max-width:300px;scroll-snap-align:center;flex-shrink:0;background:#0f172a;border:1px solid rgba(56,189,248,0.2);border-radius:16px;overflow:hidden"><img src="/assets/gocontact.png" alt="Évaluation CCaaS" style="width:100%;height:160px;object-fit:cover;display:block;filter:saturate(0.7) contrast(1.05)"/><div style="padding:1rem"><div style="font-size:0.9rem;font-weight:700;color:#f8fafc;margin-bottom:0.4rem">Évaluation CCaaS</div><p style="font-size:0.8rem;color:#94a3b8;line-height:1.5;margin:0">Évaluation des plateformes de centre de contact cloud pour moderniser les opérations de support.</p></div></div><div style="min-width:260px;max-width:300px;scroll-snap-align:center;flex-shrink:0;background:#0f172a;border:1px solid rgba(56,189,248,0.2);border-radius:16px;overflow:hidden"><img src="/assets/smartcontact.png" alt="Automatisation des processus" style="width:100%;height:160px;object-fit:cover;display:block;filter:saturate(0.7) contrast(1.05)"/><div style="padding:1rem"><div style="font-size:0.9rem;font-weight:700;color:#f8fafc;margin-bottom:0.4rem">Automatisation des processus</div><p style="font-size:0.8rem;color:#94a3b8;line-height:1.5;margin:0">Mise en œuvre de bots NLU et multicanaux pour réduire les frictions opérationnelles.</p></div></div><div style="min-width:260px;max-width:300px;scroll-snap-align:center;flex-shrink:0;background:#0f172a;border:1px solid rgba(56,189,248,0.2);border-radius:16px;overflow:hidden"><img src="/assets/kanban.png" alt="Découverte produit" style="width:100%;height:160px;object-fit:cover;display:block;filter:saturate(0.7) contrast(1.05)"/><div style="padding:1rem"><div style="font-size:0.9rem;font-weight:700;color:#f8fafc;margin-bottom:0.4rem">Découverte produit</div><p style="font-size:0.8rem;color:#94a3b8;line-height:1.5;margin:0">Direction de la découverte, cartographie des processus et priorisation des fonctionnalités.</p></div></div><div style="min-width:260px;max-width:300px;scroll-snap-align:center;flex-shrink:0;background:#0f172a;border:1px solid rgba(56,189,248,0.2);border-radius:16px;overflow:hidden"><img src="/assets/Credenciales.png" alt="Standards d'entreprise" style="width:100%;height:160px;object-fit:cover;display:block;filter:saturate(0.7) contrast(1.05)"/><div style="padding:1rem"><div style="font-size:0.9rem;font-weight:700;color:#f8fafc;margin-bottom:0.4rem">Standards d'entreprise</div><p style="font-size:0.8rem;color:#94a3b8;line-height:1.5;margin:0">Opération dans des cadres stricts de conformité et de sécurité.</p></div></div></div><p style="text-align:center;font-size:0.78rem;color:#64748b;margin-top:0.2rem">(Faites glisser pour naviguer)</p></div> </div> </article>  </main> <footer style="text-align: center; padding: 4rem 1rem; color: #94a3b8; font-size: 0.85rem; border-top: 1px solid rgba(56, 189, 248, 0.1); margin-top: 4rem;"> <p style="margin-bottom: 0.5rem;">Construire des ponts entre les systèmes, les personnes et les idées.</p> <p>&copy; 2026 Francisco Aleuy — Southern Okanagan, BC</p> </footer>    <div id="image-modal" class="modal-container"> <span class="close-modal">&times;</span> <img class="modal-content" id="modal-img"> <div id="modal-caption"></div> </div>        <script type="module">document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll(".slider-container").forEach(e=>{const n=e.querySelector(".image-slider"),l=e.querySelector(".prev"),i=e.querySelector(".next");l&&i&&n&&(l.addEventListener("click",()=>{const c=n.clientWidth;n.scrollBy({left:-c,behavior:"smooth"})}),i.addEventListener("click",()=>{const c=n.clientWidth;n.scrollBy({left:c,behavior:"smooth"})}))});const t=document.getElementById("image-modal"),s=document.getElementById("modal-img"),a=document.getElementById("modal-caption"),o=document.querySelector(".close-modal");document.querySelectorAll(".enlargeable-image").forEach(e=>{e.addEventListener("click",function(){t.style.display="flex",s.src=this.src,a.innerHTML=this.getAttribute("data-caption")||this.alt||""})}),o&&o.addEventListener("click",()=>{t.style.display="none"}),t.addEventListener("click",e=>{e.target===t&&(t.style.display="none")})});</script> <!-- Floating Contact -->
-<div style="position:fixed;bottom:1.5rem;left:1rem;z-index:9998;display:flex;align-items:center;gap:0.3rem;background:rgba(15,23,42,0.88);backdrop-filter:blur(10px);border:1px solid rgba(56,189,248,0.18);border-radius:100px;padding:0.35rem 0.8rem;font-size:0.8rem;font-family:Inter,sans-serif"><a href="/it/" onclick="localStorage.setItem('fa-lang','en')" style="color:#64748b;text-decoration:none;font-weight:500;transition:color 0.2s" onMouseOver="this.style.color='#f8fafc'" onMouseOut="this.style.color='#64748b'"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" style="display:inline-block;width:18px;height:12px;vertical-align:middle;border-radius:1px;margin-right:3px"><rect width="3" height="2" fill="#fff"/><rect x="1.25" width="0.5" height="2" fill="#CF111A"/><rect y="0.75" width="3" height="0.5" fill="#CF111A"/></svg>EN</a><span style="color:#334155;margin:0 0.1rem">·</span><span style="color:#38bdf8;font-weight:700"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" style="display:inline-block;width:18px;height:12px;vertical-align:middle;border-radius:1px;margin-right:3px"><rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ED2939"/></svg>FR</span><span style="color:#334155;margin:0 0.1rem">·</span><a href="/es/it/" onclick="localStorage.setItem('fa-lang','es')" style="color:#64748b;text-decoration:none;font-weight:500;transition:color 0.2s" onMouseOver="this.style.color='#f8fafc'" onMouseOut="this.style.color='#64748b'"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" style="display:inline-block;width:18px;height:12px;vertical-align:middle;border-radius:1px;margin-right:3px"><rect width="3" height="2" fill="#D52B1E"/><rect width="3" height="1" fill="#fff"/><rect width="1" height="1" fill="#0039A6"/><polygon points="0.5,0.12 0.59,0.37 0.86,0.38 0.65,0.55 0.72,0.81 0.5,0.66 0.28,0.81 0.35,0.55 0.14,0.38 0.41,0.37" fill="#fff"/></svg>ES</a></div>
-<div style="position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);z-index:9999;display:flex;flex-direction:column;align-items:center;gap:0.6rem">
-  <div id="fc-menu" style="display:none;flex-direction:column;gap:0.5rem;align-items:center">
-    <a href="mailto:contact@franciscoaleuy.ca" style="display:flex;align-items:center;gap:0.6rem;background:#0f172a;border:1px solid rgba(56,189,248,0.4);color:#f8fafc;padding:0.65rem 1.2rem;border-radius:100px;text-decoration:none;font-size:0.88rem;font-weight:500;font-family:Inter,sans-serif;box-shadow:0 4px 24px rgba(0,0,0,0.5);transition:all 0.2s" onMouseOver="this.style.borderColor='#38bdf8';this.style.color='#38bdf8'" onMouseOut="this.style.borderColor='rgba(56,189,248,0.4)';this.style.color='#f8fafc'">📧 M'écrire</a>
-    <a href="https://linkedin.com/in/faleuy/" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:0.6rem;background:#0f172a;border:1px solid rgba(56,189,248,0.4);color:#f8fafc;padding:0.65rem 1.2rem;border-radius:100px;text-decoration:none;font-size:0.88rem;font-weight:500;font-family:Inter,sans-serif;box-shadow:0 4px 24px rgba(0,0,0,0.5);transition:all 0.2s" onMouseOver="this.style.borderColor='#38bdf8';this.style.color='#38bdf8'" onMouseOut="this.style.borderColor='rgba(56,189,248,0.4)';this.style.color='#f8fafc'">🔗 LinkedIn</a>
-  </div>
-  <button onclick="var m=document.getElementById('fc-menu'),o=m.style.display==='flex';m.style.display=o?'none':'flex';this.style.background=o?'#38bdf8':'#0f172a';this.style.color=o?'#0f172a':'#38bdf8';this.innerHTML=o?'<svg width=20 height=20 viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot;><path d=&quot;M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z&quot;/></svg>':'&#10005;'" style="width:62px;height:62px;border-radius:50%;background:#38bdf8;border:none;color:#0f172a;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(56,189,248,0.35);transition:all 0.2s;font-size:1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></button>
-</div>
-</body> </html>
+  function animCount(el){
+    var r=el.textContent.trim(),n=parseFloat(r);
+    if(isNaN(n))return;
+    var s=r.replace(/[\d.]/g,''),dur=1400,t0=performance.now();
+    (function f(t){var p=Math.min((t-t0)/dur,1),e=1-Math.pow(1-p,3);el.textContent=Math.round(e*n)+s;if(p<1)requestAnimationFrame(f);})(t0);
+  }
+  var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){animCount(e.target);cio.unobserve(e.target);}});},{threshold:.7});
+  document.querySelectorAll('.metric .num').forEach(function(el){cio.observe(el);});
+
+  var track=document.getElementById('ent-track');
+  if(track){
+    var slides=track.children.length,i=0;
+    var dots=document.getElementById('ent-dots');
+    for(var d=0;d<slides;d++){(function(d){var b=document.createElement('button');b.className='g-dot'+(d===0?' active':'');b.setAttribute('aria-label','Diapositive '+(d+1));b.onclick=function(){go(d);};dots.appendChild(b);})(d);}
+    function go(n){i=(n+slides)%slides;track.style.transform='translateX(-'+(i*100)+'%)';dots.querySelectorAll('.g-dot').forEach(function(x,xi){x.classList.toggle('active',xi===i);});}
+    document.getElementById('ent-prev').onclick=function(){go(i-1);};
+    document.getElementById('ent-next').onclick=function(){go(i+1);};
+  }
+  var cfs=document.querySelectorAll('.cf');
+  cfs.forEach(function(btn){btn.onclick=function(){cfs.forEach(function(b){b.classList.remove('active');});btn.classList.add('active');var cat=btn.getAttribute('data-f');document.querySelectorAll('.cred-card').forEach(function(c){if(cat==='all'||c.getAttribute('data-cat')===cat){c.classList.remove('hid');}else{c.classList.add('hid');}});};});
+})();
+</script>
+
+</body></html>
