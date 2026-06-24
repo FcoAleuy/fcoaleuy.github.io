@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html><html lang="en"><head><script>(function(){var s=localStorage.getItem('fa-lang');var n=((navigator.languages&&navigator.languages[0])||navigator.language||'en').slice(0,2).toLowerCase();var t=(s==='es'||s==='fr'||s==='en')?s:((n==='es'||n==='fr')?n:'en');var p=location.pathname;var cur='en';if(p==='/es'||p.indexOf('/es/')===0)cur='es';else if(p==='/fr'||p.indexOf('/fr/')===0)cur='fr';if(t===cur)return;var base=p;if(cur!=='en'){base=p.replace(/^\/(es|fr)/,'')||'/';}var dest=(t==='en')?base:('/'+t+base);location.replace(dest);})();</script>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Francisco Aleuy — franciscoaleuy.ca</title>
 <meta name="description" content="Francisco Aleuy — IT & Operations professional and Singer/Performer. Based in Southern Okanagan, BC, Canada.">
@@ -89,18 +89,7 @@ h1{color:#f8fafc}a{text-decoration:none}
   .card-art:hover .cta-btn::after{animation:none!important}
 }
 </style>
-<script>(function(){
-  // v2 migration: clear any auto-stored 'fr' (Canadian phones stuck in French)
-  if(!localStorage.getItem('fa-lang-v2')){
-    if(localStorage.getItem('fa-lang')==='fr'){localStorage.removeItem('fa-lang');}
-    localStorage.setItem('fa-lang-v2','1');
-  }
-  var s=localStorage.getItem('fa-lang');
-  var b=(navigator.language||'en').substring(0,2).toLowerCase();
-  if(s==='es'){window.location.replace('/es/');}
-  else if(s==='fr'){window.location.replace('/fr/');}
-  else if(!s&&b==='es'){localStorage.setItem('fa-lang','es');window.location.replace('/es/');}
-})();</script>
+
 </head><body>
 
 <div class="bg-glow"></div>
