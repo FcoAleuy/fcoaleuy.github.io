@@ -65,5 +65,5 @@ The Journey Gallery (on music pages) is a vanilla JS carousel written inline —
 ## Key Assets
 
 - `/assets/odac-logo.png` — Osoyoos & District Arts Council logo (dark text, needs white chip background when placed on dark pages)
-- `/assets/CV_Francisco_Aleuy.pdf` — linked from nav on IT pages
+- `/assets/CV_Francisco_Aleuy.pdf` — the file exists but is intentionally NOT linked from any page (resume download buttons were removed site-wide; do not re-add them)
 - `/assets/yo.jpg` — portrait photo used on landing pages

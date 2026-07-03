@@ -183,6 +183,13 @@ section>h2{font-size:1.7rem;margin-bottom:.6rem}
 .avail-item .k .ic{width:16px;height:16px}
 .avail-item p{font-size:.9rem;color:#cbd5e1;line-height:1.55}
 
+.stack-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:.85rem;margin-top:1.1rem}
+.stack-card{background:rgba(30,41,59,.45);border:1px solid rgba(56,189,248,.1);border-radius:12px;padding:1rem 1.1rem;transition:transform .25s cubic-bezier(.16,1,.3,1),border-color .25s,background .25s}
+.stack-card:hover{transform:translateY(-3px);border-color:rgba(56,189,248,.3);background:rgba(56,189,248,.04)}
+.stack-card h3{font-size:.75rem;color:var(--accent);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.55rem}
+.stack-card .chips{display:flex;flex-wrap:wrap;gap:.28rem}
+.tl-card .th .when{margin-left:auto;font-size:.7rem;color:#475569;font-family:monospace;font-weight:400;white-space:nowrap}
+
 .contact-box{margin-top:2rem;padding:2rem;background:rgba(56,189,248,.03);border-radius:16px;border:1px solid rgba(56,189,248,.12)}
 .contact-box h3{font-size:1.3rem;margin-bottom:.8rem}
 .contact-box p{font-size:1rem;color:#cbd5e1;line-height:1.7;margin-bottom:.8rem}
@@ -248,7 +255,7 @@ footer{text-align:center;padding:4rem 1rem;color:var(--muted);font-size:.85rem;b
     <div class="portrait-frame"><img src="/assets/yo.jpg" alt="Francisco Aleuy" class="portrait"></div>
     <h1>Hola, soy Francisco.</h1>
     <p class="lead">Profesional en Operaciones TI y Product Owner con 15+ años diseñando sistemas, liderando mejora de procesos y entregando producto en entornos empresariales.</p>
-    <p class="sub">Con base en Okanagan, BC — aporto profundidad técnica, rigor operativo y experiencia en product ownership a roles IT y operaciones en BC. Trayectoria en QA, análisis de sistemas, plataformas cloud y desarrollo de un producto SaaS desde cero.</p>
+    <p class="sub">Con base en Okanagan, BC — aporto profundidad técnica, rigor operativo y experiencia en product ownership a roles IT y operaciones en BC. Trayectoria en QA, análisis de sistemas, plataformas BSS de telecomunicaciones (facturación, aprovisionamiento, catálogo de productos), cloud y desarrollo de un producto SaaS desde cero.</p>
     <div>
       <span class="tag">Product Ownership</span>
       <span class="tag">Soporte TI</span>
@@ -348,7 +355,7 @@ footer{text-align:center;padding:4rem 1rem;color:var(--muted);font-size:.85rem;b
   <section class="reveal">
     <span class="eyebrow">Trayectoria</span>
     <h2>Producto y tecnología empresarial</h2>
-    <p class="section-intro">Experiencia TI y de producto a escala empresarial — plataformas de contact center, infraestructura cloud, integración de IA y entrega ágil — construida antes y continuada con la relocalización a Canadá.</p>
+    <p class="section-intro">15 años entregando tecnología empresarial dentro de un operador de telecomunicaciones líder (Entel, Chile) — desde QA de software, pasando por sistemas de soporte al negocio (BSS: facturación, catálogo de productos, aprovisionamiento de servicios), hasta el product ownership de plataformas empresariales — además de plataformas de contact center, infraestructura cloud, integración de IA y entrega ágil.</p>
     <div class="gallery" id="ent-gallery">
       <div class="g-track" id="ent-track">
         <div class="g-slide"><img src="/assets/aws.jpg" alt="Estrategia AWS" loading="lazy"><div class="g-cap"><div class="ce">Estrategia AWS</div><div class="ct">Evaluación de infraestructura y alineación estratégica en la nube.</div></div></div>
@@ -364,6 +371,17 @@ footer{text-align:center;padding:4rem 1rem;color:var(--muted);font-size:.85rem;b
       <button class="g-btn next" id="ent-next" aria-label="Siguiente">›</button>
     </div>
     <div class="g-dots" id="ent-dots"></div>
+
+    <div style="margin-top:2.2rem"><span class="eyebrow">Stack Técnico y Dominios de Experiencia</span>
+      <div class="stack-grid">
+        <div class="stack-card"><h3>Telecom y Sistemas Empresariales (BSS)</h3><div class="chips"><span class="cred-sk">Nokia BSCS — Facturación</span><span class="cred-sk">Aprovisionamiento de Servicios</span><span class="cred-sk">Catálogo de Productos</span><span class="cred-sk">SAP SuccessFactors</span><span class="cred-sk">Data Warehouse Empresarial</span></div></div>
+        <div class="stack-card"><h3>Análisis de Negocio y Producto</h3><div class="chips"><span class="cred-sk">Levantamiento de Requerimientos</span><span class="cred-sk">Mapeo de Procesos</span><span class="cred-sk">Historias de Usuario</span><span class="cred-sk">Priorización de Backlog</span><span class="cred-sk">Roadmaps</span><span class="cred-sk">Gestión de Stakeholders</span><span class="cred-sk">Agile / Scrum</span></div></div>
+        <div class="stack-card"><h3>Datos y Reportería</h3><div class="chips"><span class="cred-sk">SQL — Oracle · SQL Server · PostgreSQL · MySQL</span><span class="cred-sk">Power BI</span><span class="cred-sk">Qlik Sense</span><span class="cred-sk">Reportería Regulatoria</span></div></div>
+        <div class="stack-card"><h3>Integración y Automatización</h3><div class="chips"><span class="cred-sk">APIs REST (Postman)</span><span class="cred-sk">Python</span><span class="cred-sk">PowerShell</span><span class="cred-sk">Shell Unix/Linux · AWK</span><span class="cred-sk">SSIS</span><span class="cred-sk">UiPath</span></div></div>
+        <div class="stack-card"><h3>QA y Gestión de Releases</h3><div class="chips"><span class="cred-sk">UAT</span><span class="cred-sk">Pruebas Funcionales y de Regresión</span><span class="cred-sk">Gestión de Defectos</span><span class="cred-sk">Validación de Datos</span><span class="cred-sk">Releases a Producción</span><span class="cred-sk">Planes de Rollback</span></div></div>
+        <div class="stack-card"><h3>Operaciones, Monitoreo y DevOps</h3><div class="chips"><span class="cred-sk">Splunk</span><span class="cred-sk">Pandora FMS</span><span class="cred-sk">AWS</span><span class="cred-sk">Linux</span><span class="cred-sk">Jira</span><span class="cred-sk">Confluence</span><span class="cred-sk">Git · Bitbucket</span></div></div>
+      </div>
+    </div>
   </section>
 
   <section class="reveal">
@@ -387,22 +405,36 @@ footer{text-align:center;padding:4rem 1rem;color:var(--muted);font-size:.85rem;b
       <div class="tl-current">
         <div class="ch">
           <svg class="ic" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg>
-          <h3>Actual: Operaciones y Soporte de Instalaciones (Canadá)</h3>
+          <h3>Actual: Hospitalidad, Operaciones e Instalaciones (Canadá)</h3>
         </div>
-        <p class="foc">Enfoque: Preparación del sitio, operación de instalaciones, seguridad y excelencia en el servicio.</p>
+        <p class="foc">Enfoque: Experiencia del huésped, preparación del sitio y excelencia en el servicio — con contratos de temporada renovados y operación independiente.</p>
       </div>
 
       <div class="tl">
-        <div class="tl-item"><div class="tl-card"><div class="th"><svg class="ic" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>Operación de Instalaciones</span></div><p>Responsable de la preparación diaria del área de piscina, inspecciones, estándares de limpieza y configuración operativa para garantizar un entorno seguro y acogedor.</p></div></div>
-        <div class="tl-item"><div class="tl-card"><div class="th"><svg class="ic" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>Preparación del Sitio</span></div><p>Ejecución de procedimientos de apertura, preparación de equipos, inspecciones y verificaciones operativas para asegurar que el sitio esté completamente listo para la operación diaria.</p></div></div>
-        <div class="tl-item"><div class="tl-card"><div class="th"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-2.82 1.17V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 7.5 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15H4.5a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 6 9.4l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 11 4.6V4.5a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 2.82 1.17l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9z"/></svg><span>Soporte Operativo</span></div><p>Trabajo entre departamentos para mantener los estándares operativos, responder a prioridades cambiantes y apoyar la operación diaria sin contratiempos.</p></div></div>
-        <div class="tl-item"><div class="tl-card"><div class="th"><svg class="ic" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7v6h-6"/></svg><span>Mejora de Procesos</span></div><p>Identificación de ineficiencias en planificación y comunicación, proponiendo soluciones prácticas para mejorar la coordinación y la visibilidad entre equipos.</p></div></div>
-        <div class="tl-item"><div class="tl-card"><div class="th"><svg class="ic" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Servicio al Cliente y Comunicación</span></div><p>Atención profesional a visitantes en un entorno de habla inglesa, manteniendo la seguridad, la calidad y la excelencia operativa.</p></div></div>
+        <div class="tl-item"><div class="tl-card"><div class="th"><svg class="ic" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>Pool Attendant — Watermark Beach Resort · Osoyoos, BC</span><span class="when">Abr 2026–Presente</span></div><p>Recontratado con un nuevo contrato de temporada tras un año de servicio consistente y de alta calidad en roles de hospitalidad del resort. Mantengo la preparación, presentación y confort del área de piscina según los altos estándares del resort en períodos de máxima afluencia.</p></div></div>
+        <div class="tl-item"><div class="tl-card"><div class="th"><svg class="ic" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg><span>Karaoke Host / MC — Moosehead Pub · Oliver, BC</span><span class="when">2026–Presente</span></div><p>Conduzco noches de karaoke abiertas — gestionando el flujo de canciones, el sonido y la energía del escenario mientras ayudo a los asistentes a sentirse seguros al cantar. Coordinación de eventos en vivo frente a público real, cada semana.</p></div></div>
+        <div class="tl-item"><div class="tl-card"><div class="th"><svg class="ic" viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg><span>Bartender y Barista — Watermark Beach Resort · Osoyoos, BC</span><span class="when">Jun 2025–Mar 2026</span></div><p>Servicio de bar, café y banquetes/eventos a tiempo completo en un resort de playa de alta gama. Gané la confianza de la gerencia para operar de forma independiente en turnos de alto volumen, e identifiqué ineficiencias de planificación y coordinación — proponiendo soluciones prácticas a nivel de equipo.</p></div></div>
+        <div class="tl-item"><div class="tl-card"><div class="th"><svg class="ic" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>Limpieza y Asistente de Operaciones — Moosehead Lounge · Glenwood, NL</span><span class="when">Abr–May 2025</span></div><p>Mantención de un lounge y un alojamiento de tres pisos según estándares de higiene, apoyo en operaciones de cocina y montaje de eventos semanales de karaoke — primera experiencia laboral canadiense.</p></div></div>
       </div>
 
       <div class="tl-highlight">
         <svg class="ic" viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1h6c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2z"/></svg>
         <p><strong style="color:#f8fafc">Conectando 15 años de experiencia en TI y producto con el mercado canadiense.</strong> El pensamiento sistémico, el rigor de procesos y la ejecución interfuncional son transferibles — y se aplican activamente en roles de operaciones en BC mientras avanzo hacia la próxima posición IT o PO.</p>
+      </div>
+
+      <div class="tl-current" style="margin-top:2rem">
+        <div class="ch">
+          <svg class="ic" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+          <h3>Trayectoria Empresarial: Telecomunicaciones y Sistemas (Chile)</h3>
+        </div>
+        <p class="foc">15 años a escala nacional — de QA de software a configuración BSS a Product Owner.</p>
+      </div>
+
+      <div class="tl">
+        <div class="tl-item"><div class="tl-card"><div class="th"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg><span>Product Owner — Sistemas Empresariales</span><span class="when">2021–2025</span></div><p><strong style="color:#cbd5e1">Entel · Santiago, Chile.</strong> Responsable del backlog y roadmap de los sistemas empresariales de un operador de telecomunicaciones con más de 6.500 empleados. Lideré dos equipos Scrum internacionales (Chile y Perú), coordiné integraciones vía API incluyendo SAP SuccessFactors e impulsé automatizaciones que aumentaron la eficiencia operativa en un 40%.</p></div></div>
+        <div class="tl-item"><div class="tl-card"><div class="th"><svg class="ic" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span>Especialista en Soporte de Aplicaciones</span><span class="when">2020–2021</span></div><p><strong style="color:#cbd5e1">MB Solutions Latam · Chile.</strong> Soporte de aplicaciones sobre plataformas Linux y SQL para clientes de telecomunicaciones, con despliegues en AWS y monitoreo con Pandora FMS. Reduje los incidentes recurrentes en un 25% mediante análisis de causa raíz.</p></div></div>
+        <div class="tl-item"><div class="tl-card"><div class="th"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Analista de Sistemas de Negocio / Ingeniero QA</span><span class="when">2018–2020</span></div><p><strong style="color:#cbd5e1">Accenture · Chile.</strong> Requerimientos, validación de datos y pruebas de integración de sistemas (SQL, Postman) para implementaciones de core bancario a gran escala. Mejoré el tiempo de entrega de reportes en un 35% con automatización en PowerShell.</p></div></div>
+        <div class="tl-item"><div class="tl-card"><div class="th"><svg class="ic" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01M6 18h.01"/></svg><span>Ingeniero de Sistemas — Operaciones Telecom, QA y Configuración</span><span class="when">2009–2018</span></div><p><strong style="color:#cbd5e1">Allware (servicios TI para Entel) · Santiago, Chile.</strong> Configuración de productos, tarifas y reglas de facturación en Nokia BSCS, además de plataformas de aprovisionamiento y catálogo de productos. Ejecuté releases controlados a producción con procedimientos de rollback y ventanas nocturnas de implementación, analicé la calidad de datos de red 2G/3G/LTE con Splunk y automaticé la reportería regulatoria a escala nacional (SUBTEL). Reduje los defectos en producción en un 15%.</p></div></div>
       </div>
     </div>
 
