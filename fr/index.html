@@ -25,7 +25,7 @@ body{min-height:100vh;display:flex;flex-direction:column;align-items:center;just
 
 h1{color:#f8fafc}a{text-decoration:none}
 .portrait-frame{position:relative;width:118px;height:118px;margin:0 auto 1.5rem;border-radius:50%;animation:fadeUp .8s cubic-bezier(.16,1,.3,1) both;animation-delay:.05s}
-.portrait-frame::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,rgba(56,189,248,.18) 0deg,#38bdf8 50deg,#e0f2fe 80deg,#a78bfa 110deg,rgba(167,139,250,.18) 165deg,rgba(56,189,248,.18) 360deg);animation:spin 4s linear infinite;z-index:0}
+.portrait-frame::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,#38bdf8 0deg,#7dd3fc 60deg,#a78bfa 120deg,#c084fc 180deg,#7dd3fc 240deg,#38bdf8 300deg,#38bdf8 360deg);animation:spin 7s linear infinite;z-index:0}
 .portrait-frame::after{content:"";position:absolute;inset:0;border-radius:50%;animation:glow 5s ease-in-out infinite;pointer-events:none;z-index:0}
 .portrait{position:absolute;top:3px;left:3px;width:calc(100% - 6px);height:calc(100% - 6px);object-fit:cover;border-radius:50%;display:block;filter:grayscale(12%);border:0;margin:0}
 @keyframes spin{to{transform:rotate(360deg)}}
@@ -103,8 +103,8 @@ h1{color:#f8fafc}a{text-decoration:none}
   <a href="/fr/it/" class="card card-it">
     <div class="card-badge">IT</div>
     <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25zm.75-12h9v9h-9v-9z"/></svg>
-    <div class="card-title">Opérations &amp;<br>Technologie</div>
-    <div class="card-tags">Product Owner · Conception de processus<br>Analyse de systèmes · BC, Canada</div>
+    <div class="card-title">Systèmes Enterprise<br>&amp; AQ</div>
+    <div class="card-tags">Opérations IT · Analyse de systèmes<br>Product Owner · BC, Canada</div>
     <div class="card-cta"><span class="cta-btn">Voir portfolio <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span></div>
   </a>
   <a href="/fr/music/" class="card card-art">
