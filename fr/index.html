@@ -35,8 +35,8 @@ h1{color:#f8fafc}a{text-decoration:none}
   animation:fadeUp .8s cubic-bezier(.16,1,.3,1) both;animation-delay:.18s}
 .sub{font-size:.83rem;color:#64748b;text-align:center;letter-spacing:.08em;margin-bottom:3rem;
   animation:fadeUp .8s cubic-bezier(.16,1,.3,1) both;animation-delay:.30s}
-.cards{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;width:100%;max-width:640px}
-@media(max-width:500px){.cards{grid-template-columns:1fr;max-width:340px}}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;width:100%;max-width:980px}
+@media(max-width:860px){.cards{grid-template-columns:1fr;max-width:340px}}
 .card{position:relative;padding:1.8rem 1.5rem 1.5rem;border-radius:16px;transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s,border-color .3s;display:flex;flex-direction:column;gap:.4rem;overflow:hidden;
   animation:fadeUp .85s cubic-bezier(.16,1,.3,1) both}
 .card:nth-child(1){animation-delay:.42s}
@@ -78,11 +78,24 @@ h1{color:#f8fafc}a{text-decoration:none}
 .card-badge{position:absolute;top:.7rem;right:.75rem;font-size:.6rem;font-weight:700;letter-spacing:.12em;padding:.15rem .5rem;border-radius:20px;text-transform:uppercase}
 .card-it .card-badge{background:rgba(56,189,248,.1);color:#38bdf8;border:1px solid rgba(56,189,248,.2)}
 .card-art .card-badge{background:rgba(167,139,250,.1);color:#a78bfa;border:1px solid rgba(167,139,250,.2)}
-.loc{margin-top:2.5rem;font-size:.74rem;color:#334155;text-align:center;letter-spacing:.05em;
+.loc{margin-top:1.6rem;font-size:.74rem;color:#334155;text-align:center;letter-spacing:.05em;
   animation:fadeIn 1s ease both;animation-delay:.7s}
 
+.card:nth-child(3){animation-delay:.66s}
+.card-lab{background:rgba(245,158,11,.06);border:1px solid rgba(245,158,11,.22)}
+.card-lab::before{background:linear-gradient(90deg,transparent,#f59e0b,transparent)}
+.card-lab:hover{border-color:rgba(245,158,11,.5);box-shadow:0 12px 48px rgba(245,158,11,.16)}
+.card-lab .card-icon{color:#f59e0b}.card-lab .card-cta{color:#f59e0b}
+.card-lab .cta-btn::before{background:#f59e0b}
+.card-lab .card-badge{background:rgba(245,158,11,.1);color:#f59e0b;border:1px solid rgba(245,158,11,.2)}
+.tagline{font-size:1rem;color:#cbd5e1;text-align:center;max-width:36ch;line-height:1.5;margin:.1rem auto .7rem;animation:fadeUp .8s cubic-bezier(.16,1,.3,1) both;animation-delay:.24s}
+.contact-block{margin-top:2.6rem;text-align:center;font-size:.8rem;color:#64748b;animation:fadeIn 1s ease both;animation-delay:.75s}
+.contact-block .cb-label{display:block;font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:#475569;margin-bottom:.45rem}
+.contact-block a{color:#94a3b8;transition:color .2s}.contact-block a:hover{color:#38bdf8}
+.contact-block .dot{margin:0 .6rem;color:#334155}
+
 @media(prefers-reduced-motion:reduce){
-  .portrait,.portrait-frame,.name,.sub,.card,.loc{animation:none!important;opacity:1!important;transform:none!important}
+  .portrait,.portrait-frame,.name,.tagline,.sub,.card,.loc,.contact-block{animation:none!important;opacity:1!important;transform:none!important}
   .portrait-frame::before,.portrait-frame::after{animation:none!important}
   .portrait-frame::before{background:linear-gradient(135deg,#38bdf8,#a78bfa)}
   .bg-glow::before,.bg-glow::after{animation:none}
@@ -98,24 +111,34 @@ h1{color:#f8fafc}a{text-decoration:none}
 
 <div class="portrait-frame"><img src="/assets/yo.jpg" alt="Francisco Aleuy" class="portrait"></div>
 <h1 class="name">Francisco Aleuy</h1>
+<p class="tagline">Je conçois des systèmes qui font circuler le travail, et je monte sur scène.</p>
 <p class="sub">British Columbia &nbsp;·&nbsp; Canada</p>
 
 <div class="cards">
   <a href="/fr/it/" class="card card-it">
-    <div class="card-badge">IT</div>
+    <div class="card-badge">TRAVAIL</div>
     <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25zm.75-12h9v9h-9v-9z"/></svg>
     <div class="card-title">Systèmes Enterprise<br>&amp; AQ</div>
     <div class="card-tags">Opérations IT · Analyse de systèmes<br>Product Owner · BC, Canada</div>
     <div class="card-cta"><span class="cta-btn">Voir portfolio <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span></div>
   </a>
+  <a href="/fr/lab/" class="card card-lab">
+    <div class="card-badge">LAB</div>
+    <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/></svg>
+    <div class="card-title">Product Lab</div>
+    <div class="card-tags">Produits que je construis moi-même : découverte, décisions, construction et tests.</div>
+    <div class="card-cta"><span class="cta-btn">Voir les produits <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span></div>
+  </a>
   <a href="/fr/music/" class="card card-art">
-    <div class="card-badge">ARTISTE</div>
+    <div class="card-badge">SCÈNE</div>
     <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3z"/></svg>
     <div class="card-title">Chanteur &amp;<br>Artiste</div>
     <div class="card-tags">Théâtre Musical · The Voice Chile<br>Agrupación Andrómeda · 2026</div>
     <div class="card-cta"><span class="cta-btn">Voir portfolio <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span></div>
   </a>
 </div>
+
+<div class="contact-block"><span class="cb-label">Contact</span><a href="mailto:contact@franciscoaleuy.ca">contact@franciscoaleuy.ca</a><span class="dot">·</span><a href="https://www.linkedin.com/in/faleuy/" target="_blank" rel="noopener">linkedin.com/in/faleuy</a></div>
 
 <p class="loc">franciscoaleuy.ca &nbsp;·&nbsp; <a href="/" style="color:#475569;transition:color .2s" onMouseOver="this.style.color='#94a3b8'" onMouseOut="this.style.color='#475569'" onclick="localStorage.setItem('fa-lang','en')">EN</a> &nbsp;·&nbsp; <a href="/es/" style="color:#475569;transition:color .2s" onMouseOver="this.style.color='#94a3b8'" onMouseOut="this.style.color='#475569'" onclick="localStorage.setItem('fa-lang','es')">ES</a></p>
 
