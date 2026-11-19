@@ -142,9 +142,42 @@ hr{border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(167,
 
 <hr>
 
+<!-- THE HEARTBREAK SOCIETY · Vancouver · latest. After December 11, 2026 remove the "next show" tag and the last sentence of the paragraph. -->
+<section id="heartbreak">
+  <span class="label">Latest &middot; Vancouver &middot; 2026</span>
+  <h2 style="margin-top:.25rem;font-size:1.65rem">The Heartbreak Society</h2>
+  <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1.1rem">
+    <span class="tag" style="background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.35);color:#f59e0b">Vocalist</span>
+    <span class="tag">Vancouver, BC</span>
+    <span class="tag gray">Debut: November 12, 2026 &middot; Good &amp; Co.</span>
+    <span class="tag gray">Next show: December 11, 2026 &middot; Wings, Port Moody</span>
+  </div>
+  <p>Vocalist with The Heartbreak Society, based in Vancouver. The group made its debut on November 12, 2026 at Good &amp; Co. and plays next on December 11, 2026 at Wings in Port Moody.</p>
+  <div style="max-width:420px;margin:1.25rem auto">
+    <div style="position:relative;border-radius:10px;overflow:hidden;border:1px solid rgba(167,139,250,.18);background:#0a0f1e">
+      <div id="hb-track" style="display:flex;transition:transform .35s cubic-bezier(.4,0,.2,1)">
+        <img src="/assets/heartbreak-society/performance.jpg" alt="The Heartbreak Society, performing in Vancouver" style="min-width:100%;width:100%;aspect-ratio:4/5;object-fit:cover;display:block">
+        <img src="/assets/heartbreak-society/meet-the-team.jpg" alt="The Heartbreak Society, Meet the Team" loading="lazy" style="min-width:100%;width:100%;aspect-ratio:4/5;object-fit:cover;display:block">
+      </div>
+      <button onclick="hbNav(-1)" aria-label="Previous" style="position:absolute;left:.5rem;top:50%;transform:translateY(-50%);background:rgba(15,23,42,.72);border:1px solid rgba(167,139,250,.3);color:#a78bfa;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:1.2rem;line-height:1;display:flex;align-items:center;justify-content:center;transition:background .2s;backdrop-filter:blur(4px)" onMouseOver="this.style.background='rgba(167,139,250,.22)'" onMouseOut="this.style.background='rgba(15,23,42,.72)'">&lsaquo;</button>
+      <button onclick="hbNav(1)" aria-label="Next" style="position:absolute;right:.5rem;top:50%;transform:translateY(-50%);background:rgba(15,23,42,.72);border:1px solid rgba(167,139,250,.3);color:#a78bfa;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:1.2rem;line-height:1;display:flex;align-items:center;justify-content:center;transition:background .2s;backdrop-filter:blur(4px)" onMouseOver="this.style.background='rgba(167,139,250,.22)'" onMouseOut="this.style.background='rgba(15,23,42,.72)'">&rsaquo;</button>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:.55rem .1rem 0">
+      <span id="hb-caption" style="font-size:.78rem;color:#64748b;font-style:italic">Performing in Vancouver</span>
+      <span id="hb-counter" style="font-size:.72rem;color:#475569;font-weight:600;letter-spacing:.06em">1 / 2</span>
+    </div>
+  </div>
+  <script>(function(){
+    var idx=0,caps=["Performing in Vancouver","Meet the team"],total=2;
+    window.hbNav=function(d){idx=(idx+d+total)%total;document.getElementById("hb-track").style.transform="translateX(-"+(idx*100)+"%)";document.getElementById("hb-caption").textContent=caps[idx];document.getElementById("hb-counter").textContent=(idx+1)+" / "+total;};
+  })();</script>
+</section>
+
+<hr>
+
 <!-- ANDRÓMEDA 2026 -->
 <section id="andromeda">
-  <span class="label">Most recent · 2026</span>
+  <span class="label">2026</span>
   <h2 style="margin-top:.25rem;font-size:1.65rem">Jesucristo Superstar</h2>
   <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1.1rem">
     <span class="tag" style="background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.35);color:#f59e0b">Role: Jesús (lead)</span>
@@ -211,15 +244,6 @@ hr{border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(167,
 
   <div class="journey-gallery">
     <div class="journey-track" id="jt">
-      <!-- The Heartbreak Society: after December 11, 2026 remove the "Next show" sentence -->
-      <div class="journey-slide">
-        <img src="/assets/heartbreak-society/performance.jpg" alt="The Heartbreak Society, performing in Vancouver" loading="lazy">
-        <div class="journey-caption">
-          <div class="jc-era">2026 – Present</div>
-          <div class="jc-title">The Heartbreak Society</div>
-          <div class="jc-role">Vocalist &middot; Vancouver, BC &middot; Debut: November 12, 2026, Good &amp; Co. Next show: December 11, 2026, Wings, Port Moody.</div>
-        </div>
-      </div>
       <div class="journey-slide">
         <img src="/assets/theatre-lesmis.png" alt="Les Misérables 2018 — Marius Pontmercy" loading="lazy">
         <div class="journey-caption">
@@ -260,7 +284,7 @@ hr{border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(167,
 </section>
 
 <script>(function(){
-  var total=5,idx=0;
+  var total=4,idx=0;
   var track=document.getElementById('jt');
   var dotsEl=document.getElementById('jdots');
   for(var i=0;i<total;i++){
@@ -400,13 +424,12 @@ hr{border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(167,
     <div>
       <div style="display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-bottom:.15rem">
         <span style="font-weight:700;color:#f8fafc">Karaoke Host</span>
-        <span class="tag" style="margin:0;background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.35);color:#f59e0b">Live · 2026</span>
       </div>
-      <div style="font-size:.8rem;color:#64748b;margin-bottom:.45rem">Moosehead Pub · Oliver, BC · 2026 – Present</div>
-      <div style="font-size:.84rem;color:#94a3b8;line-height:1.6">Hosts open karaoke nights at Moosehead, building community through music and inviting anyone — seasoned vocalist or total beginner — to step up to the mic. His way of staying connected to live performance between productions.</div>
+      <div style="font-size:.8rem;color:#64748b;margin-bottom:.45rem">Moosehead Pub · Newfoundland</div>
+      <div style="font-size:.84rem;color:#94a3b8;line-height:1.6">Hosted open karaoke nights at Moosehead, building community through music and inviting anyone — seasoned vocalist or total beginner — to step up to the mic. A way of staying connected to live performance between productions.</div>
       <a href="https://www.facebook.com/reel/695695763056162" target="_blank" rel="noopener" class="btn primary" style="font-size:.78rem;padding:.4rem .9rem;margin-top:.7rem;display:inline-flex">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-        Watch the invitation ↗
+        Watch the clip ↗
       </a>
     </div>
   </div>
@@ -455,7 +478,7 @@ hr{border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(167,
       <div style="display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-bottom:.15rem">
         <span style="font-weight:700;color:#f8fafc">Karaoke Host / MC</span>
       </div>
-      <div style="font-size:.8rem;color:#64748b;margin-bottom:.45rem">Cantobar Providencia · Santiago, Chile · Mar 2025 — now hosting weekly at Moosehead Pub, Oliver, BC</div>
+      <div style="font-size:.8rem;color:#64748b;margin-bottom:.45rem">Cantobar Providencia · Santiago, Chile · Mar 2025 — later at Moosehead Pub, Newfoundland</div>
       <div style="font-size:.84rem;color:#94a3b8;line-height:1.6">Hosted and energized karaoke sessions — curating music flow, managing the song queue, and building guests' confidence on stage. Hospitality and live entertainment in one role, on two continents.</div>
     </div>
   </div>
@@ -614,7 +637,7 @@ hr{border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(167,
 <section id="contact" style="text-align:center;padding:1rem 0 2rem">
   <span class="label" style="text-align:center">Contact</span>
   <h2 style="margin-top:.25rem;font-size:1.65rem">Let's Create Together</h2>
-  <p style="color:#94a3b8;max-width:480px;margin:.4rem auto 0;font-size:.9rem;line-height:1.7">Available for artistic collaborations, musical projects, and performances across BC — open to Vancouver and the Lower Mainland arts scene — and in Chile.</p>
+  <p style="color:#94a3b8;max-width:480px;margin:.4rem auto 0;font-size:.9rem;line-height:1.7">Based in Vancouver. Available for artistic collaborations, musical projects, and performances in Vancouver and the Lower Mainland arts scene, across BC, and in Chile.</p>
   <div class="btn-row">
     <a href="mailto:faleuy@gmail.com" class="btn primary">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
