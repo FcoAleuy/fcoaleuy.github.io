@@ -164,9 +164,9 @@ P["field-service-ops"] = dict(status="mvp", en=dict(
   status_text=["MVP v0.1 fonctionnel en démo, en révision avec le propriétaire (séance de rétroaction en novembre 2026)."],
   next="Ajouter un backend partagé pour que toute l’équipe utilise les mêmes données, puis construire le deuxième outil : un rapport numérique de technicien qui puise les pièces dans le catalogue et va directement au propriétaire pour approbation et à la comptable pour facturation, sans copier-coller."))
 
-# ---------- 3. Craft beer platform (published, anonymized name) ----------
+# ---------- 3. Craft beer platform (published as OtraChela) ----------
 P["craft-beer-qa"] = dict(status="prog", en=dict(
-  title="Chilean craft beer discovery platform, product and quality",
+  title="OtraChela: Chilean craft beer discovery platform (product and quality)",
   summary="Co-founder covering product management and quality on a 3-person team, from risk-based test planning to a new end-to-end automation base.",
   tags=["Risk-based testing", "ISTQB", "Playwright", "AI-assisted QA", "Product management"],
   facts=[("role", "Co-founder, Product Owner and QA Lead"), ("timeline", "2026 to present"), ("stack", "Next.js 15, TypeScript, MongoDB, Better Auth, Playwright"),
@@ -185,7 +185,7 @@ P["craft-beer-qa"] = dict(status="prog", en=dict(
   status_text=["Pre-launch. Testing campaign ongoing and automation of the 281 selected scenarios in progress. Security findings are shared privately with the team."],
   next="Finish automating the selected scenarios, cover the remaining areas (brewery dashboard, discovery and map, moderation) and run a regression cycle before launch."),
  es=dict(
-  title="Plataforma chilena de descubrimiento de cerveza artesanal, producto y calidad",
+  title="OtraChela: plataforma chilena de descubrimiento de cerveza artesanal (producto y calidad)",
   summary="Cofundador a cargo de la gestión de producto y la calidad en un equipo de 3 personas, desde la planificación de pruebas basada en riesgo hasta una nueva base de automatización de punta a punta.",
   tags=["Testing basado en riesgo", "ISTQB", "Playwright", "QA asistido por IA", "Gestión de producto"],
   facts=[("role", "Cofundador, Product Owner y Líder de QA"), ("timeline", "2026 a la fecha"), ("stack", "Next.js 15, TypeScript, MongoDB, Better Auth, Playwright"),
@@ -204,7 +204,7 @@ P["craft-beer-qa"] = dict(status="prog", en=dict(
   status_text=["Pre-lanzamiento. Campaña de pruebas en marcha y automatización de los 281 escenarios seleccionados en curso. Los hallazgos de seguridad se comparten en privado con el equipo."],
   next="Terminar de automatizar los escenarios seleccionados, cubrir las áreas restantes (panel de cervecerías, descubrimiento y mapa, moderación) y ejecutar un ciclo de regresión antes del lanzamiento."),
  fr=dict(
-  title="Plateforme chilienne de découverte de bières artisanales, produit et qualité",
+  title="OtraChela : plateforme chilienne de découverte de bières artisanales (produit et qualité)",
   summary="Cofondateur responsable de la gestion de produit et de la qualité au sein d’une équipe de 3 personnes, de la planification de tests fondée sur le risque à une nouvelle base d’automatisation de bout en bout.",
   tags=["Tests fondés sur le risque", "ISTQB", "Playwright", "AQ assistée par IA", "Gestion de produit"],
   facts=[("role", "Cofondateur, Product Owner et responsable AQ"), ("timeline", "2026 à aujourd’hui"), ("stack", "Next.js 15, TypeScript, MongoDB, Better Auth, Playwright"),
@@ -411,7 +411,7 @@ def wrap_main(inner):
     return ('<main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">\n<div style="max-width:800px;margin:0 auto;padding:4rem 1rem">\n\n'
             + inner + '\n</div>\n</main>')
 def cta(label):
-    return ('  <div style="margin-top:3rem;text-align:center"><a href="mailto:contact@franciscoaleuy.ca" style="display:inline-block;padding:1rem 2rem;'
+    return ('  <div style="margin-top:3rem;text-align:center"><a href="mailto:faleuy@gmail.com" style="display:inline-block;padding:1rem 2rem;'
             'border:1px solid rgba(56,189,248,0.4);color:#38bdf8;border-radius:100px;font-weight:600;text-decoration:none;font-size:1rem">%s</a></div>\n') % label
 
 def shell_for(lg):
@@ -432,7 +432,7 @@ def finish(lg, slug, head, mainhtml, tail, title, hidden=False):
     for l2, p2 in PRE.items():
         tgt = ("%s/lab/%s/" % (p2, slug)) if slug else ("%s/lab/" % p2)
         tail = tail.replace('href="%s/work/soymanada/"' % p2, 'href="%s"' % tgt)
-    return head + mainhtml + tail
+    return (head + mainhtml + tail).replace("faleuy@gmail.com", "faleuy@gmail.com")
 
 CASE_BASE_CSS = ""   # filled from the original English SoyManada stylesheet below
 _orig = git_show("work/soymanada/index.html")
